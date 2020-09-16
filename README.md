@@ -1,4 +1,4 @@
-# Gm88 Android 海外 游戏SDK Demo
+# Gm88 Android 国内 游戏SDK Demo
 
 本项目旨在提供Demo供接入SDK时参考
 
