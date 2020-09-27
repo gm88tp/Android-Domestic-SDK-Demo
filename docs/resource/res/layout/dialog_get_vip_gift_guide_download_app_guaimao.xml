@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="275dp"
+        android:layout_height="162dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_guide_download_app_red_guaimao">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/rl_guide_download_app_cancel_guaimao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_guide_app_download_cancle_yellow_guaimao" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_guide_download_app_confirm_guaimao"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_guide_app_download_confirm_yellow_guaimao" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

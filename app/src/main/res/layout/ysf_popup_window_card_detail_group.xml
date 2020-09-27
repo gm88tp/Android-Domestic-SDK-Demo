@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ysf_card_detail_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ysf_white"
+        android:orientation="vertical" />
+
+    <include layout="@layout/ysf_include_divider" />
+
+    <include
+        android:id="@+id/ysf_card_detail_space"
+        layout="@layout/ysf_include_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ysf_divider_height"
+        android:layout_marginTop="15dp" />
+</LinearLayout>

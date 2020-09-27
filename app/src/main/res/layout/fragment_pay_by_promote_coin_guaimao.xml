@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="225dp"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_point_pay_fragment_product_name_guaimao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:textColor="#333333"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="西亭脆饼" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付："
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_point_pay_fragment_price_guaimao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#f85d5d"
+                android:textSize="20sp"
+                tools:text="68" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点券"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额："
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_point_pay_fragment_balance_guaimao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                tools:text="68" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点券"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:paddingLeft="42dp"
+            android:paddingRight="42dp">
+
+            <TextView
+                android:id="@+id/tv_point_pay_fragment_cancel_guaimao"
+                style="@style/ShortGreyButton_width_100_guaimao"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="取消支付" />
+
+            <TextView
+                android:id="@+id/tv_point_pay_fragment_pay_guaimao"
+                style="@style/ShortYellowButton_width_100_guaimao"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="点券支付" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_point_pay_fragment_other_pay_type_guaimao"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="其他支付方式"
+                android:textColor="#42a2f4"
+                android:textSize="13sp"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_promote_point_pay_forward"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

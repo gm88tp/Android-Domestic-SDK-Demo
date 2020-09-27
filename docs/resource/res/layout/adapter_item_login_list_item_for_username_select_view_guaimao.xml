@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="8dp"
+    android:id="@+id/input_selectitem_item"
+    android:layout_width="match_parent"
+    android:layout_height="28dip">
+    <RelativeLayout
+        android:id="@+id/rl_adapter_item_coupon_user_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="41dp">
+
+        <TextView
+            android:id="@+id/tv_login_list_item_select_view_guaimao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:text="111"
+            android:textColor="#666666"
+            android:textSize="16dp" />
+        <RelativeLayout
+            android:id="@+id/ll_login_list_item_select_view_guaimao"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="right">
+        <ImageButton
+        android:scaleType="centerInside"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/ic_new_small_close"
+        android:id="@+id/imgbtn_login_list_item_select_view_guaimao"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

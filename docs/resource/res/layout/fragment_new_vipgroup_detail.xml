@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="292.5dp"
+        android:layout_height="250.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:background="@drawable/bg_user_center_function_top_bar_gray_guaimao">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="VIP专属客服"
+                android:textColor="#7A746F"
+                android:textSize="23.5sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/rl_close_gm"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_close" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <ImageView
+                android:id="@+id/tv_detail_btn_gm"
+                android:gravity="center"
+                android:layout_width="214dp"
+                android:layout_height="35.5dp"
+                android:src="@drawable/ic_new_vip_hint_gm"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_user_center_vip_qq"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/ic_qq_new_gm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:text="QQ号:2852371004"
+                android:layout_marginLeft="7dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_user_center_vip_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="75dp"
+                android:src="@drawable/ic_wechat_new_gm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:text="微信号:GM88VIP01"
+                android:layout_marginLeft="7dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

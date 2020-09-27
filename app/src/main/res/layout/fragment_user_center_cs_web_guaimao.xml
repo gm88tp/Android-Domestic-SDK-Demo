@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user_center_message_list_main_content"
+        android:layout_width="@dimen/gm_sdk_general_width"
+        android:layout_height="@dimen/gm_sdk_general_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_white_solid_guaimao"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gm_sdk_general_title_bar_height"
+            android:background="@drawable/bg_user_center_main_function_top_bar"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_user_center_customer_service_return_guaimao"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_user_center_gift_list_return"
+                    android:layout_width="8dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_activity_list_return_grey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:text="客服"
+                android:textColor="#323232" />
+
+
+        </RelativeLayout>
+
+
+        <View style="@style/HorizontalLine_guaimao" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginBottom="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@color/color_c12_gm"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_online_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="31dp"
+                                android:layout_height="29dp"
+                                android:src="@drawable/ic_customer_service_online_yellow_guaimao" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="在线客服"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View style="@style/VerticalLine_guaimao" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_tel_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="31dp"
+                                android:layout_height="29dp"
+                                android:src="@drawable/ic_customer_service_tel_yellow_guaimao" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="客服热线"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View style="@style/HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@color/color_c12_gm"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_QQ_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="31dp"
+                                android:layout_height="29dp"
+                                android:src="@drawable/ic_customer_service_qq_yellow_guaimao" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="QQ客服"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View style="@style/VerticalLine_guaimao" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_QQ_group_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="35dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="31dp"
+                                android:layout_height="29dp"
+                                android:src="@drawable/ic_customer_service_qq_group_yellow_guaimao" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:gravity="center"
+                                android:text="QQ群"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View style="@style/HorizontalLine_guaimao" />
+
+                <WebView
+                    android:id="@+id/gm_center_cs_kf"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                </WebView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

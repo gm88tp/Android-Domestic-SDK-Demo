@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_register_new_whole_guaimao"
+        android:layout_width="292.5dp"
+        android:layout_height="326.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_white_gm"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <RelativeLayout
+                android:id="@+id/rl_back_gm"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left">
+                <ImageView
+                    android:id="@+id/iv_back_gm"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_new_back" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_close_gm"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/iv_close_gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_close" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_login_down_gm">
+            <ImageView
+                android:layout_width="83.5dp"
+                android:layout_height="83.5dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/ic_new_fail_gm" />
+            <TextView
+                android:id="@+id/tv_gm_fail_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="认证失败"
+                android:layout_marginBottom="10dp"
+                android:textColor="#7F7F7F"
+                android:textSize="23dp" />
+            <ImageView
+                android:id="@+id/iv_gm_fail_hint"
+                android:layout_width="178.5dp"
+                android:layout_height="17dp"
+                android:layout_marginBottom="50dp"
+
+                android:src="@drawable/iv_bind_fail_hint_gm" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/ll_register_new_whole_guaimao"
+        android:layout_width="287dp"
+        android:layout_height="239.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_white_gm"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:background="@drawable/bg_user_center_function_top_bar_gray_guaimao">>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="实名信息"
+                android:textColor="#7A746F"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rl_close_gm"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/iv_close_gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_close" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_login_down_gm">
+            <TextView
+                android:id="@+id/tv_name_gm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="姓名：张三"
+                android:layout_marginBottom="20dp"
+                android:textColor="#7F7F7F"
+                android:textSize="19dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证号码："
+                android:textColor="#7F7F7F"
+                android:textSize="19dp" />
+            <TextView
+                android:id="@+id/tv_id_gm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="310000000000000000"
+                android:textColor="#7F7F7F"
+                android:textSize="19dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

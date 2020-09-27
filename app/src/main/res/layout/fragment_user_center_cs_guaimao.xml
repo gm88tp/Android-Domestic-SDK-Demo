@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user_center_message_list_main_content"
+        android:layout_width="@dimen/gm_sdk_general_width"
+        android:layout_height="@dimen/gm_sdk_general_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_white_solid_guaimao"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gm_sdk_general_title_bar_height"
+            android:background="@drawable/bg_user_center_main_function_top_bar"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <RelativeLayout
+                android:paddingRight="20dp"
+                android:gravity="center"
+                android:id="@+id/rl_user_center_customer_service_return_guaimao"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+
+                    android:id="@+id/iv_user_center_gift_list_return"
+                    android:layout_width="8dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_activity_list_return_grey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:text="客服"
+                android:textColor="#323232" />
+
+
+        </RelativeLayout>
+
+
+        <View style="@style/HorizontalLine_guaimao" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_marginBottom="8dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="82dp"
+                    android:background="@color/color_c12_gm"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_QQ_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                            <ImageView
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_customer_service_qq_yellow_guaimao"
+                                android:id="@+id/imageView3"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="QQ客服"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao"
+                                android:layout_below="@+id/imageView3"
+                                android:layout_centerHorizontal="true" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_QQ_group_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                            <ImageView
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="20dp"
+                                android:id="@+id/imageView"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_customer_service_qq_group_yellow_guaimao"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="QQ群"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao"
+                                android:layout_below="@+id/imageView"
+                                android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_customer_service_tel_container"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+
+                            <ImageView
+                                android:scaleType="centerInside"
+                                android:layout_marginTop="20dp"
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/ic_customer_service_tel_yellow_guaimao"
+                                android:id="@+id/imageView6"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true" />
+
+                            <TextView
+                                android:layout_marginTop="4dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:text="客服热线"
+                                android:textColor="#333333"
+                                android:textSize="@dimen/text_size_f13_guaimao"
+                                android:layout_below="@+id/imageView6"
+                                android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="工作时间："
+                            android:textColor="@color/text_black33_gm"
+                            android:textSize="@dimen/text_size_f12_guaimao" />
+
+                        <TextView
+                            android:id="@+id/gm_kf_worktime_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:textColor="@color/text_redf85d5d_gm"
+                            android:textSize="@dimen/text_size_f13_guaimao" />
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/iv_customer_service_detail_qr_code"
+                            android:layout_width="112dp"
+                            android:layout_height="112dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_customer_service_qr_code_guaimao" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_customer_service_detail_qr_code"
+                            android:layout_centerHorizontal="true"
+                            android:text="微信公众号：怪猫游戏"
+                            android:textColor="@color/text_black6e_gm"
+                            android:textSize="@dimen/text_size_f13_guaimao" />
+
+                        <TextView
+                            android:id="@+id/tv_customer_service_save_qr_code"
+                            style="@style/LongYellowButton_guaimao"
+                            android:layout_width="136dp"
+                            android:layout_below="@+id/iv_customer_service_detail_qr_code"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="20dp"
+                            android:text="保存二维码至相册" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

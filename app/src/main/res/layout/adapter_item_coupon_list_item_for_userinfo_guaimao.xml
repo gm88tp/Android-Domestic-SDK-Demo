@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/input_select_listlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ListView
+        android:divider="@color/color_tips_text_gm"
+        android:dividerHeight="1px"
+        android:id="@+id/list_coupon_for_userinfo_guaimao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

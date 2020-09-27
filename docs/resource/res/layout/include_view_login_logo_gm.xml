@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_user_center_main_function_top_bar_white_guaimao">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_login_entrance_back_gm"
+        android:layout_width="50dp"
+        android:layout_height="70dp">
+
+        <ImageView
+            android:id="@+id/iv_login_entrance_back_gm"
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_back_black_guaimao" />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/gm_long_logo"
+        android:layout_width="135dp"
+        android:layout_height="37dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="18dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_login_logo_new_gm" />
+
+</RelativeLayout>

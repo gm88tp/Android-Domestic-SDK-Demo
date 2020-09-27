@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="215dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_guaimao"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/gm_caveat_or_selnumber_pic" />
+
+            <TextView
+                android:id="@+id/gm_dialog_role_caveat_or_selnum_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="封号通知"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gm_dialog_role_caveat_or_selnum_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:text="由于您的账号多次违反了《怪猫游戏服务使用协议》第x条，现给予永久封号处理；若有疑问或需解封，请咨询QQ：800115198，或者联系客服热线：400-800-4675"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/gm_tv_close_dialog"
+                    style="@style/MiddleYellowButton2_guaimao"
+                    android:text="知道了" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

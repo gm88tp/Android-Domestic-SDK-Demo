@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_user_center_message_list_main_content"
+        android:layout_width="@dimen/gm_sdk_general_width"
+        android:layout_height="@dimen/gm_sdk_general_width"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_white_solid_guaimao"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gm_sdk_general_title_bar_height"
+            android:background="@drawable/bg_user_center_main_function_top_bar"
+            android:paddingRight="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rl_user_center_account_return_guaimao"
+                android:layout_width="40dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_user_center_gift_list_return"
+                    android:layout_width="8dp"
+                    android:layout_height="12dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_activity_list_return_grey" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:text="账号"
+                android:textColor="#323232" />
+
+
+        </RelativeLayout>
+
+
+        <View style="@style/HorizontalLine_guaimao" />
+
+        <ListView
+            android:id="@+id/lv_user_center_account_list_guaimao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:divider="@null" />
+
+    </LinearLayout>
+
+</RelativeLayout>

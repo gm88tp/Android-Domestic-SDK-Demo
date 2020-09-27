@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="280dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical"
+        android:paddingLeft="34dp"
+        android:paddingRight="34dp">
+
+
+        <ImageView
+            android:id="@+id/gm_long_logo"
+            android:layout_width="135dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="23dp"
+            android:src="@drawable/ic_login_logo_new_gm" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_first_login_one_key_register"
+            style="@style/LongYellowButton_guaimao"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="31dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一键试玩"
+                android:textColor="#2f2e2e"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="将发送短信验证身份，手机号即账号"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="29dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_first_login_by_already_account_gm"
+                style="@style/LongBorderButton_guaimao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:paddingBottom="13dp"
+                android:paddingTop="13dp"
+                android:text="已有账号登录" />
+
+            <TextView
+                android:id="@+id/tv_login_create_account_gm"
+                style="@style/LongBorderButton_guaimao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingBottom="13dp"
+                android:paddingTop="13dp"
+                android:text="创建账号" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

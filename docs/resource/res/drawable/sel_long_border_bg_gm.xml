@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/bg_grey_border_corner_pressed_gm" android:state_pressed="true" />
+    <item android:drawable="@drawable/bg_grey_border_corner_gm" android:state_pressed="false" />
+
+</selector>

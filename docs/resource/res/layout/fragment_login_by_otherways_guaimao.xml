@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/gm_sdk_activity_width"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_user_center_main_function_top_bar_white_guaimao">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_login_entrance_back_gm"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_login_entrance_back_gm"
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_return_back_for_login_guaimao" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:layout_width="85dp"
+                android:layout_height="24.5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/rl_login_entrance_back_gm"
+                android:layout_toRightOf="@+id/rl_login_entrance_back_gm"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_login_entrance_small_guaimao_logo_orange"
+                android:id="@+id/login_entrance_logo" />
+
+
+
+
+
+            <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/gm_ll_user_center_main_function_customer_service"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/sel_area_no_border_with_corner_2dp_guaimao"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp">
+
+                <com.game.sdk.reconstract.views.DotView
+                    android:id="@+id/dv_user_center_main_function_account_customer_tips"
+                    android:layout_width="@dimen/gm_sdk_main_function_item_new_tips_width"
+                    android:layout_height="@dimen/gm_sdk_main_function_item_new_tips_height"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    tools:visibility="invisible" />
+
+                <ImageView
+                    android:scaleType="centerInside"
+                    android:id="@+id/iv_user_center_main_function_customer_icon"
+                    android:layout_width="26dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user_center_main_function_cd_guaimao"
+                    android:layout_below="@+id/dv_user_center_main_function_account_customer_tips"
+                    android:layout_toStartOf="@+id/dv_user_center_main_function_account_customer_tips" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_login_entrance_register_guaimao"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:background="@drawable/sel_area_no_border_with_corner_2dp_guaimao"
+                android:orientation="horizontal"
+                android:paddingLeft="4dp"
+                android:visibility="gone"
+                android:paddingStart="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="注册"
+                    android:textColor="@color/color_yellowff9600_gm"
+                    android:textSize="@dimen/text_size_f12_guaimao" />
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_login_entrance_yellow_arrow_guaimao" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    <View
+        style="@style/HorizontalLine_guaimao"
+        android:background="#E0E0E0" />
+    <LinearLayout
+        android:layout_width="@dimen/gm_sdk_activity_width"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_login_entrance_qq_login_container_guaimao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_login_entrance_qq_login_guaimao"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_login_entrance_qq_login_blue_guaimao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_login_entrance_qq_login_guaimao"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="QQ登录"
+                        android:textColor="#666666"
+                        android:textSize="11dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/rl_login_entrance_weibo_login_container_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_login_entrance_weibo_login_guaimao"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_login_entrance_weibo_login_red_guaimao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_login_entrance_weibo_login_guaimao"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="微博登录"
+                        android:textColor="#666666"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:visibility="gone"
+                    android:id="@+id/rl_login_entrance_sms_login_container_guaimao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_login_entrance_phone_login_guaimao"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_login_entrance_sms_login_yellow_guaimao" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_login_entrance_phone_login_guaimao"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="手机登录"
+                        android:textColor="#666666"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

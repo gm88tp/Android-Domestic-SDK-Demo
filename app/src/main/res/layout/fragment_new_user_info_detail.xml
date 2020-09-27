@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="292.5dp"
+        android:layout_height="326.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:background="@drawable/bg_user_center_function_top_bar_gray_guaimao">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="个人信息"
+                android:textColor="#7A746F"
+                android:textSize="23.5sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/rl_close_gm"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_close" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <com.game.sdk.reconstract.widget.circleimageview.CircleImageView
+                android:id="@+id/iv_user_info_avatar_gm"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_new_user_info_avatar_default" />
+            <TextView
+                android:id="@+id/tv_user_info_name_gm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLength="12"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="14dp"
+                android:textColor="#7A746F"
+                android:textSize="20dp"
+                tools:text="13000000000" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@drawable/bg_login_down_gm"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/tv_detail_btn_gm"
+                android:background="@drawable/bg_user_center_function_bar_orange_guaimao"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="155dp"
+                android:layout_height="37.5dp"
+                android:text="实名信息"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/tv_change_phone_btn_gm"
+                android:background="@drawable/bg_user_center_function_bar_orange_guaimao"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="155dp"
+                android:layout_height="37.5dp"
+                android:text="手机换绑"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/tv_change_password_btn_gm"
+                android:background="@drawable/bg_user_center_function_bar_orange_guaimao"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:layout_width="155dp"
+                android:layout_height="37.5dp"
+                android:text="修改密码"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

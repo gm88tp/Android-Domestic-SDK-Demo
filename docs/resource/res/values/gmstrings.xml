@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="gm_app_name">GameSDK</string>
+    <string name="gm_channel">17</string>
+
+    <!--3.0新的-->
+    <string name="login_new_username_gm">   请输入账号</string>
+    <string name="login_new_password_gm">   请输入密码</string>
+    <string name="login_new_login_tips_new_gm">登录</string>
+    <string name="login_new_fast_play_new_gm">快速游戏</string>
+    <string name="login_tv_edit_login_name_gm">账号/手机号</string>
+    <string name="login_new_register_gm">注册</string>
+    <string name="login_new_forget_password_gm">忘记密码?</string>
+    <string name="login_new_third_login_tips_new_gm">第三方账号登录</string>
+    <string name="string_register_phone_num_gm">请输入手机号</string>
+    <string name="register_new_password_tips_gm">请输入6-14位密码</string>
+    <string name="register_new_password_confirm_tips_gm">请再次确认密码</string>
+    <string name="forget_verify_code_btn_tips_gm">获取</string>
+    <string name="register_get_verify_code_gm">获取</string>
+    <string name="user_center_hide_gm">隐藏</string>
+    <string name="register_verify_code_tips_gm">请输入验证码</string>
+    <string name="float_window_close_hint_gm">拖到此处关闭浮窗</string>
+</resources>

@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven { url './libs/maven_local' }
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        //热更新插件
+//        classpath 'com.bihe0832:BuildPatch:1.0.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+
+}
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    HOTFIX_OLD_VERSION_CODE = 1
+    HOTFIX_NEW_VERSION_CODE = 2
+}
+//android {
+//    compileSdkVersion 25
+//    buildToolsVersion '25.0.3'
+//}
+dependencies {
+}

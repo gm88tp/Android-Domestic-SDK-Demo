@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_white_solid_guaimao"
+        android:orientation="vertical"
+        android:paddingBottom="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:background="#ff8a00">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="VIP特权"
+                android:textColor="#FFFFFF"
+                android:textSize="23.5sp"
+                android:textStyle="bold" />
+            <RelativeLayout
+                android:id="@+id/rl_vip_close_gm"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_white_close" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <WebView
+            android:layout_marginTop="10dp"
+            android:id="@+id/wv_vip_guaimao"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

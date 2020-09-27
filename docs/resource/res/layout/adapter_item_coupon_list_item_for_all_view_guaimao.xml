@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/bg_coupon_list_item_guaimao"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_adapter_item_coupon_item_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="¥"
+                            android:textColor="#f0383a"
+                            android:textSize="30sp" />
+
+
+                        <TextView
+                            android:id="@+id/tv_adapter_item_coupon_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#f0383a"
+                            android:textSize="30sp"
+                            tools:text="60" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_adapter_item_coupon_condition_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#333333"
+                        android:textSize="12sp"
+                        tools:text="满199使用" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="3"
+                    android:gravity="left">
+                    <TextView
+                        android:id="@+id/tv_adapter_item_coupon_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="游戏专享"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="70dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_adapter_item_coupon_validate_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#333333"
+                        android:layout_marginLeft="70dp"
+                        android:layout_weight="1"
+                        android:textSize="10sp"
+                        tools:text="这是有效期" />
+
+                    <TextView
+                        android:id="@+id/tv_adapter_item_coupon_game_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="70dp"
+                        android:textColor="#333333"
+                        android:textSize="10sp"
+                        tools:text="全部游戏" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

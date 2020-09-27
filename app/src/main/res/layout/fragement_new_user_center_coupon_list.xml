@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_user_center_activity_list_whole"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_user_center_message_list_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_white_solid_guaimao"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="62.5dp"
+            android:background="#ff8a00"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_coupon_list_return_guaimao"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:gravity="left">
+
+                <ImageView
+                    android:id="@+id/iv_user_center_gift_list_return"
+                    android:layout_width="8dp"
+                    android:layout_height="14.5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="14.5dp"
+                    android:src="@drawable/ic_new_white_back" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:text="我的优惠券"
+                android:textColor="#FFFFFF" />
+            <RelativeLayout
+                android:id="@+id/rl_coupon_list_close_guaimao"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/iv_close_gm"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/ic_new_white_close" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/lv_coupon_list_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

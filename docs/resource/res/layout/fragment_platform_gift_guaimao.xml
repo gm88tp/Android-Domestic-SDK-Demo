@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_platform_gift_content_guaimao"
+        android:layout_width="275dp"
+        android:layout_height="435dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_platfor_gift_red_guaimao"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_platform_gift_list_guaimao"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="180dp"
+            android:layout_weight="1"
+            android:divider="@null" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="已放到您的账户中"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_f12_guaimao" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_platform_gift_close_guaimao"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/ll_platform_gift_content_guaimao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+
+        <ImageView
+            android:id="@+id/iv_platform_gift_close_guaimao"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_first_banner_close_guaimao" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

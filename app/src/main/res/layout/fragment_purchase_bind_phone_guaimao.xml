@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90000000"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_purchase_bind_phone_close_gm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ll_purchase_bind_phone_content_gm"
+        android:layout_alignTop="@+id/ll_purchase_bind_phone_content_gm"
+        android:layout_marginTop="-50dp"
+        android:src="@drawable/ic_general_close_white" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_purchase_bind_phone_content_gm"
+        android:layout_width="320dp"
+        android:layout_height="243dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_guaimao"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layer_list_purchase_bind_phone_top_bar"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="手机认证"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="还差一步，完成手机认证将使您的支付体验更"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="安全，并可领取 "
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_purchase_bind_phone_coupon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="一张"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_user_center_main_function_bottom_bar_white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_login_new_user_name"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="42dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_login_user_icon_new_gm" />
+
+                <EditText
+                    android:id="@+id/et_purchase_bind_phone_gm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/string_register_phone_num_gm"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size_f13_guaimao" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_purchase_bind_phone_clear_gm"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/iv_purchase_bind_phone_clear_gm"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_register_new_gm_phone_clear" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_login_new_user_name"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="42dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_register_verify_code_new" />
+
+                <EditText
+                    android:id="@+id/et_purchase_bind_phone_verify_code_gm"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/register_verify_code_tips_gm"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:paddingLeft="15dp"
+                    android:textSize="@dimen/text_size_f13_guaimao" />
+
+                <com.game.sdk.reconstract.widget.CountDownButton
+                    android:id="@+id/cdb_purchase_bind_phone_verify_code_send_button"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/register_get_verify_code_gm"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_f13_guaimao" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_purchase_bind_phone_confirm_button_gm"
+                android:layout_width="273dp"
+                android:layout_height="33dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_long_yellow_button"
+                android:gravity="center"
+                android:text="认证"
+                android:textColor="@color/text_black33_gm"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

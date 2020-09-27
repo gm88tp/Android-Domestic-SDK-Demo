@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gm.gmsdkdemo">
+
+    <!-- 加入应用需要的权限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 手机状态 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 读写文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <!-- 多媒体 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <!-- 渠道 sdk 需要的权限配置  [END] -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/gm_app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:name="com.gm.gmsdkdemo.TApplication"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        <activity android:name="com.gm.gmsdkdemo.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="game_sdk_version_guaimao"
+            android:value="3.7.2" />
+
+        <activity
+            android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.reconstract.ui.BindIdCardActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.reconstract.ui.UserActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.game.sdk.reconstract.ui.PurchaseActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.IsBindedIdCardActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewUserCenterDetailActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewVipCenterActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewGetGftFailedActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.VipCustomerActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 现在支付 -->
+        <activity
+            android:name="com.ipaynow.plugin.presenter.PayMethodActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="behind"
+            android:exported="false"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="behind"
+            android:exported="false"/>
+
+        <activity android:name="com.ipaynow.plugin.inner_plugin.alipaywp.activity.AlipayNotifyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout|touchscreen|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog"
+            />
+        <!-- 微信WAP版支付 -->
+        <activity
+            android:name="com.ipaynow.plugin.inner_plugin.wechatwp.activity.WeChatNotifyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout|touchscreen|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Dialog" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.gmfileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 声明云信后台服务 -->
+        <service
+            android:name="com.qiyukf.nimlib.service.NimService"
+            android:process=":core" />
+        <service
+            android:name="com.qiyukf.nimlib.service.NimService$Aux"
+            android:process=":core" />
+        <service
+            android:name="com.qiyukf.unicorn.analytics.AnalyticsService"
+            android:process=":core" />
+
+        <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录 -->
+        <receiver
+            android:name="com.qiyukf.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信receiver -->
+        <service android:name="com.qiyukf.nimlib.service.WakeupService" />
+
+        <!--如果使用eclipse集成，需要将${applicationId}替换为你的应用包名-->
+        <provider
+            android:name="com.qiyukf.nim.uikit.provider.UnicornProvider"
+            android:authorities="${applicationId}.unicorn.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/ysf_provider" />
+        </provider>
+
+        <activity
+            android:name="com.qiyukf.unicorn.ui.activity.ServiceMessageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:icon="@drawable/ysf_action_bar_icon_transparent"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.qiyukf.nim.uikit.session.activity.WatchMessagePictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.qiyukf.nim.uikit.session.activity.PickImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme" />
+        <activity
+            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme" />
+        <activity
+            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/ysf_input_panel_take"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.qiyukf.unicorn.ui.activity.FileDownloadActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/ysf_activity_file_download"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme" />
+        <activity
+            android:name="com.qiyukf.unicorn.ui.activity.UrlImagePreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme" />
+        <activity
+            android:name="com.qiyukf.unicorn.ui.activity.CardPopupActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/ysf_window_theme" />
+    </application>
+</manifest>

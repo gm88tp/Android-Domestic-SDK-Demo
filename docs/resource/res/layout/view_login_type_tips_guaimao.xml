@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="70dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_login_tips_yellow_new_guaimao"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/tv_login_type_tips_content_guaimao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="上一次您的选\n择是快速登录"
+        android:textColor="@color/text_black33_gm"
+        android:textSize="@dimen/text_size_f10_guaimao" />
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tv_vip_growth_progress_growth_count_guaimao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#e7c68e"
+        android:textSize="@dimen/text_size_f9_guaimao"
+        toos:text="2000/5000" />
+
+    <com.game.sdk.reconstract.widget.PercentHorizontalView
+        android:id="@+id/phv_vip_growth_progress_bar_guaimao"
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_vip_growth_progress_before_level_guaimao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="V1"
+            android:textColor="#e7c68e"
+            android:textSize="@dimen/text_size_f12_guaimao" />
+
+
+        <TextView
+            android:id="@+id/tv_vip_growth_progress_current_level_guaimao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="V2"
+            android:textColor="#e7c68e"
+            android:textSize="@dimen/text_size_f12_guaimao" />
+
+
+        <TextView
+            android:id="@+id/tv_vip_growth_progress_next_level_guaimao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:text="V3"
+            android:textColor="#e7c68e"
+            android:textSize="@dimen/text_size_f12_guaimao" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

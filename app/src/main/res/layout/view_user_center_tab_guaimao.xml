@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="36dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <RelativeLayout
+        android:id="@+id/ll_user_center_tab_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_user_center_tab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@color/text_black00_gm"
+            android:textSize="15sp" />
+
+        <com.game.sdk.reconstract.views.DotView
+            android:id="@+id/dv_user_center_tab_new_tips"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_alignEnd="@+id/tv_user_center_tab_name"
+            android:layout_alignRight="@+id/tv_user_center_tab_name"
+            android:layout_marginEnd="-10dp"
+            android:layout_marginRight="-10dp"
+            android:layout_marginTop="4dp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/v_user_center_tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignEnd="@+id/tv_user_center_tab_name"
+            android:layout_alignLeft="@+id/tv_user_center_tab_name"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/tv_user_center_tab_name"
+            android:layout_alignStart="@+id/tv_user_center_tab_name"
+            android:background="@color/color_yellowff9600_gm" />
+    </RelativeLayout>
+
+</LinearLayout>

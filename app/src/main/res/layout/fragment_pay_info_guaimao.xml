@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#90000000">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="282dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_purchase_center_white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_pay_info_product_name_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="西亭脆饼" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pay_info_product_price_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#f85d5d"
+                    android:textSize="22sp"
+                    tools:text="6800" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="猫币"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/ll_pay_info_save_cost_guaimao"
+                android:layout_width="103dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_pay_info_button"
+                android:orientation="horizontal"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_pay_info_coupon_guaimao" />
+
+                <TextView
+                    android:id="@+id/tv_pay_info_save_cost_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="#42a2f4"
+                    android:textSize="11sp"
+                    tools:text="已优惠80元" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_user_center_mine_account_forward" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_user_center_main_function_bottom_bar_white"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <View style="@style/HorizontalLine_guaimao" />
+
+            <com.game.sdk.reconstract.views.PayChannelItemView
+                android:id="@+id/piv_pay_info_channel_item_alipay_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                attr:viewTypeGuaimao="1" />
+
+            <com.game.sdk.reconstract.views.PayChannelItemView
+                android:id="@+id/piv_pay_info_channel_item_wechat_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                attr:viewTypeGuaimao="2" />
+
+            <com.game.sdk.reconstract.views.PayChannelItemView
+                android:id="@+id/piv_pay_info_channel_item_coin_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                attr:viewTypeGuaimao="3" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

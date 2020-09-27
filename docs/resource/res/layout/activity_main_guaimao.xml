@@ -1,0 +1,264 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/gm_demo_activity_background"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="46.0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:onClick="userLogin"
+                android:text="登录" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/bt_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.0dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/gm_demo_button_shape"
+                        android:onClick="userLogout"
+                        android:text="注销账号" />
+
+                    <Button
+                        android:id="@+id/bt_loginswitch"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.0dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/gm_demo_button_shape"
+                        android:onClick="userLoginSwitch"
+                        android:text="切换账号" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_main_activity_creatRole"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.0dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/gm_demo_button_shape"
+                        android:text="创建角色" />
+
+                    <Button
+                        android:id="@+id/btn_main_activity_beginner"
+                        android:layout_width="match_parent"
+                        android:layout_height="46.0dp"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/gm_demo_button_shape"
+                        android:text="新手引导" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_main_activity_updata_role"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="请输入待上传角色名" />
+
+            <Button
+                android:id="@+id/btn_main_activity_updata_role"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="角色上报" />
+            <Button
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:id="@+id/btn_main_activity_show_ad"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="播放广告" />
+
+            <EditText
+                android:id="@+id/et_set_tips_time"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="请输入在第多少分钟弹出提示"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_set_time_guest_stop"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="请输入在第多少分钟禁止游客玩游戏"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_set_time_child_stop"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white"
+                android:hint="请输入在第多少分钟禁止未成年玩游戏"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_commit"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="保存"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="充值金额"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/gm_demo_money" />
+
+                    <EditText
+                        android:id="@+id/et_main_activity_purchase_value_input_gm"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:hint="请输入充值金额"
+                        android:inputType="numberDecimal"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="36.0dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/gm_demo_button_shape"
+                    android:onClick="userPurchase"
+                    android:text="充值" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_margin="5dp"
+                android:background="@android:color/white" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="36.0dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:onClick="changePattern"
+                android:text="切换为隐藏注销按钮模式"
+                android:visibility="gone" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 游戏ID : "
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/et_main_activity_set_game_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="3dp"
+                        android:background="@null" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_main_activity_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gm_demo_button_shape"
+                    android:text="设置" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_main_activity_change_debug"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="切换成正式环境" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

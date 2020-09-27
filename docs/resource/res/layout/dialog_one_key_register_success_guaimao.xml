@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_new_gm"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="268dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_one_key_register_success_gm" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="17dp"
+            android:text="您的初始密码已生成并发送至\n您的手机及用户中心消息列表"
+            android:textColor="#333333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="Tips:再次登录时您可以使用该密码登录\n如需修改请前往用户中心修改"
+            android:textColor="#666666"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

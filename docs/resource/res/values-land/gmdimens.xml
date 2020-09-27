@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_f13_guaimao">13sp</dimen>
+    <dimen name="text_size_f12_guaimao">12sp</dimen>
+    <dimen name="text_size_f11_guaimao">11sp</dimen>
+    <dimen name="text_size_f10_guaimao">10sp</dimen>
+    <dimen name="text_size_f9_guaimao">9sp</dimen>
+
+    <dimen name="floatview_height_guaimao">44dp</dimen>
+    <dimen name="floatview_width_guaimao">44dp</dimen>
+    <dimen name="floatview_left_height_guaimao">44dp</dimen>
+    <dimen name="floatview_left_width_guaimao">22dp</dimen>
+    <dimen name="floatview_top_height_guaimao">22dp</dimen>
+    <dimen name="floatview_top_width_guaimao">44dp</dimen>
+    <dimen name="float_window_bottom_height_guaimao">123dp</dimen>
+    <dimen name="float_window_bottom_close_height_guaimao">15dp</dimen>
+    <dimen name="float_window_bottom_close_width_guaimao">15dp</dimen>
+
+    <!-- 共通 -->
+    <dimen name="gm_sdk_activity_width">320dp</dimen>
+    <dimen name="gm_sdk_activity_title_height">35dp</dimen>
+    <dimen name="gm_sdk_activity_title_padding_top">11dp</dimen>
+    <dimen name="gm_sdk_activity_close_padding_top">10dp</dimen>
+    <dimen name="gm_sdk_activity_close_padding_right">15dp</dimen>
+
+    <!-- register new gm fragment -->
+    <dimen name="gm_sdk_registernewgm_height">270dp</dimen>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:paddingLeft="24dp">
+
+        <ImageView
+            android:id="@+id/iv_vip_info_list_member_week_gift_item_icon_guaimao"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_vip_info_list_item_week_gift_yellow_guaimao" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/iv_vip_info_list_member_week_gift_item_icon_guaimao"
+            android:layout_toRightOf="@+id/iv_vip_info_list_member_week_gift_item_icon_guaimao"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_vip_info_list_member_name_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VIP周礼包"
+                    android:textColor="#f5cf7f"
+                    android:textSize="@dimen/text_size_f12_guaimao" />
+
+
+                <TextView
+                    android:id="@+id/tv_vip_info_list_member_gift_count_tips_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginStart="4dp"
+                    android:text="【您有1份周礼包待领取】"
+                    android:textColor="#fa4b4b"
+                    android:textSize="@dimen/text_size_f12_guaimao"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_vip_info_list_member_description_guaimao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="VIP会员每周都可以领取官方为您准备的VIP周礼包"
+                android:textColor="#9d8f65"
+                android:textSize="@dimen/text_size_f10_guaimao" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#32312e" />
+
+</LinearLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_new_gm"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_purchase_bind_phone_dialog_tips_gm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="认证手机后获得："
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.game.sdk.reconstract.views.GreyDotView
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_purchase_bind_phone_dialog_price_tips_gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="找客服问题解决速度升级"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.game.sdk.reconstract.views.GreyDotView
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_purchase_bind_phone_dialog_product_name_tips_gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平台海量福利专享"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.game.sdk.reconstract.views.GreyDotView
+                    android:id="@+id/dv_purchase_bind_phone_item_point"
+                    android:layout_width="4dp"
+                    android:layout_height="4dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp" />
+
+                <ImageView
+                    android:id="@+id/iv_purchase_bind_phone_item_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/dv_purchase_bind_phone_item_point"
+                    android:layout_toRightOf="@+id/dv_purchase_bind_phone_item_point"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_purchase_bind_phone_coupon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/iv_purchase_bind_phone_item_image"
+                    android:layout_toRightOf="@+id/iv_purchase_bind_phone_item_image"
+                    android:text="  X 1 "
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/HorizontalLine_guaimao"
+            android:layout_marginTop="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_purchase_bind_phone_dialog_cancel_gm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="暂不认证"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+
+            <View style="@style/VerticalLine_guaimao" />
+
+            <TextView
+                android:id="@+id/tv_purchase_bind_phone_dialog_confirm_gm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="前去认证"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

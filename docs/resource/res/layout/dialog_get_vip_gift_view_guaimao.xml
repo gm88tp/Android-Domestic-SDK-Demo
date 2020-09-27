@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_new_gm"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="309dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_vip_dialog_info_tips1_guaimao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_vip_dialog_cry_yellow_guaimao" />
+
+                <TextView
+                    android:id="@+id/tv_quick_login_dialog_tips_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
+                    android:lineSpacingExtra="10dp"
+                    android:text="未满足领取条件，无法领取"
+                    android:textColor="#333333"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_vip_dialog_info_tips1_guaimao"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="VIP专享礼包仅限v4及以上会员可领取"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/HorizontalLine_guaimao"
+            android:layout_marginTop="15dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tv_quick_login_dialog_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="关闭"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+
+            <View style="@style/VerticalLine_guaimao" />
+
+            <TextView
+                android:id="@+id/tv_quick_login_dialog_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="会员特权详情"
+                android:textColor="#ffc900"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
