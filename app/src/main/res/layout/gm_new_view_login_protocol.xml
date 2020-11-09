@@ -14,7 +14,7 @@
         <ImageView
             android:id="@+id/gm_fragment_login_entrance_check_protocol"
             android:scaleType="fitXY"
-            android:src="@drawable/gm_fragment_login_entrance_check"
+            android:src="@drawable/gm_login_protocol_check"
             android:layout_width="14dp"
             android:layout_height="14dp" />
 
@@ -34,11 +34,14 @@
             android:text="我已阅读并同意" />
 
         <TextView
+            android:id="@+id/tv_login_entrance_read_protocol"
             android:textSize="12dp"
+            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="用户服务协议"
-            android:textColor="#87CEFA" />
+            android:background="@drawable/gm_text_underline"
+            android:textColor="@color/color_protocol_agree" />
 
     </LinearLayout>
 

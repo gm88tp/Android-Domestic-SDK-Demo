@@ -18,33 +18,47 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@drawable/bg_user_center_function_top_bar_gray_guaimao">
-            <ImageView
-                android:id="@+id/iv_back_gm"
-                android:layout_width="12dp"
-                android:layout_height="18dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_new_back" />
+            <RelativeLayout
+                android:id="@+id/rl_back_gm"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true">
+                <ImageView
+                    android:id="@+id/iv_back_gm"
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_new_back" />
+            </RelativeLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="修改密码"
                 android:textColor="#7A746F"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/iv_close_gm"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:layout_alignParentEnd="true"
+            <RelativeLayout
+                android:id="@+id/rl_close_gm"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="2dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/ic_new_close" />
+                android:layout_alignParentEnd="true"
+                android:gravity="right">
+                <ImageView
+                    android:id="@+id/iv_close_gm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_new_close" />
+            </RelativeLayout>
         </RelativeLayout>
 
         <LinearLayout
@@ -70,7 +84,7 @@
                 <TextView
                     android:gravity="center"
                     android:textColor="#7F7F7F"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:text="+86"
                     android:paddingLeft="10dp"
                     android:layout_width="72dp"
@@ -91,7 +105,7 @@
                     android:paddingLeft="10dp"
                     android:textColor="@color/text_black32_gm"
                     android:textColorHint="#9a9a9a"
-                    android:textSize="18dp" />
+                    android:textSize="14dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -117,7 +131,7 @@
                     android:paddingLeft="10dp"
                     android:textColor="@color/text_black32_gm"
                     android:textColorHint="#9a9a9a"
-                    android:textSize="18dp" />
+                    android:textSize="14dp" />
 
 
                 <com.game.sdk.reconstract.widget.CountDownButton
@@ -169,7 +183,7 @@
                     android:paddingLeft="10dp"
                     android:textColor="@color/text_black32_gm"
                     android:textColorHint="#9a9a9a"
-                    android:textSize="18dp" />
+                    android:textSize="14dp" />
 
 
                 <RelativeLayout
@@ -212,11 +226,11 @@
                 android:background="@drawable/bg_user_center_function_bar_orange_login_guaimao"
                 android:gravity="center"
                 android:layout_marginTop="0dp"
-                android:layout_width="280dp"
-                android:layout_height="55dp"
+                android:layout_width="262.5dp"
+                android:layout_height="45dp"
                 android:text="下一步"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold"/>
 
 

@@ -8,30 +8,39 @@
 
     <RelativeLayout
         android:id="@+id/rl_first_banner_whole_guaimao"
-        android:layout_width="425dp"
-        android:layout_height="222dp"
+        android:layout_width="560dp"
+        android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iv_first_banner_pic_guaimao"
-            android:layout_width="425dp"
-            android:layout_height="222dp"
-            android:layout_centerInParent="true"
-            android:scaleType="fitXY"
-            tools:src="@drawable/bg_first_banner_default" />
+        <com.stx.xhb.xbanner.XBanner
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/xbanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:pointNormal="@drawable/shape_noraml"
+            app:pointSelect="@drawable/shape_selected"
+            app:tipTextSize="12sp"
+            app:pointsVisibility="true"
+            app:isClipChildrenModeLessThree="true"
+            app:isShowIndicatorOnlyOne="false"
+            app:isHandLoop="true"
+            app:isAutoPlay="false"
+            app:bannerBottomMargin="10dp"
+            app:isClipChildrenMode="true"
+            app:pageChangeDuration="600"/>
 
 
         <RelativeLayout
             android:id="@+id/rl_first_banner_close_guaimao"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignEnd="@+id/iv_first_banner_pic_guaimao"
-            android:layout_alignRight="@+id/iv_first_banner_pic_guaimao"
-            android:layout_alignTop="@+id/iv_first_banner_pic_guaimao"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp">
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="right"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="45dp">
 
 
             <ImageView
@@ -39,7 +48,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/ic_first_banner_close_guaimao" />
+                android:src="@drawable/ic_guaimao_new_banner_close"/>
 
         </RelativeLayout>
 

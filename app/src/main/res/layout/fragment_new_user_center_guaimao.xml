@@ -519,12 +519,25 @@
                     style="@style/new_HorizontalLine_guaimao"
                     android:visibility="invisible"/>
             </LinearLayout>
-            <TextView
-                android:layout_alignParentBottom="true"
-                android:layout_width="fill_parent"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:background="#FFFFFF"
-                tools:text="底部" />
+                android:orientation="horizontal"
+                android:background="#FFFFFF">
+                <TextView
+                    android:id="@+id/view_usercenter_version_code"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="52dp"
+                    android:background="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    tools:text="v3.7.2" />
+
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

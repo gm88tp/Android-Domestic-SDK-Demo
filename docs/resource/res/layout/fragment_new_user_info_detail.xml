@@ -78,6 +78,17 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <Button
+                android:id="@+id/tv_change_phone_btn_gm"
+                android:background="@drawable/bg_user_center_function_bar_orange_guaimao"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="155dp"
+                android:layout_height="37.5dp"
+                android:text="手机换绑"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
             <Button
                 android:id="@+id/tv_detail_btn_gm"
@@ -88,17 +99,6 @@
                 android:layout_width="155dp"
                 android:layout_height="37.5dp"
                 android:text="实名信息"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-            <Button
-                android:id="@+id/tv_change_phone_btn_gm"
-                android:background="@drawable/bg_user_center_function_bar_orange_guaimao"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_width="155dp"
-                android:layout_height="37.5dp"
-                android:text="手机换绑"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp" />
             <Button

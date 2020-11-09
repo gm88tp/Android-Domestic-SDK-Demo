@@ -24,7 +24,7 @@
                 android:layout_centerInParent="true"
                 android:text="手机换绑"
                 android:textColor="#7A746F"
-                android:textSize="25sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
         <RelativeLayout
             android:id="@+id/rl_close_gm"
@@ -52,7 +52,7 @@
             android:layout_gravity="center"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="140dp">
+            android:layout_height="120dp">
 
             <LinearLayout
 
@@ -69,7 +69,7 @@
                 <TextView
                     android:gravity="center"
                     android:textColor="#7F7F7F"
-                    android:textSize="18dp"
+                    android:textSize="14dp"
                     android:text="+86"
                     android:paddingLeft="10dp"
                     android:layout_width="72dp"
@@ -90,7 +90,7 @@
                     android:paddingLeft="10dp"
                     android:textColor="@color/text_black32_gm"
                     android:textColorHint="#9a9a9a"
-                    android:textSize="18dp" />
+                    android:textSize="14dp" />
 
             </LinearLayout>
             <LinearLayout
@@ -117,7 +117,7 @@
                     android:paddingLeft="10dp"
                     android:textColor="@color/text_black32_gm"
                     android:textColorHint="#9a9a9a"
-                    android:textSize="18dp" />
+                    android:textSize="14dp" />
 
 
                 <com.game.sdk.reconstract.widget.CountDownButton
@@ -151,12 +151,12 @@
                 android:id="@+id/tv_next_btn_gm"
                 android:background="@drawable/bg_user_center_function_bar_orange_login_guaimao"
                 android:gravity="center"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="262.5dp"
-                android:layout_height="52.5dp"
+                android:layout_height="45dp"
                 android:text="下一步"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold"/>
 
 

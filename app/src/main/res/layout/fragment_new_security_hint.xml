@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/gm_sdk_activity_width"
+        android:layout_height="350dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/bg_new_login_gm">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="安全提示"
+                android:textColor="#FF6A00"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+            <TextView
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="        快捷登录用于快速体验游戏, 账号安全无法保障, 一旦账号丢失, 将无法找回"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_marginTop="10dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                tools:text="        强烈建议您使用手机登录或进入游戏后绑定手机"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_login_down_gm"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/ll_quick_login"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_login_down_gm">
+                <TextView
+                    android:id="@+id/tv_to_login"
+                    android:background="@drawable/bg_user_center_function_bar_black_guaimao"
+                    android:gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="125dp"
+                    android:layout_height="42dp"
+                    android:text="继续进入游戏"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_phone_login"
+                android:layout_width="fill_parent"
+                android:background="@drawable/bg_login_down_gm"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_back_to_phone_login"
+                    android:background="@drawable/bg_user_center_function_bar_orange_login_guaimao"
+                    android:gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_width="125dp"
+                    android:layout_height="42dp"
+                    android:text="返回手机登录"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

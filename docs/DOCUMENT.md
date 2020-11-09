@@ -1,427 +1,260 @@
-# GM88 Android国内游戏3.7.2SDK 对接文档
+# 怪猫SDK V3.8.0 接入文档
 
-***请注意：demo内的所有参数均是为了方便展示，接入时请使用运营提供的参数进行接入***
+## SDK **资源引用**
 
-## 1.SDK引入
+1. 将 resource/libs 下的 jar 文件复制到项目的 libs 目录。
 
-1.将 resource/libs 下的 jar 文件复制到项目的 libs 目录
-2.将 resource/so 下的 so文件复制到项目的 so 存放目录（Eclipse 的 so 存放目录在 libs 下，AndroidStudio 的 so存放目录在 /src/main/jniLibs 下）
-3.将 resource/res 下的资源文件复制到项目的 res 目录，如果有如果有重复的文件，将文件内容进行合并（合并一般会出现在 res/values/strings.xml 文件中）。
-4.将 resource/assets 下的文件复制到项目的 assets 目录下，如果项目没有 assets目录，需手劢创建（Eclipse 的 assets 目录在项目根目录下创建，AndroidStudio 的assets 目录在 /src/main/ 下创建）
-5.将resource/AndroidManifest.xml内注册的activity、meta-data和uses-permission复制到游戏工程的AndroidManifest.xml文件中。
-6.targetSdkVersion 设置成26及以上（最高可到28）
+2. 将 resource/so 下的 so文件复制到项目的 so 存放目录（Eclipse 的 so 存放目录在 libs 下，AndroidStudio 的 so存放目录在 /src/main/jniLibs 下）
 
+3. 将 resource/res 下的资源文件复制到项目的 res 目录，如果有如果有重复的文件，将文件内容进行合并（合并一般会出现在 res/values/strings.xml 文件中）。
 
-## 2.初始化SDK
+4. 将 resource/assets 下的文件复制到项目的 assets 目录下，如果项目没有 assets目录，需手动创建（Eclipse 的 assets 目录在项目根目录下创建，AndroidStudio 的assets 目录在 /src/main/ 下创建）
 
-1.在Application的对应方法内进行初始化（如无Application类，则新建一个，同时修改清单文件指定该类）：
-代码示例
-```
-public class TApplication extends Application {
-    
+5. 将 resource/AndroidManifest.xml 内注册的 activity、server、provider、meta-data 和 uses-permission 等复制到游戏工程的AndroidManifest.xml文件中。(详细请参考demo)
+
+6. 将清单文件中 ${applicationId}替换成游戏本身的包名。
+
+7. 在清单文件中的application节点中加上 
+   
+   ```java
+    android:usesCleartextTraffic="true"
+   ```
+
+8. targetSdkVersion 设置成22及以上(最高可支持到28)
+
+## SDK 接入相关
+
+怪猫 SDK 开放接口，对外提供的接口方法都是静态的，直接通过 GM 进行调用即可。
+
+### 接入 SDK 基本顺序
+
+1. 第一步需要在 Application 的对应方法内进行初始化
+
+```java
+public class MyApplication extends Application {
+
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
-        GMSDK.attachBaseContext(base);
+        GM.attachBaseContext(base);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        GMSDK.initApp(this);
+        GM.initApplication(MyApplication.this);
     }
 }
 ```
-**记得在清单文件Manifest中进行声明**
-2.在游戏的Activity的onCreate方法内调用如下方法：
-代码示例
-```
-Platform.getInstance().initPlatform(activity, gameid);
-```
-**重要:gameid需要找对接的运营申请**
 
-3.初始化SDK需加上如下代码，丌然可能会导致个人中心点击切换账号后页面退出的情况:
-代码示例
-```
-Platform.getInstance().setShouldShowLoginViewAuto(true);
-``` 
+2. 第二步需要在游戏主 Activity 的onCreate()方法内设置回调函数，否则游戏将收不到任何回调信息（登陆成功,登陆失败,支付成功,支付失败等...）
+   
+   ```java
+        GM.setListener(new GmListener() {
+            @Override
+            public void onCallBack(Message mMessage) {
+                // TODO Auto-generated method stub
+                switch (mMessage.what) {
+                    case GmStatus.INIT_SUCCESS:// 初始化sdk成功回调
+                        String s = (String) mMessage.obj;
+                        SDKLog.d(TAG,"初始化sdk成功回调  " +  s);
+                        toast(s);
+                        break;
+                    case GmStatus.INIT_FALIED:// 初始化sdk失败回调
+                        String s1 = (String) mMessage.obj;
+                        SDKLog.d(TAG,"初始化sdk失败回调  " +  s1);
+                        toast(s1);
+                        break;
+                    case GmStatus.LOGIN_SUCCESS:// 登录成功回调
+                        String res = (String) mMessage.obj;
+                        try {
+                            JSONObject object = new JSONObject(res);
+                            object.getString("token");
+                            object.getString("uid");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        break;
+                    case GmStatus.LOGIN_FALIED:// 登录失败回调
+                        toast("登录失败回调");
+                        break;
+                    case GmStatus.LOGIN_CANCEL:// 登录取消回调
+                        toast("登录取消回调");
+                        break;
+                    case GmStatus.LOGOUT_SUCCESS:// 注销账号成功回调
+                        toast("注销账号成功回调");
+                        break;
+                    case GmStatus.LOGOUT_FALIED:// 注销账号失败回调
+                        toast("注销账号失败回调");
+                        break;
+                    case GmStatus.PAY_SUCCESS:// 支付成功回调
+                        toast("支付成功回调");
+                        break;
+                    case GmStatus.PAY_FALIED:// 支付失败回调
+                        toast("支付失败回调");
+                        break;
+                    case GmStatus.PAY_CANCEL:// 支付取消回调
+                        toast("支付取消回调");
+                        break;
+                    case GmStatus.GAME_EXIT:// 退出游戏回调
+                        MainActivity.this.finish();
+                        break;
+                    case GmStatus.ACTION_SHOW_QUIT_DIALOG://显示退出游戏提示框
+                        GM.showQuitDialg();
+                        break;
+                    case GmStatus.REALNAME_CHECK:
+                        int realNameType = (int) mMessage.obj;
+                        switch (realNameType){
+                            //0-7岁
+                            case GmStatus.ANTI_CHILD:
+                                toast("0-7岁");
+                                break;
+                            //8-17岁
+                            case GmStatus.ANTI_MINOR:
+                                toast("8-17岁");
+                                break;
+                            //成年
+                            case GmStatus.ANTI_AUDLT:
+                                toast("成年");
+                                break;
+                            //查询失败或者是未实名
+                            case GmStatus.ANTI_UNREGISTER:
+                                toast("查询失败或者是未实名");
+                                break;
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        });
+        GM.init(this);
+   ```
 
-4.在onCreate方法内初始化登录回调，注销回调，支付回调等：
-代码示例
+3. 第三步需要在游戏主 Activity 的 onCreate 方法内进行初始化(如上面代码所示)
+   
+   ```java
+   GM.init(this);
+   ```
+
+4. 商务给您的appid并不在这个初始化中传入，只需要在 assests 的 GMConfig.xml 中去修改gssAppId 即可
+
+5. 需要重写 Activity 的一些生命周期方法，并调用怪猫 SDK 的相关方法。后续有详细说明。
+
+### SDK 重写生命周期方法
+
+游戏需要在游戏主 Activity 里的各个生命周期内，重写以下生命周期的方法，并在方法内调用 GM SDK 对应的生命周期方法
+
+注意：onBackPressed()方法是否重写，需要根据游戏是否能主动监听用户退出游戏的操作来决定。游戏能够监听用户退出操作，就不需要重写 onBackPressed() 方法了。反之，则需要重写。
+
+生命周期内需要重写的方法
+
+以下方法都需要重写，并调用 GMSDK 对应的生命周期方法
+
+```java
+onStart()
+onResume()
+onRestart()
+onAttachedToWindow()
+onPause()
+onStop()
+onDestroy()
+onNewIntent(Intent intent)
+onActivityResult(int requestCode, int resultCode, Intent data)
+onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
 ```
-@Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    initCallbacks();
+
+```java
+GM.onStart()
+GM.onResume()
+GM.onRestart()
+GM.onAttachedToWindow()
+GM.onPause()
+GM.onStop()
+GM.onDestroy()
+GM.onNewIntent(Intent intent)
+GM.onActivityResult(int requestCode, int resultCode, Intent data)
+GM.onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
+```
+
+### 登录
+
+```java
+GM.login()
+```
+
+一定要接到初始化 SDK 成功回调，才可以调登录接口的函数。
+在点击进入游戏时，游戏需要判断用户是否登陆，若未登录，需要调用登录方法。
+登录结果请在相应回调中进行获取
+登录成功的回调信息如下：
+
+```java
+{"token": "token","uid": "xxxx"}
+```
+
+注意：如何获取res？ 
+
+```java
+ String res = (String) mMessage.obj;
+  try {
+  JSONObject object = new JSONObject(res);
+  object.getString("token");
+  object.getString("uid");
+  } catch (JSONException e) {
+    e.printStackTrace();
   }
-```  
-InitCallback方法中初始化登录回调，注销回调以及支付回调等回调． 并通过
-代码示例
-```
-Platform.getInstance().setCallbacks(loginCallback, logoutCallback, purchaseCallback,initCallback,registRealNameCallback,adCallBack, exitCallback);
-```
-设置好回调
-
-5.正式出包时，请在onCreate方法内设置为正式环境：
-代码示例
-```
-Config.setIsDebug(false);
 ```
 
-## 2.生命周期重写
+### 查看用户是否登录
 
-以下方法都要重写，并调用Platform对应的生命周期方法
-onStart(), onResume(), onRestart(), onAttatchedToWindow(), onPause(), onStop(), onDestory(), onNewIntent(), onActivityResult(), onRequestPermissionsResult()
-
-代码示例
-```
-@Override
-protected void onStart() {
-    super.onStart();
-    Platform.getInstance().onStart();
-}
-
-@Override
-protected void onResume() {
-    super.onResume();
-    Platform.getInstance().floatResume(this);
-}
-
-@Override
-protected void onRestart() {
-    super.onRestart();
-    Platform.getInstance().onRestart();
-}
-
-@Override
-public void onAttachedToWindow() {
-    super.onAttachedToWindow();
-    Platform.getInstance().onAttachedToWindow();
-}
-
-@Override
-protected void onPause() {
-    super.onPause();
-    Platform.getInstance().onPause(this);
-}
-
-@Override
-protected void onStop() {
-    super.onStop();
-    Platform.getInstance().onStop();
-}
-
-@Override
-protected void onDestroy() {
-    super.onDestroy();
-    Platform.getInstance().exit();
-}
-
-@Override
-protected void onNewIntent(Intent intent) {
-    super.onNewIntent(intent);
-    Platform.getInstance().onNewIntent(intent);
-}
-
-@Override
-protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    super.onActivityResult(requestCode, resultCode, data);
-    Platform.getInstance().onActivityResult(requestCode, resultCode, data);
-}
-
-@Override
-public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    Platform.getInstance().onRequestPermissionsResult(requestCode,permissions,grantResults);
-}
+```java
+GM.isLogin()
 ```
 
-## 3.SDK接口及回调说明
+| 返回值   | 描述       |
+| ----- | -------- |
+| true  | 当前为已登陆状态 |
+| false | 当前为未登陆状态 |
 
-3.1初始化回调
-接口定义：
-```
-public interface InitCallback { 
-    void initSuccess(); 
-    void initFail(); 
-}
-```
-调用示例：
-```
- initCallback = new InitCallback() {
-      @Override
-      public void initSuccess() {
-        initsucc = true;
-        Log.i(TAG, "初始化成功");
-      }
+### 登出
 
-      @Override
-      public void initFail() {
-
-        Log.i(TAG, "初始化失败");
-      }
-    };
-```  
-3.2.1登录接口
-**一定要接到初始化SDK成功回调，才可调用，可以用isLogin()来查看用户是否登录**
-调用示例：
-```
-if (Platform.getInstance().isLogin()) {
-    Toast.makeText(this, "您已经登录过帐号", Toast.LENGTH_SHORT).show();
-    return;
-}
-//初始化成功调用登录，失败再次初始化
-if (initsucc){
-    Platform.getInstance().login();
-}else {
-    Toast.makeText(this, "初始化失败", Toast.LENGTH_SHORT).show();
-    Platform.getInstance().initPlatform(activity, gameid);
-}
-```   
-3.2.2登录回调
-
-接口定义：
-```
-public interface LoginCallback { 
-    void loginSuccess(User user); 
-    void loginFail(String msg);
-    void loginCancel(String msg); 
-}
-```
-调用示例：
-```
-loginCallback = new LoginCallback() {
-    @Override
-    public void loginSuccess(User gameUser) {
-        Log.i(TAG, "登录成功：" + gameUser.getSid());
-        Toast.makeText(MainActivity.this,"登录成功回调...",Toast.LENGTH_SHORT).show();
-    }
-    
-    @Override
-    public void loginFail(String msg) {
-        Log.i(TAG, "登录失败loginFail：" + msg);
-        Toast.makeText(MainActivity.this,"登录失败   loginFail...",Toast.LENGTH_SHORT).show();
-    }
-    
-    @Override
-    public void loginCancel(String msg) {
-        Log.i(TAG, "登录取消loginCancel：" + msg);
-        Toast.makeText(MainActivity.this,"登录取消  loginCancel...",Toast.LENGTH_SHORT).show();
-  
-    }
-};
-```
-需要在loginCallback 的 loginSuccess 回调里, 保存用户信息
-
-3.3.1登出接口
-调用示例：
-```   
-Platform.getInstance().logout();
-```   
-
-3.3.2登出回调
-接口定义：
-```
-public interface LogoutCallback { 
-    void onLogoutSuccess(); 
-    void onLogoutFail(); 
-}
-```
-如果是需要监听sdk方的注销事件，请通过Platform.setLogoutCallback(new LogoutCallback)即可。如果注销成功之后需要弹出提示，请在代码中给出提示
-调用示例：
-```   
-logoutCallback = new LogoutCallback() {
-    @Override
-    public void onLogoutSuccess() {
-        ULogUtil.d(TAG,"[onLogoutSuccess] ....注销成功");
-        Toast.makeText(MainActivity.this, "注销成功~", Toast.LENGTH_SHORT).show();
-    }
-    @Override
-    public void onLogoutFail() {
-        Toast.makeText(MainActivity.this, "注销失败~", Toast.LENGTH_SHORT).show();
-    }
-};
-```
-需要在logoutCallback的onLogoutSuccess回调里, 清理用户信息, 并返回游戏登录界面.(不用再调Sdk中的任何接口)
-
-3.4.1支付接口
-调用示例：
-```
-Purchase purchase = new Purchase();
-purchase.setCoins(Double.parseDouble(price_ET.getText().toString()));
-purchase.setRoleid("roleid");
-purchase.setServerid("1");
-//服务端会根据这个DeveloperInfo来判断重复，如果一段时间内重复提交会被服务端拒绝，请保持唯一
-purchase.setDeveloperInfo("developerinfo" + System.currentTimeMillis());
-purchase.setProductName("测试商品");
-Platform.getInstance().purchase(purchase);
+```java
+GM.logout
 ```
 
-**重要：请一定要写入对应的商品名称，purchase.setProductName("测试商品"), 否则在支付的时候无法正确显示商品名称**
-**Purchase.setDeveloperInfo() 设置进去的订单信息请保持唯一，服务单会根据这个字段来判断一定时间内的订单是否重复提交，如果重复会直接提示支付失败**
+调用该方法后，游戏会收到登出回调。此时请游戏退回到游戏主界面，如果想重新拉起登录，请再次调用登录方法
 
-3.4.2支付回调
-接口定义：
-```   
-public interface PurchaseCallback {
-    void onSuccess(String ordeId, Purchase purchase);
-    void onFail(String msg);
-    void onCancel(String msg);
-}
-```   
+### 完成新手引导
 
-调用示例：
-```   
-purchaseCallback = new PurchaseCallback() {
-
-    @Override
-    public void onSuccess(String ordeId, Purchase purchase1) {
-        Log.i(TAG, "支付成功");
-        GlobalUtil.shortToast("当前支付成功的id是：" + ordeId);
-    }
-
-    @Override
-    public void onFail(String msg) {
-        Log.i(TAG, "失败支付 : " + msg);
-        GlobalUtil.shortToast("支付失败：" + msg);
-    }
-
-    @Override
-    public void onCancel(String msg) {
-        Log.i(TAG, "取消支付 : " + msg);
-        GlobalUtil.shortToast("取消支付：" + msg);
-    }
-};
-```   
-
-3.5实名认证回调
-接口定义：
-```   
-public interface RegistRealNameCallback {
-    void registRealNameSuccChild();
-    void registRealNameSuccMinor();
-    void registRealNameSuccAudlt();
-    void registRealNameFailed();
-}
-```   
-
-调用示例：
-```   
-registRealNameCallback = new RegistRealNameCallback() {
-      @Override
-      public void registRealNameSuccChild() {
-        //0-8
-      }
-
-      @Override
-      public void registRealNameSuccMinor() {
-        //8-18
-      }
-
-      @Override
-      public void registRealNameSuccAudlt() {
-        //18+
-      }
-
-      @Override
-      public void registRealNameFailed() {
-        //未认证，或者认证失败
-      }
-};
-```   
-
-3.6.1退出游戏接口
-重写onbackPressed()方法，调用quit接口：
-调用示例：
-```   
-@Override
-public void onBackPressed() {
-    Platform.getInstance().quit();
-}
-```   
-3.6.2退出游戏回调
-调用示例：
-```  
-exitCallback = new ExitCallback() {
-      @Override
-      public void onSuccess() {
-          //To-do退出游戏回调，此时需要结束游戏进程
-          Log.i(TAG, "退出成功");
-      }
-
-      @Override
-      public void onCancel() {
-          //取消退出回调
-          Log.i(TAG, "取消退出");
-      }
-```  
-
-
-3.7.1广告接口
-**重要：此接口为选接接口，根据运营要求是否接入，不接入时无法调起广告**
-当游戏需要拉起广告的时候，应调用此接口，目前仅支持激励视频，请直接传int型13
-调用示例：
-```  
-Platform.getInstance().showAd(13, extra);
-```  
-| 字段名称        | 类型     | 属性           |
-| ----------- | ------ | ------------ |
-| adType       | int |  广告形式(目前仅支持激励视频，请直接传int型13)  |
-| extra      | String |广告透传参数，在成功的回调内，会原样返回    |
-
-
-3.7.2播放广告回调
-调用示例：
-```  
-adCallBack = new AdCallBack() {
-      @Override
-      public void onAdFailed(String errormsg) {
-        GlobalUtil.shortToast("onAdFailed：" + errormsg);
-      }
-      @Override
-      public void onVideoComplete(String extra) {
-        GlobalUtil.shortToast("onVideoComplete：" + extra);
-      }
-};
+```java
+GM.overBeginnerGruid()
 ```
 
+该方法为完成新手引导后调用（若无新手引导可以忽略）
 
-3.8创建角色接口
-此接口在创建角色后调用，为必接接口
-调用示例：
-```  
-Platform.getInstance().creatRole();
-```  
+### 提交角色信息
 
-3.9切换账号接口
-调用示例：
-```  
-Platform.getInstance().loginSwitch();
-```  
+```java
+GM.submitRoleInfo(Map<String,String> roleInfo)
+```
 
-3.10提交角色信息接口
-当游戏内角色状态变化时，应调用此接口
-接口定义：
-```  
-Platform.getInstance().submitRoleInfo(Map<String, String> roleInfo);
-```  
+| key            | value                                   |
+| -------------- | --------------------------------------- |
+| dataType       | 数据类型，1 为进入游戏，2 为创建角色，3 为角色升级，4 为退出      |
+| roleId         | 角色 ID                                   |
+| roleName       | 角色名称                                    |
+| roleLevel      | 角色等级                                    |
+| zoneId         | 服务器 ID                                  |
+| zoneName       | 服务器名称                                   |
+| balance        | 用户余额 （ RMB 购买的游戏币）                      |
+| partyName      | 帮派、公会等，没有填空字符串                          |
+| vipLevel       | VIP 等级，没有 VIP 系统的传 0                    |
+| roleCTime      | 角色创建时间(单位：秒)（历史角色没记录时间的传 -1 ，新创建的角色必须要） |
+| roleLevelMTime | 角色等级变化时间(单位：秒)（创建角色和进入游戏时传 -1 ）         |
 
-| KEY        |  说明           |
-| -----------  | ------------ |
-| datatype     |  数据类型，1为进入游戏，2为创建角色，3为角色升级，4为退出  |
-| roleId       | 角色ID    |
-| roleName     |  角色名称  |
-| roleLevel       | 角色等级    |
-| zoneId     |  服务器ID  |
-| zoneName       | 服务器名称    |
-| balance     |  用户余额（RMB购买的游戏币）  |
-| partyName       | 帮派、工会等，没有填空字符串   |
-| vipLevel     |  VIP等级，没有VIP系统传0  |
-| roleCTime       | 角色创建时间（单位秒，历史角色没记录时间传-1，新建角色必须要）    |
-| roleLevelMTime     |  角色等级变化时间（单位秒，进入游戏和创建角色传-1）  |
+示例
 
-调用示例：
-```  
+```java
 Map<String, String> data = new HashMap<String, String>();
 data.put("dataType", "1");
 data.put("roleId", "7845");
@@ -434,5 +267,74 @@ data.put("partyName", "青帮");
 data.put("vipLevel", "2");
 data.put("roleCTime", "-1");
 data.put("roleLevelMTime", "-1");
-Platform.getInstance().submitRoleInfo(data);
-``` 
+GM.submitRoleInfo(data);
+```
+
+### 支付
+
+```java
+GM.pay(Map<String,String> payInfo)
+```
+
+| key          | value                            |
+| ------------ | -------------------------------- |
+| productId    | 商品 ID                            |
+| productName  | 商品名                              |
+| productPrice | 商品价格(元)（无小数点）                    |
+| productCount | 商品份数(除非游戏需要支持一次购买多份商品，否则传 1 即可)  |
+| productDesc  | 商品描述（不传则使用 product_Name ）        |
+| coinName     | 虚拟币名称（如金币、元宝）                    |
+| coinRate     | 虚拟币兑换比例（例如 100，表示 1 元购买 100 虚拟币） |
+| roleId       | 游戏角色 ID                          |
+| roleName     | 游戏角色名                            |
+| roleGrade    | 游戏角色等级                           |
+| roleBalance  | 用户游戏内虚拟币余额，如元宝，金币，符石             |
+| vipLevel     | VIP 等级                           |
+| partyName    | 帮派、公会等                           |
+| zoneId       | 服务器 ID，若无填“ 1 ”                  |
+| zoneName     | 服务器名                             |
+| gameReceipts | 游戏客户端内生成的用户身份加密票据，订单号等（透传）       |
+
+示例
+
+```java
+Map<String, String> payInfo = new HashMap<String, String>();
+payInfo.put("productId", "1");
+payInfo.put("productName", "月卡");
+payInfo.put("productPrice", "30");
+payInfo.put("productCount", "1");
+payInfo.put("productDesc", "月卡");
+payInfo.put("coinName", "钻石");
+payInfo.put("coinRate", "10");
+payInfo.put("roleId", "78713");
+payInfo.put("roleName", "天下第一");
+payInfo.put("roleGrade", "69");
+payInfo.put("roleBalance", "120");
+payInfo.put("vipLevel", "3");
+payInfo.put("partyName", "青帮");
+payInfo.put("zoneId", "1");
+payInfo.put("zoneName", "上海一区");
+payInfo.put("gameReceipts", "test info");
+GM.pay(payInfo);
+```
+
+支付信息可以在回调当中获取
+
+### 退出游戏
+
+```java
+GM.quit()
+```
+
+退出游戏的接入流程说明：
+
+1. 首先根据游戏是否会自己监听游戏的退出来分：
+   
+   游戏自己监听：当游戏监听到用户退出游戏的意图时，需要调用 GM.quit() 。此时游戏不需要重写 onBackPress()方法，否则可能会产生异常
+   
+   游戏不自己监听：则需要重写 onBackPress()方法，sdk 将帮助游戏来监听用户退出意图
+
+2. 游戏需要对退出游戏的回调做出相应的处理
+   
+   GmStatus.GAME_EXIT --- 游戏此时需要结束游戏进程
+
