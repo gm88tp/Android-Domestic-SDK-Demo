@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="text_black_gm">@android:color/black</color>
+    <color name="text_white_gm">@android:color/white</color>
+    <color name="click_transparent">@android:color/transparent</color>
+
+    <color name="color_c1_gm">#a5a5a5</color>
+    <color name="color_c5_gm">#b2b2b2</color>
+    <color name="color_c12_gm">#ffffff</color>
+    <color name="color_main_text_color_black_gm">#333333</color>
+    <color name="color_tips_text_gm">#9a9a9a</color>
+    <color name="color_edit_text_bg_color_grey_gm">#f2f2f2</color>
+    <color name="color_main_yellow_gm">#ffda44</color>
+    <color name="color_button_yellow_gm">#fde274</color>
+    <color name="color_text_color_blue_gm">#42a2f4</color>
+    <color name="color_text_color_blue_press_gm">#2b8cdf</color>
+
+    <color name="text_black33_gm">#333333</color>
+    <color name="text_black32_gm">#323232</color>
+    <color name="text_black00_gm">#000000</color>
+    <color name="color_protocol_agree">#aaaaaa</color>
+    <color name="color_protocol_read">#ff9600</color>
+    <color name="color_yellowff9600_gm">#ff9600</color>
+
+    <color name="button_text_gm">#443f2b</color>
+    <color name="text_redf85d5d_gm">#f85d5d</color>
+    <color name="text_black6e_gm">#6e6e6e</color>
+    <color name="text_button50492d_gm">#50492d</color>
+    <color name="text_blackee_gm">#eeeeee</color>
+    <color name="text_black60_gm">#606060</color>
+    <color name="color_user_center_tab_grey_gm">#c9c9c9</color>
+
+
+    <color name="text_yellow_e7c68e_gm">#e7c68e</color>
+
+</resources>
