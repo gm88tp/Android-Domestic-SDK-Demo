@@ -119,7 +119,7 @@
             android:name="com.game.sdk.reconstract.ui.CenterSecurityHintActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        
+
         <activity
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:name="com.game.sdk.reconstract.ui.NewGetGftFailedActivity"

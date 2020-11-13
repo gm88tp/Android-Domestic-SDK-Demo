@@ -81,7 +81,7 @@ public class MyApplication extends Application {
                     case GmStatus.LOGIN_CANCEL:// 登录取消回调
                         toast("登录取消回调");
                         break;
-                    case GmStatus.LOGOUT_SUCCESS:// 注销账号成功回调
+                    case GmStatus.LOGOUT_SUCCESS:// 注销账号成功回调，收到回调后游戏需返回主界面
                         toast("注销账号成功回调");
                         break;
                     case GmStatus.LOGOUT_FALIED:// 注销账号失败回调
@@ -98,10 +98,7 @@ public class MyApplication extends Application {
                         break;
                     case GmStatus.GAME_EXIT:// 退出游戏回调
                         MainActivity.this.finish();
-                        break;
-                    case GmStatus.ACTION_SHOW_QUIT_DIALOG://显示退出游戏提示框
-                        GM.showQuitDialg();
-                        break;
+                        break;  
                     case GmStatus.REALNAME_CHECK:
                         int realNameType = (int) mMessage.obj;
                         switch (realNameType){
