@@ -167,7 +167,6 @@ public class MainActivity extends Activity {
             }
           }
         });
-
         changeDebug_BTN.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -220,7 +219,7 @@ public class MainActivity extends Activity {
     }
 
     public void userLoginSwitch(View view) {
-  //        Platform.getInstance().loginSwitch();
+        Platform.getInstance().loginSwitch();
     }
 
 

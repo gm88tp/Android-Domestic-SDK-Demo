@@ -565,14 +565,16 @@
 
             </LinearLayout>
             <View style="@style/new_HorizontalLine_guaimao" />
-
+            <View
+                android:id="@+id/view_usercenter_bottom_line"
+                style="@style/new_HorizontalLine_guaimao"
+                android:visibility="invisible"/>
             <LinearLayout
 
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF">
-
 
                 <TextView
                     android:id="@+id/view_usercenter_version_code"
