@@ -12,48 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ipaynow_base_2.1.12_api_1.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="15e5626c722e7d1f395199e2bd4e7a18f163d96f">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ipaynow_base_2.1.12_api_1.0.0_44053977fa7a3b7e6d2d384e832e6c3e989bc746\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmdatasdk.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="06126c5bf6f527bf7488c8d699677497d8425602">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmdatasdk_4236b8dd0f64fd545580abc2f7820941bef4a634\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ks-sdk_1.0.4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3a06a865bc9d6e77d76a5182efeef41069b419ee">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ks-sdk_1.0.4_d8b0ab81d492da28fc03b8f94b7474a4dc3e79a6\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\open_ad_sdk.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="686ae1a2f14f4778cc70054d5a640616f0d11a0f">
         <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\open_ad_sdk_3fe54f2da90a3c4e6e7b5d7f82e7d84eb6d61080\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\android-v4.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="77864d29f11787046bbad934c9912f264546f6a0">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-v4_fac17de40030b59aca96054aeb2408f18f79613c\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,30 +39,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmthirdskeleton.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f96a46a0d74538ca724592155ef15ca2c6ee3b23">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmthirdskeleton_fceb8999270dff492e8ac41167b20b40e3244645\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\GDTUnionSDK.4.28.902.min.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="22f5c36ce078d7189fc5ad3238e5281672e8a5d1">
         <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\GDTUnionSDK.4.28.902.min_c1d4798cf021a7d391eca7c6543d529ad3dc7032\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ipaynow_wechatpay_v2.0.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="43e18fbeaf5354ed9baad4fd1ba213674053635a">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ipaynow_wechatpay_v2.0.5_7eac8468d5d07afa735c8ce9fcbc3f2b6e612065\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,39 +57,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmthirdutil.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c4ecef62994b08a7e6e79f900fa01be00612ce8b">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmthirdutil_d14a6f28a59b38f601357c6624241dd2d34b9c61\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\GuaiMaoSdk_3.8.0.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="2fc5bb28b2313d50dd2d55e3370a971c17197416">
+        sha1="f86991caa350a18cb036ef49025286c98e220a47">
         <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\GuaiMaoSdk_3.8.0_6954c36308348ac1169ebe92836917f6e9c9e43c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmpluginsdk.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="6233271f3c76ea06b56e283edc3c419610f505d2">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmpluginsdk_441ac6a5c8203c29048f6fb2637498b9592ef0fa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\pap_0.0.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="824bd655c9afa85d463be9c8c9e4115fbcd5eff3">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\pap_0.0.3_e55bc420668fef63aa8dbd3345507011a454c0c4\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -183,15 +102,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gdt.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="463749a6130844ae07d73dfdf6e07515063d5603">
-        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gdt_dd89ed2666f42441f9af6702d9cc6aa0e9a57b67\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\bcprov-jdk16-139.jar"
         jumboMode="false"
         optimize="true"
@@ -207,6 +117,96 @@
         revision="25.0.0"
         sha1="cb1135c70efd9a81130a300d3344e32a8f28f4c5">
         <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\qiyu-sdk-3.11.1_17191d27a0700d923e1fb1df8a9ee53e50f1d8ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ipaynow_base_2.1.12_api_1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="15e5626c722e7d1f395199e2bd4e7a18f163d96f">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ipaynow_base_2.1.12_api_1.0.0_44053977fa7a3b7e6d2d384e832e6c3e989bc746\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmdatasdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="06126c5bf6f527bf7488c8d699677497d8425602">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmdatasdk_4236b8dd0f64fd545580abc2f7820941bef4a634\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ks-sdk_1.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3a06a865bc9d6e77d76a5182efeef41069b419ee">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ks-sdk_1.0.4_d8b0ab81d492da28fc03b8f94b7474a4dc3e79a6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\android-v4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="77864d29f11787046bbad934c9912f264546f6a0">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\android-v4_fac17de40030b59aca96054aeb2408f18f79613c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmthirdskeleton.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f96a46a0d74538ca724592155ef15ca2c6ee3b23">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmthirdskeleton_fceb8999270dff492e8ac41167b20b40e3244645\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\ipaynow_wechatpay_v2.0.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43e18fbeaf5354ed9baad4fd1ba213674053635a">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\ipaynow_wechatpay_v2.0.5_7eac8468d5d07afa735c8ce9fcbc3f2b6e612065\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmthirdutil.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c4ecef62994b08a7e6e79f900fa01be00612ce8b">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmthirdutil_d14a6f28a59b38f601357c6624241dd2d34b9c61\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gmpluginsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6233271f3c76ea06b56e283edc3c419610f505d2">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gmpluginsdk_441ac6a5c8203c29048f6fb2637498b9592ef0fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\pap_0.0.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="824bd655c9afa85d463be9c8c9e4115fbcd5eff3">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\pap_0.0.3_e55bc420668fef63aa8dbd3345507011a454c0c4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\demo\Android-Domestic-SDK-Demo\app\libs\gdt.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="463749a6130844ae07d73dfdf6e07515063d5603">
+        <dex dex="D:\demo\Android-Domestic-SDK-Demo\app\build\intermediates\transforms\dex\debug\folders\1000\2\gdt_dd89ed2666f42441f9af6702d9cc6aa0e9a57b67\classes.dex" />
     </item>
 
 </items>
