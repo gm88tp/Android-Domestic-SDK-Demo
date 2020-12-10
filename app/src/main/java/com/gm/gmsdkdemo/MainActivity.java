@@ -156,7 +156,12 @@ public class MainActivity extends Activity {
             GM.antiAddiction();
           }
         });
-
+        creatRole_BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                submitRoleInfo();
+            }
+        });
         setGameId_BTN.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
@@ -265,7 +270,7 @@ public class MainActivity extends Activity {
     private void submitRoleInfo() {
         // use map as the param to submitRoleInfo
         Map<String, String> data = new HashMap<String, String>();
-        data.put("dataType", "1");
+        data.put("dataType", "2");
         data.put("roleId", "7845");
         data.put("roleName", "天下第一");
         data.put("roleLevel", "22");
