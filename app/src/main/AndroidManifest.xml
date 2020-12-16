@@ -73,7 +73,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.8.0" />
+            android:value="3.8.1" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
@@ -266,5 +266,64 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/ysf_window_theme" />
+        <!-- 今日广告 -->
+        <service
+            android:name="com.ss.android.socialbase.downloader.impls.RetryJobSchedulerService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService" />
+        <service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTWebPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTPlayableWebPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoWebPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoScrollWebPageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTDelegateActivity"
+            android:launchMode="standard"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenExpressVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="standard" />
+
+        <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
+
+        <receiver
+            android:name="com.bytedance.embedapplog.collector.Collector"
+            android:enabled="true"
+            android:exported="false" />
+
+        <service
+            android:name="com.bytedance.tea.crash.upload.CrashUploadService"
+            android:process=":npth" />
     </application>
 </manifest>
