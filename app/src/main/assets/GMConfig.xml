@@ -8,7 +8,7 @@
         <!--今日头条-->
         <jrtt appName ="" channel = "" aId = "" />
         <!--热云-->
-        <ry appkey = "2803780abff854f8dafe8d9c940f0a80" channelid = "_default_" />
+        <ry appkey = "" channelid = "_default_" />
         <!--广点通-->
         <tc ActionSetID = "" AppSecretKey = "" />
         <!--uc-->

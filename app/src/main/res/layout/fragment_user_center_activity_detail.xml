@@ -54,28 +54,9 @@
                 android:layout_marginRight="40dp"
                 android:singleLine="true"
                 android:textStyle="bold"
-                android:textSize="24dp"
+                android:textSize="20dp"
                 android:text="新闻公告"
                 android:textColor="#FFFFFF" />
-            <RelativeLayout
-                android:id="@+id/rl_user_center_activity_detail_close"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:gravity="right">
-
-                <ImageView
-                    android:id="@+id/iv_user_center_activity_detail_close"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerInParent="true"
-                    android:layout_marginRight="15dp"
-                    android:src="@drawable/ic_new_white_close" />
-            </RelativeLayout>
-
 
         </RelativeLayout>
 

@@ -52,7 +52,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/gm_app_name"
         android:usesCleartextTraffic="true"
-        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:configChanges="keyboardHidden|orientation|screenSize"
@@ -73,7 +72,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.8.1" />
+            android:value="3.8.3" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
@@ -132,6 +131,36 @@
             android:name="com.game.sdk.reconstract.ui.VipCustomerActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewServiceH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewWeChatPayH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewGiftActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewMessageActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewActActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewCouponActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- 现在支付 -->
         <activity
@@ -151,6 +180,38 @@
             android:configChanges="orientation|keyboardHidden|navigation"
             android:screenOrientation="behind"
             android:exported="false"/>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.PayResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.AlipayResultActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5OpenAuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.APayEntranceActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
 
         <activity android:name="com.ipaynow.plugin.inner_plugin.alipaywp.activity.AlipayNotifyActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout|touchscreen|screenSize"
@@ -266,64 +327,5 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/ysf_window_theme" />
-        <!-- 今日广告 -->
-        <service
-            android:name="com.ss.android.socialbase.downloader.impls.RetryJobSchedulerService"
-            android:enabled="true"
-            android:exported="false"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <service android:name="com.ss.android.socialbase.downloader.downloader.SqlDownloadCacheService" />
-        <service android:name="com.ss.android.socialbase.appdownloader.DownloadHandlerService" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTWebPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTPlayableWebPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoWebPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTVideoScrollWebPageActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard"
-            android:windowSoftInputMode="stateHidden" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTDelegateActivity"
-            android:launchMode="standard"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTRewardExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard" />
-        <activity
-            android:name="com.bytedance.sdk.openadsdk.activity.base.TTFullScreenExpressVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:launchMode="standard" />
-
-        <service android:name="com.bytedance.sdk.openadsdk.multipro.aidl.BinderPoolService" />
-
-        <receiver
-            android:name="com.bytedance.embedapplog.collector.Collector"
-            android:enabled="true"
-            android:exported="false" />
-
-        <service
-            android:name="com.bytedance.tea.crash.upload.CrashUploadService"
-            android:process=":npth" />
     </application>
 </manifest>

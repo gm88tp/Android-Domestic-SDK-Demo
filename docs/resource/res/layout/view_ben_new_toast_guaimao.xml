@@ -1,27 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="@color/text_white_gm"-->
+<!--    android:gravity="center"-->
+<!--    android:paddingBottom="10dp"-->
+<!--    android:paddingLeft="50dp"-->
+<!--    android:paddingRight="50dp"-->
+<!--    android:paddingTop="10dp">-->
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_new_toast_msg_guaimao"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:textColor="@color/text_black_gm"-->
+<!--        android:textSize="14sp"-->
+<!--        tools:text="这是toast文本" />-->
+
+<!--</LinearLayout>-->
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/text_white_gm"
-    android:gravity="center"
-    android:paddingBottom="10dp"
-    android:paddingLeft="50dp"
-    android:paddingRight="50dp"
-    android:paddingTop="10dp">
+    android:layout_height="70dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00000000"
+    android:orientation="vertical">
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_user_center_guaimao"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_user_center_guaimao"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_top_bar_recommend_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/iv_top_bar_recommend_name"
+                android:layout_width="220dp"
+                android:layout_height="20dp"
+                tools:text="产品名称"
+                android:textColor="#333333"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_have_new_guaimao" />
+            <TextView
+                android:id="@+id/iv_top_bar_recommend_describe"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                tools:text="产品描述的话"
+                android:textColor="#333333"
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_have_new_guaimao" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/tv_top_bar_recommend_download"
+                android:background="@drawable/bg_top_bar_gray_guaimao"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:text="立即下载"
+                android:layout_centerInParent="true"
+                android:textColor="#FF9600"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_top_bar_close_gm"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_new_close" />
+        </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/tv_new_toast_msg_guaimao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:textColor="@color/text_black_gm"
-        android:textSize="14sp"
-        tools:text="这是toast文本" />
+    </RelativeLayout>
 
-</LinearLayout>
+</RelativeLayout>

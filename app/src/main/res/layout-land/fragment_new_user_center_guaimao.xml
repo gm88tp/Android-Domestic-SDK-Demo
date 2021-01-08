@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:clickable="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FF8A00">
+
+        <RelativeLayout
+            android:id="@+id/rl_user_center_back_gm"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:gravity="left">
+
+            <ImageView
+                android:id="@+id/iv_back_gm"
+                android:layout_width="8dp"
+                android:layout_height="14.5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="14.5dp"
+                android:src="@drawable/ic_new_white_back" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="用户中心"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/rl_user_center_close_gm"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="right">
+
+            <ImageView
+                android:id="@+id/iv_close_gm"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_new_white_close" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="#FF9600"
+                android:orientation="horizontal">
+
+                <com.game.sdk.reconstract.widget.circleimageview.CircleImageView
+                    android:id="@+id/iv_user_info_avatar_gm"
+                    android:layout_width="69.5dp"
+                    android:layout_height="69.5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="24dp"
+                    android:src="@drawable/ic_new_user_info_avatar_default" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_user_info_gm"
+                    android:layout_width="170dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tv_user_info_name_gm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="25.5dp"
+                        android:ellipsize="end"
+                        android:maxLength="12"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20dp"
+                        tools:text="13000000000" />
+
+                    <ImageView
+                        android:id="@+id/user_center_personal_detail"
+                        android:layout_width="94.5dp"
+                        android:layout_height="17.5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginBottom="30.5dp"
+                        android:src="@drawable/ic_new_personal_info" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="right">
+
+                    <Button
+                        android:id="@+id/user_center_change_account"
+                        android:layout_width="77.5dp"
+                        android:layout_height="32.5dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="25dp"
+                        android:background="@drawable/bg_user_center_function_bar_white_guaimao"
+                        android:text="切换账号"
+                        android:textColor="#FF9600"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:background="#FFFFFF"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_name_verify"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_verify" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_smrz_gm" />
+
+                    <TextView
+                        android:id="@+id/tv_user_center_is_verified"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:ellipsize="end"
+                        android:maxWidth="180dp"
+                        android:textColor="#FF9600"
+                        android:textSize="18dp"
+                        android:visibility="invisible"
+                        tools:text="(已认证：310***6)" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View style="@style/new_HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_game_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_gift" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_yxlb_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+                        <ImageView
+                            android:id="@+id/iv_user_center_gifts_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:visibility="invisible"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_have_new_guaimao" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/new_HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_news" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_swgg_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+                        <ImageView
+                            android:id="@+id/iv_user_center_news_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:visibility="invisible"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_have_new_guaimao" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/new_HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_activity" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_yxhd_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/iv_user_center_activity_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:visibility="invisible"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_have_new_guaimao" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/new_HorizontalLine_guaimao" />
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_vip" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_vipfw_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View style="@style/new_HorizontalLine_guaimao" />
+                <LinearLayout
+                    android:id="@+id/ll_user_center_call_kf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_customer" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_kfzx_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View style="@style/new_HorizontalLine_guaimao" />
+                <LinearLayout
+                    android:id="@+id/ll_user_center_coupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_coupon" />
+
+                    <ImageView
+                        android:layout_width="72dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="0dp"
+                        android:src="@drawable/ic_new_yhq_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <View style="@style/new_HorizontalLine_guaimao" />
+                <LinearLayout
+                    android:id="@+id/ll_user_center_call_vipkf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_new_vipcustomer" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:src="@drawable/ic_new_vipkfzx_gm" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_usercenter_bottom_line"
+                    style="@style/new_HorizontalLine_guaimao"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:background="#FFFFFF">
+                <TextView
+                    android:id="@+id/view_usercenter_version_code"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="52dp"
+                    android:background="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    tools:text="v3.7.2" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

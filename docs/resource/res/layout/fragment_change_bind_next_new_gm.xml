@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/ll_register_new_whole_guaimao"
-        android:layout_width="@dimen/gm_sdk_activity_width"
-        android:layout_height="350dp"
+        android:layout_width="305dp"
+        android:layout_height="349dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:background="@drawable/bg_login_new_gm"
@@ -17,13 +17,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/bg_user_center_function_top_bar_gray_guaimao">
+            android:background="@drawable/bg_user_center_function_bottom_bar_white_guaimao">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="手机换绑"
-                android:textColor="#7A746F"
+                android:textColor="#F59A23"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <RelativeLayout
@@ -39,8 +39,7 @@
                     android:layout_height="23dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginRight="20dp"
                     android:layout_centerInParent="true"
                     android:src="@drawable/ic_new_close" />
             </RelativeLayout>
@@ -53,29 +52,28 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="140dp">
-
             <LinearLayout
-
-                android:id="@+id/fragment_login_entrance_loginname_gm"
-
-                android:background="@drawable/gm_new_login"
+                android:background="@drawable/guaimao_login_shape"
                 android:orientation="horizontal"
                 android:layout_height="40dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent">
 
                 <TextView
                     android:gravity="center"
-                    android:textColor="#7F7F7F"
+                    android:textColor="#000000"
                     android:textSize="14dp"
                     android:text="+86"
-                    android:paddingLeft="10dp"
-                    android:layout_width="72dp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="40dp"
                     android:layout_height="25dp" />
                 <View
-                    style="@style/VerticalDashLine_guaimao"
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
                     android:background="#7F7F7F" />
 
                 <EditText
@@ -93,7 +91,6 @@
                     android:textSize="14dp" />
 
             </LinearLayout>
-
         </LinearLayout>
 
 
@@ -107,7 +104,7 @@
 
             <TextView
                 android:id="@+id/tv_next_btn_gm"
-                android:background="@drawable/bg_user_center_function_bar_orange_login_guaimao"
+                android:background="@drawable/bg_user_center_function_bar_orange_coners_guaimao"
                 android:gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_width="262.5dp"

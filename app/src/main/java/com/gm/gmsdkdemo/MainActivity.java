@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
     private EditText price_ET;
 
     private EditText gameId_ET, roleName_ET;
-    private Button setGameId_BTN, changeDebug_BTN, creatRole_BTN, beginner_BTN, updateRole_BTN;
+    private Button setGameId_BTN, changeDebug_BTN, creatRole_BTN, beginner_BTN, updateRole_BTN, palyTimeLeft_BTN;
     private Button mRealNameCheck;
     private int count = 0;
 
@@ -113,11 +113,16 @@ public class MainActivity extends Activity {
                   switch (realNameType) {
                       //0-7岁
                       case GmStatus.ANTI_CHILD:
-                        toast("0-7岁");
-                        break;
-                      //8-17岁
+                          //Anti-addiction
+                          toast("0-7岁");
+                          break;
+                      //8-15岁
                       case GmStatus.ANTI_MINOR:
-                          toast("8-17岁");
+                          toast("8-15岁");
+                          break;
+                      //16-17岁
+                      case GmStatus.ANTI_MINOR2:
+                          toast("16-17岁");
                           break;
                       //成年
                       case GmStatus.ANTI_AUDLT:
@@ -127,7 +132,7 @@ public class MainActivity extends Activity {
                       case GmStatus.ANTI_UNREGISTER:
                           toast("查询失败或者是未实名");
                           break;
-                }
+                  }
                   break;
               default:
                   break;
@@ -147,6 +152,7 @@ public class MainActivity extends Activity {
         creatRole_BTN = (Button) findViewById(R.id.btn_main_activity_creatRole);
         beginner_BTN = (Button) findViewById(R.id.btn_main_activity_beginner);
         updateRole_BTN = (Button) findViewById(R.id.btn_main_activity_updata_role);
+        palyTimeLeft_BTN = (Button) findViewById(R.id.btn_main_activity_check_palytimeleft);
         roleName_ET = (EditText) findViewById(R.id.et_main_activity_updata_role);
         changeDebug_BTN.setText(Config.isDebug() ? "点击切换成正式环境服务" : "点击切换成测试环境服务");
 
@@ -171,6 +177,19 @@ public class MainActivity extends Activity {
                 GlobalUtil.shortToast("请输入正确的游戏id号");
             }
           }
+        });
+        palyTimeLeft_BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int timeLeft = GM.getPlayTimeLeft();
+                if (timeLeft == Integer.MAX_VALUE) {
+                    GlobalUtil.shortToast("用户已成年无剩余游戏时间限制");
+                } else if (timeLeft == Integer.MIN_VALUE) {
+                    GlobalUtil.shortToast("未开启游玩限制");
+                } else {
+                    GlobalUtil.shortToast("剩余游戏时间：" + timeLeft);
+                }
+            }
         });
         changeDebug_BTN.setOnClickListener(new View.OnClickListener() {
           @Override
@@ -207,8 +226,8 @@ public class MainActivity extends Activity {
                 return;
             }
                 GM.login();
-            } else {
-                GM.init(this);
+        } else {
+            GM.init(this);
         }
     }
 
@@ -379,11 +398,6 @@ public class MainActivity extends Activity {
      */
     private void toast(final String str) {
         ToastHelper.toast(this, str);
-    }
-
-    public void userInit(View view) {
-        SDKLog.d(TAG, "demo 点击了初始化");
-      //  init();
     }
 
     public void userLoginCheck(View view) {

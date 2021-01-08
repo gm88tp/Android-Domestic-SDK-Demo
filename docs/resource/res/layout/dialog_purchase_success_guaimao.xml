@@ -81,15 +81,6 @@
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="11sp"
-            android:textColor="#9a9a9a"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:text="如需账单明细，请至'个人中心'进行查看"/>
-
     </LinearLayout>
 
 </LinearLayout>

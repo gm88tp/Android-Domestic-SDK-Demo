@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="安全提示"
-                android:textColor="#FF6A00"
+                android:textColor="#F59A23"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <RelativeLayout
@@ -38,10 +38,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="18dp"
-                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginRight="2dp"
+                    android:layout_marginRight="20dp"
                     android:layout_centerInParent="true"
                     android:src="@drawable/ic_new_close" />
             </RelativeLayout>

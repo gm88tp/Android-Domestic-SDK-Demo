@@ -1,4 +1,4 @@
-# 怪猫SDK V3.8.1 接入文档
+# 怪猫SDK V3.8.3 接入文档
 
 ## SDK **资源引用**
 
@@ -99,17 +99,21 @@ public class MyApplication extends Application {
                     case GmStatus.GAME_EXIT:// 退出游戏回调
                         MainActivity.this.finish();
                         break;  
-                    case GmStatus.REALNAME_CHECK:
+                    case GmStatus.REALNAME_CHECK:// 实名认证回调
                         int realNameType = (int) mMessage.obj;
                         switch (realNameType){
                             //0-7岁
                             case GmStatus.ANTI_CHILD:
                                 toast("0-7岁");
                                 break;
-                            //8-17岁
+                            //8-15岁
                             case GmStatus.ANTI_MINOR:
-                                toast("8-17岁");
+                                toast("8-15岁");
                                 break;
+                            //16-17岁
+                           case GmStatus.ANTI_MINOR2:
+                               toast("16-17岁");
+                               break;
                             //成年
                             case GmStatus.ANTI_AUDLT:
                                 toast("成年");
@@ -326,4 +330,25 @@ GM.quit()
 2. 游戏需要对退出游戏的回调做出相应的处理
    
    GmStatus.GAME_EXIT --- 游戏此时需要结束游戏进程
+   
+   
+### 实名认证相关
+
+
+实名认证相关接入流程说明：
+相关主动接口均需在用户登录后调用，如游戏或我方运营有相关需求可以选择接入，如无要求可不接入
+
+1. SDK会在登录游戏以及用户实名状态改变时回调实名认证回调，同时SDK提供接口GM.antiAddiction()，调用后也可收到实名认证回调
+
+```java
+GM.antiAddiction()
+```
+
+2. 根据防沉迷相关要求，SDK提供查询用户当天剩余游玩时间接口，返回为剩余游玩分钟
+   
+```java
+GM.getPlayTimeLeft()
+```
+
+当GM.getPlayTimeLeft()接口返回为Integer.MAX_VALUE时，用户已成年无游玩时间限制，返回为Integer.MIN_VALUE时为我方后台未开启实名游玩限制，其余返回为用户剩余游玩分钟，详情可参考demo
 

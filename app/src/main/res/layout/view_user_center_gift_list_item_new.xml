@@ -92,7 +92,27 @@
                 android:text="已领取"
                 android:textSize="15.5dp"
                 android:visibility="invisible" />
-
+            <Button
+                android:id="@+id/bt_code_guaimao_depleted"
+                android:layout_width="77.5dp"
+                android:layout_height="27.5dp"
+                android:layout_centerInParent="true"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_user_center_function_bar_gray_guaimao"
+                android:text="已领完"
+                android:textSize="15.5dp"
+                android:visibility="invisible" />
+            <TextView
+                android:id="@+id/tv_code_amount_guaimao_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="（剩余5000）"
+                android:layout_centerInParent="true"
+                android:textSize="12dp"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentBottom="true"
+                android:textColor="#8F979C"
+                />
 
         </RelativeLayout>
 

@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_marginBottom="20dp"
-    android:layout_marginTop="20dp"
+    android:layout_height="80dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginTop="8dp"
     android:background="@drawable/bg_coupon_list_item_guaimao"
     android:orientation="vertical">
 
@@ -12,7 +12,7 @@
     <RelativeLayout
         android:id="@+id/rl_adapter_item_coupon_item_main_container"
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="80dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -87,7 +87,7 @@
                         android:text="游戏专享"
                         android:textColor="#333333"
                         android:layout_marginLeft="70dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="1"
                         android:textSize="13sp"
                         android:textStyle="bold" />
@@ -107,7 +107,7 @@
                         android:id="@+id/tv_adapter_item_coupon_game_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="20dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_weight="1"
                         android:layout_marginLeft="70dp"
                         android:textColor="#333333"

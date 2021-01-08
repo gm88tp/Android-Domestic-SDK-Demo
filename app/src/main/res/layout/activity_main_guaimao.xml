@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
     android:background="@drawable/gm_demo_activity_background"
+    android:orientation="horizontal"
     android:weightSum="1">
 
     <ScrollView
@@ -96,13 +96,14 @@
                 android:layout_height="46dp"
                 android:layout_margin="5dp"
                 android:background="@drawable/gm_demo_button_shape"
-                android:text="角色上报" />
+                android:text="更新角色信息" />
+
             <Button
-                android:layout_margin="5dp"
-                android:background="@drawable/gm_demo_button_shape"
                 android:id="@+id/btn_main_activity_show_ad"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
                 android:text="播放广告" />
 
             <EditText
@@ -255,6 +256,58 @@
                 android:layout_margin="5dp"
                 android:background="@drawable/gm_demo_button_shape"
                 android:text="切换成正式环境" />
+
+            <Button
+                android:id="@+id/anti1"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="未实名游玩还剩15分钟" />
+            <Button
+                android:id="@+id/anti2"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="未实名登录60分钟" />
+
+            <Button
+                android:id="@+id/anti3"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="防沉迷用户游玩还剩15分钟" />
+            <Button
+                android:id="@+id/anti4"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="防沉迷用户游玩到时间" />
+
+            <Button
+                android:id="@+id/anti5"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="宵禁" />
+            <Button
+                android:id="@+id/anti6"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="查看剩余游玩时间" />
+            <Button
+                android:id="@+id/anti7"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="查看用户年龄区间" />
 
         </LinearLayout>
 

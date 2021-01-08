@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="134dp"
+        android:layout_height="80dp"
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
         android:orientation="horizontal">
@@ -28,12 +28,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="25dp"
-                android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:lines="1"
                 android:maxLines="1"
                 android:textColor="#333333"
-                android:textSize="18.5dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 tools:text="这是礼包的文案" />
             <TextView
@@ -46,7 +45,7 @@
                 android:maxLines="1"
                 android:textColor="#FF9600"
                 android:layout_marginLeft="25dp"
-                android:textSize="19.5dp"
+                android:textSize="17dp"
                 android:textIsSelectable="true"
                 tools:text="这是礼包码" />
 
@@ -60,8 +59,8 @@
                 android:maxLines="1"
                 android:textColor="#9A9A9A"
                 android:layout_marginLeft="25dp"
-                android:layout_marginBottom="25dp"
-                android:textSize="15dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="14dp"
                 tools:text="这是到期时间" />
 
 

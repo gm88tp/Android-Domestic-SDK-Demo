@@ -59,28 +59,6 @@
                 android:textSize="24sp"
                 tools:text="双十一买点好的..." />
 
-
-            <RelativeLayout
-                android:id="@+id/rl_user_center_activity_detail_close"
-                android:layout_width="40dp"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:gravity="right"
-                android:visibility="visible">
-
-                <ImageView
-                    android:id="@+id/iv_user_center_activity_detail_close"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="15dp"
-                    android:src="@drawable/ic_new_white_close" />
-
-            </RelativeLayout>
-
         </RelativeLayout>
 
         <com.game.sdk.reconstract.widget.NumberProgressBar

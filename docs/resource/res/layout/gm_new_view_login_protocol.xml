@@ -5,9 +5,9 @@
     android:orientation="horizontal">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:gravity="center|start"
-        android:id="@+id/gm_ll_fragment_login_entrance_check_protocol"
+        android:id="@+id/gm_rl_fragment_login_entrance_check_protocol"
         android:layout_width="20dp"
         android:layout_height="30dp">
 
@@ -16,9 +16,16 @@
             android:scaleType="fitXY"
             android:src="@drawable/gm_login_protocol_check"
             android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:visibility="invisible"/>
+        <ImageView
+            android:id="@+id/gm_fragment_login_entrance_uncheck_protocol"
+            android:scaleType="fitXY"
+            android:src="@drawable/gm_login_protocol_uncheck"
+            android:layout_width="14dp"
             android:layout_height="14dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
     <LinearLayout
         android:id="@+id/gm_fragment_login_entrance_read_protocol"
         android:gravity="center"

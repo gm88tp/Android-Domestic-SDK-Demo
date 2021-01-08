@@ -112,6 +112,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
                 android:text="查询用户实名情况" />
+            <Button
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:id="@+id/btn_main_activity_check_palytimeleft"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="查询用户剩余游玩时间" />
 
             <EditText
                 android:visibility="gone"

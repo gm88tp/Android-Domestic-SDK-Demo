@@ -88,7 +88,7 @@
         <item name="android:layout_height">33dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/bg_long_yellow_button</item>
-        <item name="android:textColor">#333333</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">@dimen/text_size_f14_guaimao</item>
     </style>
     <style name="ShortYellowButton_width_10_corner_border_guaimao">

@@ -10,31 +10,13 @@
         android:layout_height="70dp"
         android:background="#FF8A00">
 
-        <RelativeLayout
-            android:id="@+id/rl_user_center_back_gm"
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:gravity="left">
-
-            <ImageView
-                android:id="@+id/iv_back_gm"
-                android:layout_width="8dp"
-                android:layout_height="14.5dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="14.5dp"
-                android:src="@drawable/ic_new_white_back" />
-        </RelativeLayout>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="用户中心"
             android:textColor="#FFFFFF"
-            android:textSize="23.5sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <RelativeLayout
@@ -56,12 +38,6 @@
                 android:src="@drawable/ic_new_white_close" />
         </RelativeLayout>
     </RelativeLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -141,7 +117,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="550dp"
+                android:layout_height="430dp"
                 android:background="#FFFFFF"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -160,12 +136,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_verify" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_smrz_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="实名认证" />
 
                     <TextView
                         android:id="@+id/tv_user_center_is_verified"
@@ -177,7 +156,7 @@
                         android:ellipsize="end"
                         android:maxWidth="180dp"
                         android:textColor="#FF9600"
-                        android:textSize="18dp"
+                        android:textSize="15dp"
                         android:visibility="invisible"
                         tools:text="(已认证：310***6)" />
 
@@ -216,12 +195,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_gift" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_yxlb_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="游戏礼包" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -267,12 +249,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_news" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_swgg_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="新闻公告" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -318,12 +303,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_activity" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_yxhd_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="游戏活动" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -370,12 +358,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_vip" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_vipfw_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="VIP服务" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -410,12 +401,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_customer" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_kfzx_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="客服中心" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -449,12 +443,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_coupon" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="72dp"
-                        android:layout_height="18dp"
+                        android:layout_height="20dp"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="0dp"
-                        android:src="@drawable/ic_new_yhq_gm" />
+                        android:layout_marginLeft="7dp"
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="优惠券" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -489,12 +486,15 @@
                         android:layout_marginLeft="25dp"
                         android:src="@drawable/ic_new_vipcustomer" />
 
-                    <ImageView
+                    <TextView
                         android:layout_width="100dp"
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:src="@drawable/ic_new_vipkfzx_gm" />
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="VIP专属客服" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -517,21 +517,84 @@
                 <View
                     android:id="@+id/view_usercenter_bottom_line"
                     style="@style/new_HorizontalLine_guaimao"
-                    android:visibility="invisible"/>
+                    android:visibility="visible"/>
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="90dp"
                 android:orientation="horizontal"
                 android:background="#FFFFFF">
+                <LinearLayout
+                    android:id="@+id/ll_user_center_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/tv_user_center_recommend_icon"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="210dp"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/iv_user_center_recommend_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            tools:text="产品名称"
+                            android:layout_weight="1"
+                            android:textColor="#333333"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@drawable/ic_have_new_guaimao" />
+                        <TextView
+                            android:id="@+id/iv_user_center_recommend_describe"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            tools:text="产品描述的话"
+                            android:textColor="#333333"
+                            android:layout_marginBottom="10dp"
+                            android:singleLine="true"
+                            android:layout_weight="1"
+                            android:textSize="14sp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:src="@drawable/ic_have_new_guaimao" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_user_center_recommend_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="详情"
+                        android:layout_centerInParent="true"
+                        android:textColor="#02A7F0"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="14.5dp" />
+                </LinearLayout>
                 <TextView
                     android:id="@+id/view_usercenter_version_code"
                     android:gravity="right"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_alignParentBottom="true"
                     android:layout_width="fill_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="20dp"
                     android:background="#FFFFFF"
                     android:textSize="16sp"
                     android:textColor="#000000"
@@ -539,6 +602,5 @@
 
             </RelativeLayout>
         </LinearLayout>
-    </ScrollView>
 
 </LinearLayout>

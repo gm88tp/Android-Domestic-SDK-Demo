@@ -12,7 +12,7 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
-        <com.stx.xhb.xbanner.XBanner
+        <com.game.sdk.reconstract.banner.XBanner
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/xbanner"
             android:layout_width="match_parent"
