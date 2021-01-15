@@ -13,7 +13,9 @@ android {
         ndk{
             abiFilters 'armeabi-v7a'
         }
-//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        jackOptions {
+            enabled true
+        }
     }
     buildTypes {
         release {
@@ -24,6 +26,10 @@ android {
     lintOptions {
         checkReleaseBuilds false
         abortOnError false
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 dependencies {
@@ -37,7 +43,7 @@ dependencies {
     compile files('libs/ipaynow_base_2.1.12_api_1.0.0.jar')
     compile files('libs/ipaynow_wechatpay_v2.0.5.jar')
     compile files('libs/jrtt-3.3.12.jar')
-    compile files('libs/miit_mdid_1.0.23.jar')
+    compile files('libs/miit_mdid_1.0.13.jar')
     compile files('libs/gmdatasdk.jar')
     compile files('libs/gmpluginsdk.jar')
     compile files('libs/gmthirdutil.jar')
@@ -49,5 +55,5 @@ dependencies {
     compile files('libs/gmthirdskeleton.jar')
     compile files('libs/bcprov-jdk16-139.jar')
     compile files('libs/qiyu-sdk-3.11.1.jar')
-    compile files('libs/tracking.1.6.8.jar')
+    compile files('libs/tracking.1.7.1.jar')
 }
