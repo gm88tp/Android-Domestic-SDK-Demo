@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <gameinfo gssAppId="1628" appMode="release" />
+    <gameinfo gssAppId="1628" appMode="release" cpSupSwitch="1"/>
     <gmsdk>
         <loginType>
             <login>fast</login>

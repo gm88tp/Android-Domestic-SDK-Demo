@@ -34,7 +34,7 @@ android {
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.8.3.jar')
+    compile files('libs/GuaiMaoSdk_3.8.4.jar')
     compile files('libs/android-v4.jar')
     compile files('libs/gdt.jar')
     compile files('libs/GDTUnionSDK.4.28.902.min.jar')

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="305dp"
+        android:layout_height="302dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_login_new_gm"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/title"
+                android:layout_gravity="right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="温馨提示"
+                android:textColor="#ff9600"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/download_kf"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_new_kf" />
+        </FrameLayout>
+
+
+        <TextView
+            android:textColor="#333333"
+            android:id="@+id/tv_downloading_tips_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:text="尊敬的用户，您好：系统已经检测到最新的游戏版本更新，为了获得最新的游戏体验，请更新至最新版本！"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="8sp"
+            android:layout_marginLeft="10dp"
+            android:text="注：如果更新遇到问题，请点击右上角客服按钮联系客服解决" />
+
+
+        <TextView
+            android:textColor="#333333"
+            android:id="@+id/tv_downloading_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="16dp"
+            android:text="本次更新大小：0MB"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_downinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ProgressBar
+                    android:id="@+id/pb_downloading_progress_gm"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:indeterminateOnly="false"
+                    android:progressDrawable="@drawable/bg_customer_progress_bar_horizontal" />
+
+                <TextView
+                    android:id="@+id/tv_downloading_progress_guaimao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="0%"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/tv_downloading_loading_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="下载速度：600kb/s"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_startdown"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:textColor="#333333"
+                android:id="@+id/exit_app"
+                style="@style/ShortGreyBorderButton_guaimao"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"
+                android:text="退出游戏"></TextView>
+
+
+            <TextView
+                android:id="@+id/down_apk"
+                style="@style/MiddleYellowButton2_guaimao"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="下载"></TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_downover"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:textColor="#333333"
+                android:layout_marginLeft="10dp"
+                android:text="游戏更新包已下载完成！" />
+
+            <TextView
+                android:id="@+id/start_install"
+                style="@style/MiddleYellowButton2_guaimao"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="安装"></TextView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
