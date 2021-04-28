@@ -37,9 +37,9 @@ public class MainActivity extends Activity {
 
     private EditText price_ET;
 
-    private EditText gameId_ET, roleName_ET;
-    private Button setGameId_BTN, changeDebug_BTN, creatRole_BTN, beginner_BTN, updateRole_BTN, palyTimeLeft_BTN;
-    private Button mRealNameCheck;
+    private EditText gameId_ET, roleName_ET, openUrl_ET;
+    private Button setGameId_BTN, changeDebug_BTN, creatRole_BTN, customer_BTN, updateRole_BTN, palyTimeLeft_BTN;
+    private Button mRealNameCheck_BTN, openWebUrl_BTN;
     private int count = 0;
 
     private boolean initsucc = false;
@@ -145,18 +145,31 @@ public class MainActivity extends Activity {
 
     private void initClick() {
         price_ET = (EditText) findViewById(R.id.et_main_activity_purchase_value_input_gm);
-        mRealNameCheck = findViewById(R.id.btn_main_activity_check_realname);
+        mRealNameCheck_BTN = findViewById(R.id.btn_main_activity_check_realname);
         gameId_ET = (EditText) findViewById(R.id.et_main_activity_set_game_id);
         setGameId_BTN = (Button) findViewById(R.id.btn_main_activity_set);
         changeDebug_BTN = (Button) findViewById(R.id.btn_main_activity_change_debug);
         creatRole_BTN = (Button) findViewById(R.id.btn_main_activity_creatRole);
-        beginner_BTN = (Button) findViewById(R.id.btn_main_activity_beginner);
+        customer_BTN = (Button) findViewById(R.id.btn_main_activity_customer);
+        openUrl_ET = (EditText) findViewById(R.id.et_main_activity_openUrlWithWeb);
+        openWebUrl_BTN = (Button) findViewById(R.id.bt_open_web_url);
         updateRole_BTN = (Button) findViewById(R.id.btn_main_activity_updata_role);
         palyTimeLeft_BTN = (Button) findViewById(R.id.btn_main_activity_check_palytimeleft);
         roleName_ET = (EditText) findViewById(R.id.et_main_activity_updata_role);
         changeDebug_BTN.setText(Config.isDebug() ? "点击切换成正式环境服务" : "点击切换成测试环境服务");
 
-        mRealNameCheck.setOnClickListener(new View.OnClickListener() {
+        openWebUrl_BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(openUrl_ET.getText().toString().trim())) {
+                    GlobalUtil.shortToast("请在输入框中填入跳转链接");
+                    return;
+                }
+               Platform.getInstance().openUrlWithWeb(openUrl_ET.getText().toString().trim());
+            }
+        });
+
+        mRealNameCheck_BTN.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
             GM.antiAddiction();
@@ -206,13 +219,30 @@ public class MainActivity extends Activity {
             ULogUtil.d(TAG, "is Debug :" + Config.isDebug());
           }
         });
+        customer_BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Platform.getInstance().openCustomer(MainActivity.this);
+            }
+        });
 
         updateRole_BTN.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
             Toast.makeText(MainActivity.this, "点击更新角色信息~", Toast.LENGTH_SHORT).show();
-            Platform.getInstance().updateRole("game_level", roleName_ET.getText().toString().isEmpty() ?
-                    "role_name" : roleName_ET.getText().toString(), "server_id");
+              Map<String, String> data = new HashMap<>();
+              data.put("dataType", "1");
+              data.put("roleId", "7845");
+              data.put("roleName", "天下第一");
+              data.put("roleLevel", "22");
+              data.put("zoneId", "1");
+              data.put("zoneName", "上海一区");
+              data.put("balance", "130");
+              data.put("partyName", "青帮");
+              data.put("vipLevel", "2");
+              data.put("roleCTime", "-1");
+              data.put("roleLevelMTime", "-1");
+              GM.submitRoleInfo(data);
           }
         });
     }
@@ -248,7 +278,7 @@ public class MainActivity extends Activity {
 
 
     public void userPurchase(View view) {
-        if (!Platform.getInstance().isLogin()) {
+        if (!GM.isLogin()) {
             GlobalUtil.shortToast("请先登录~");
             return;
         }

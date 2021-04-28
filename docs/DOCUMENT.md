@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2021/01/25
+# 怪猫SDK 接入文档 2021/04/28
 
 ## SDK **资源引用**
 
@@ -12,7 +12,7 @@
 
 5. 将 resource/AndroidManifest.xml 内注册的 activity、server、provider、meta-data 和 uses-permission 等复制到游戏工程的AndroidManifest.xml文件中。(详细请参考demo)
 
-6. 将清单文件中 ${applicationId}替换成游戏本身的包名。
+6. 如果项目使用Eclipse集成，需要将清单文件中 ${applicationId}替换成游戏本身的包名。
 
 7. 在清单文件中的application节点中加上 
    
@@ -30,10 +30,10 @@
 
 ### 接入 SDK 基本顺序
 
-1. 第一步需要在 Application 的对应方法内进行初始化
+1. 第一步需要在 Application 的对应方法内进行初始化，Application需要继承GMApplication
 
 ```java
-public class MyApplication extends Application {
+public class MyApplication extends GMApplication {
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -353,6 +353,20 @@ GM.getPlayTimeLeft()
 ```
 
 当GM.getPlayTimeLeft()接口返回为Integer.MAX_VALUE时，用户已成年无游玩时间限制，返回为Integer.MIN_VALUE时为我方后台未开启实名游玩限制，其余返回为用户剩余游玩分钟，详情可参考demo
+
+### 其他外部接口，可根据游戏自身需要选接
+
+1. 打开外部链接接口，调用此接口后，SDK会跳转外部链接url
+
+```java
+Platform.getInstance().openUrlWithWeb(String url);
+```
+
+2. 打开怪猫客服界面接口，调用此接口后，会进入客服界面
+
+```java
+Platform.getInstance().openCustomer(Context context);
+```
 
 ### 广告相关（选接）
 

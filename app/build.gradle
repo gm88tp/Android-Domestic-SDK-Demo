@@ -34,8 +34,9 @@ android {
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.8.4.jar')
+    compile files('libs/GuaiMaoSdk_3.8.6.jar')
     compile files('libs/android-v4.jar')
+    compile files('libs/du.jar')
     compile files('libs/gdt.jar')
     compile files('libs/GDTUnionSDK.4.28.902.min.jar')
     compile files('libs/ipaynow_alipay_v2.0.1.jar')
