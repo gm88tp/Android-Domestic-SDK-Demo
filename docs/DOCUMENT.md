@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2021/04/28
+# 怪猫SDK 接入文档 2021/05/18
 
 ## SDK **资源引用**
 
@@ -366,6 +366,25 @@ Platform.getInstance().openUrlWithWeb(String url);
 
 ```java
 Platform.getInstance().openCustomer(Context context);
+```
+
+3. 打开怪猫个人中心界面接口，调用此接口后，会进入个人中心界面
+
+```java
+Platform.getInstance().showUserCenter(Context context);
+```
+
+4. 打开怪猫手机绑定界面接口，调用此接口后，会进入手机绑定界面
+
+```java
+Platform.getInstance().showBindPhone();
+```
+
+
+5. 打开怪猫实名认证界面接口，调用此接口后，会进入实名认证界界面
+
+```java
+Platform.getInstance().showBindId();
 ```
 
 ### 广告相关（选接）

@@ -178,7 +178,8 @@ public class MainActivity extends Activity {
         creatRole_BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                submitRoleInfo();
+//                submitRoleInfo();
+                Platform.getInstance().doQueryBindId();
             }
         });
         setGameId_BTN.setOnClickListener(new View.OnClickListener() {

@@ -196,6 +196,40 @@
                     android:text="充值" />
 
             </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="-8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:textColorHint="@android:color/white"
+                        android:textColor="@android:color/white"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:id="@+id/et_main_activity_openUrlWithWeb"
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:hint="请输入想要打开的外部链接网址"
+                        android:maxLines="1" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/bt_open_web_url"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36.0dp"
+                    android:background="@drawable/gm_demo_button_shape"
+                    android:text="跳转" />
+
+            </LinearLayout>
 
 
             <View
