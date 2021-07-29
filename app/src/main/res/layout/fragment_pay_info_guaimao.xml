@@ -127,6 +127,13 @@
             android:paddingTop="10dp">
 
             <View style="@style/HorizontalLine_guaimao" />
+            <com.game.sdk.reconstract.views.PayChannelItemView
+                android:id="@+id/piv_pay_info_channel_item_sandboxPay_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                attr:viewTypeGuaimao="0"
+                android:visibility="gone"
+                />
 
             <com.game.sdk.reconstract.views.PayChannelItemView
                 android:id="@+id/piv_pay_info_channel_item_alipay_guaimao"

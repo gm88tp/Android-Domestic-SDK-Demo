@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2021/05/18
+# 怪猫SDK 接入文档 2021/07/29
 
 ## SDK **资源引用**
 
@@ -23,6 +23,13 @@
 8. targetSdkVersion 设置成22及以上(最高可支持到28)
 
 9. resource/addition 下的zip文件为选接功能相关的接入文档、demo，正常情况下可以不进行接入，如有相关功能需求再进行接入。相关SDK均为独立SDK，接入时不会影响已接入的主体SDK。
+
+10. 注意请在清单文件中更新当前SDK引用的版本号。否则在开放平台的自测流程中，上传apk时会无法通过检测（需要3.9以上版本）。
+```xml
+    <meta-data
+                android:name="game_sdk_version_guaimao"
+                android:value="3.9.0" />
+   ```
 
 ## SDK 接入相关
 
