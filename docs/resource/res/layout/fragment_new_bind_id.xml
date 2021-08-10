@@ -58,7 +58,7 @@
                 android:text="       亲爱的玩家，按照国家相关法规要求，未实名登记的帐号体验时长不超过1小时，且不能充值，请尽快完成实名认证，以获得完整的游戏体验"/>
 
         </LinearLayout>
-         <LinearLayout
+        <LinearLayout
             android:background="#FFFFFF"
             android:gravity="center"
             android:layout_gravity="center"
@@ -134,6 +134,19 @@
                 android:textColor="#FFFFFF"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tv_bind_id_btn_skip"
+                style="@style/ShortGreyBorderButton_guaimao"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:textColor="#000"
+                android:layout_alignParentBottom="true"
+                android:text="暂时跳过"
+                android:textSize="15sp"
+                />
 
         </LinearLayout>
 
