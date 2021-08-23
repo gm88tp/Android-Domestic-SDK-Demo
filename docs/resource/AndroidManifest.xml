@@ -72,7 +72,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.8.8" />
+            android:value="3.9.2" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
@@ -342,5 +342,18 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/ysf_window_theme" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 数数  -->
+        <meta-data android:name="cn.thinkingdata.android.MainProcessName" android:value="${applicationId}"/>
+
+        <receiver android:name="cn.thinkingdata.android.TDReceiver" android:exported="false" android:enabled="false"/>
+
+        <service android:name="cn.thinkingdata.android.TDQuitSafelyService$TDKeepAliveService" android:exported="false" android:stopWithTask="false"/>
     </application>
 </manifest>

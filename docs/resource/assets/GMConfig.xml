@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <gameinfo gssAppId="1628" appMode="release"/>
+    <gameinfo gssAppId="4621" appMode="debug"/>
     <gmsdk>
         <loginType>
             <login>fast</login>
@@ -17,6 +17,9 @@
         <ks appId = "" appName = "" />
         
         <pdd appId = ""  appSecret = ""/>
+
+        <!-- 数数 -->
+        <thinking appId = "06842647fb7c48e794aafa3d6d3fc7d9"  reportUrl = "https://receiver.ta.thinkingdata.cn"/>
     </gmsdk>
 </config>
 

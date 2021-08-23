@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2021/07/29
+# 怪猫SDK 接入文档 2021/08/23
 
 ## SDK **资源引用**
 
@@ -28,7 +28,7 @@
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.0" />
+                android:value="3.9.2" />
    ```
 
 ## SDK 接入相关
