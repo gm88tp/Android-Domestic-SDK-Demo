@@ -19,7 +19,7 @@
         <pdd appId = ""  appSecret = ""/>
 
         <!-- 数数 -->
-        <thinking appId = "06842647fb7c48e794aafa3d6d3fc7d9"  reportUrl = "https://receiver.ta.thinkingdata.cn"/>
+        <thinking appId = ""  reportUrl = ""/>
     </gmsdk>
 </config>
 
