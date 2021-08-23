@@ -176,6 +176,11 @@
             android:name="com.game.sdk.reconstract.ui.UserCenterActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- 现在支付 -->
         <activity
