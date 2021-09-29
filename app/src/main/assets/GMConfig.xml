@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <gameinfo gssAppId="4621" appMode="debug"/>
+    <gameinfo gssAppId="4688" appMode="debug"/>
     <gmsdk>
         <loginType>
             <login>fast</login>

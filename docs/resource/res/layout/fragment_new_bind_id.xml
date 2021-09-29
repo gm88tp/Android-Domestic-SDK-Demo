@@ -55,10 +55,10 @@
                 android:textColor="#0A0A0A"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="       亲爱的玩家，按照国家相关法规要求，未实名登记的帐号体验时长不超过1小时，且不能充值，请尽快完成实名认证，以获得完整的游戏体验"/>
+                android:text="根据国家相关法规要求，您必须完成实名制认证才能进行游戏，为保证您的游戏体验，请进行实名认证"/>
 
         </LinearLayout>
-        <LinearLayout
+         <LinearLayout
             android:background="#FFFFFF"
             android:gravity="center"
             android:layout_gravity="center"
