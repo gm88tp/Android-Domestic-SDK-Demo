@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.game.sdk.Platform;
 import com.game.sdk.reconstract.base.Config;
+import com.game.sdk.reconstract.manager.GameInfoManager;
 import com.game.sdk.reconstract.utils.GlobalUtil;
 import com.game.sdk.reconstract.utils.ULogUtil;
 import com.gm88.gmcore.GM;
