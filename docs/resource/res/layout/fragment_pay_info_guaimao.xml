@@ -23,16 +23,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv_pay_info_product_name_guaimao"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:textColor="#F59A23"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:text="西亭脆饼" />
+            <TextView
+                android:id="@+id/tv_pay_info_product_name_guaimao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#F59A23"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="西亭脆饼" />
                 <RelativeLayout
                     android:id="@+id/rl_close_gm"
                     android:layout_width="45dp"

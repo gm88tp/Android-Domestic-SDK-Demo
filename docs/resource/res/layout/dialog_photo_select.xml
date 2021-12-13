@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_select_photo"
+    >
+
+    <TextView
+        android:id="@+id/dialog_photo_tvbtn_camera"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/button_text_gm"
+        android:text="拍照上传"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFEFEFEF"
+        />
+    <TextView
+        android:id="@+id/dialog_photo_tvbtn_local"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/button_text_gm"
+        android:text="本地上传"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#FFEFEFEF"
+        />
+    <TextView
+        android:id="@+id/dialog_photo_tvbtn_cancel"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:textColor="@color/button_text_gm"
+        android:text="取消"
+        />
+
+</LinearLayout>

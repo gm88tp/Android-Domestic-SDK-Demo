@@ -15,11 +15,11 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#FF8A00"
             android:layout_centerInParent="true"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/iv_user_center_title_logo"
                 android:layout_width="28.5dp"
                 android:layout_height="28.5dp"
                 android:layout_gravity="center"
@@ -68,23 +68,35 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:background="@drawable/usercenter_background_new_ysy"
-                android:orientation="horizontal">
+                android:layout_height="180dp"
+                >
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:src="@drawable/usercenter_background_new_ysy"
+                    android:scaleType="fitXY"
+                    />
 
                 <LinearLayout
                     android:id="@+id/ll_subtitle_gm"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_usercenter_usrinfo"
+                    >
 
                     <RelativeLayout
                         android:id="@+id/rl_user_info_gm"
                         android:layout_width="100dp"
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true">
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone"
+                        >
 
                         <Button
                             android:id="@+id/bt_user_info_gm"
@@ -97,67 +109,138 @@
                             android:background="@drawable/bg_user_center_function_bar_ysy_guaimao"
                             android:text="个人信息"
                             android:textColor="#FF9600"
-                            android:textSize="12dp" />
+                            android:textSize="12dp"
+
+                            />
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="85dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true">
 
+                        <com.game.sdk.reconstract.widget.circleimageview.CircleImageView
+                            android:id="@+id/iv_user_info_avatar_gm"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="13dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_new_user_info_avatar_default" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="90dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/iv_user_info_avatar_gm"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+
+                            >
+
+                            <TextView
+                                android:id="@+id/tv_user_info_name_gm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:ellipsize="end"
+                                android:maxLength="12"
+                                android:textColor="#FF333333"
+                                android:textSize="15sp"
+                                tools:text="13000000000" />
+
+                            <TextView
+                                android:id="@+id/tv_user_info_name_intro"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginTop="5dp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:textColor="#7A746F"
+                                android:textSize="12sp"
+                                tools:text="13000000000"
+
+                                />
+
+
+                        </LinearLayout>
+
                         <Button
                             android:id="@+id/user_center_change_account"
-                            android:layout_width="60.9dp"
+                            android:layout_width="70.9dp"
                             android:layout_height="25.4dp"
-                            android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
-                            android:layout_centerInParent="true"
-                            android:layout_marginRight="24.5dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="25dp"
+                            android:layout_marginRight="25dp"
                             android:background="@drawable/bg_user_center_function_bar_ysy_guaimao"
                             android:text="切换账号"
-                            android:textColor="#FF9600"
+                            android:textColor="#FFFFFF"
                             android:textSize="12dp" />
                     </RelativeLayout>
+                    <TextView android:layout_height="0.5dp" android:layout_width="match_parent" android:background="#FFEEEAF3"/>
+                    <LinearLayout
+                        android:id="@+id/user_center_ll_edit_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="2dp"
+                        >
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:src="@drawable/ic_userinfo_edit"
+                            />
+                        <TextView
+                            android:textColor="#FF333333"
+                            android:text="编辑您的资料"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </LinearLayout>
                 </LinearLayout>
 
 
-                <com.game.sdk.reconstract.widget.circleimageview.CircleImageView
-                    android:id="@+id/iv_user_info_avatar_gm"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_new_user_info_avatar_default" />
+
 
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:background="#FFFFFF"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tv_user_info_name_gm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:ellipsize="end"
-                    android:maxLength="12"
-                    android:textColor="#7A746F"
-                    android:textSize="20dp"
-                    tools:text="13000000000" />
-            </RelativeLayout>
-            <View style="@style/new_HorizontalLine_guaimao" />
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:background="#FFFFFF"-->
+<!--                android:orientation="horizontal">-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_user_info_name_gm"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:ellipsize="end"-->
+<!--                    android:maxLength="12"-->
+<!--                    android:textColor="#7A746F"-->
+<!--                    android:textSize="20dp"-->
+<!--                    tools:text="13000000000" />-->
+<!--            </RelativeLayout>-->
+            <View style="@style/new_HorizontalLine_guaimao"
+                android:layout_marginTop="5dp"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="430dp"
+                android:layout_height="460dp"
                 android:background="#FFFFFF"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:id="@+id/ll_user_center_name_verify"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -213,6 +296,58 @@
                             android:src="@drawable/ic_new_user_center_go" />
                     </RelativeLayout>
 
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_user_center_community"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:src="@drawable/ic_community" />
+
+                    <TextView
+                        android:layout_width="72dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="#7A746F"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:text="游戏社区" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true">
+                        <ImageView
+                            android:id="@+id/iv_user_center_gifts_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:visibility="invisible"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_have_new_guaimao" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="24.5dp"
+                            android:src="@drawable/ic_new_user_center_go" />
+                    </RelativeLayout>
                 </LinearLayout>
 
                 <View style="@style/new_HorizontalLine_guaimao" />
@@ -560,7 +695,7 @@
                 <View
                     android:id="@+id/view_usercenter_bottom_line"
                     style="@style/new_HorizontalLine_guaimao"
-                    android:visibility="visible"/>
+                    android:visibility="gone"/>
             </LinearLayout>
             <RelativeLayout
                 android:layout_width="match_parent"

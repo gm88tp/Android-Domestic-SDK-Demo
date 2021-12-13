@@ -1,4 +1,11 @@
-# 怪猫SDK 接入文档 2021/09/29
+# 怪猫SDK 接入文档 2021/12/13
+
+## 历史版本更新
+3.9.4 增加个人中心用户资料编辑，增加个人中心的游戏社区。
+
+
+
+
 
 ## SDK **资源引用**
 
@@ -28,7 +35,7 @@
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.3" />
+                android:value="3.9.4" />
    ```
 
 ## SDK 接入相关
@@ -147,7 +154,8 @@ public class MyApplication extends GMApplication {
    GM.init(this);
    ```
 
-4. 商务给您的appid并不在这个初始化中传入，只需要在 assests 的 GMConfig.xml 中去修改gssAppId 即可
+4. 商务给您的appid并不在这个初始化中传入，只需要在 assests 的 GMConfig.xml 中去修改gssAppId 即可。
+3.9.4版本中GMConfig.xml添加了appReleaseId属性，以提供发布记录id。（可不填或为空）
 
 5. 需要重写 Activity 的一些生命周期方法，并调用怪猫 SDK 的相关方法。后续有详细说明。
 

@@ -57,7 +57,7 @@
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:name="com.gm.gmsdkdemo.TApplication"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-        <activity android:name="com.gm.gmsdkdemo.MainActivity"
+        <activity android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -176,6 +176,13 @@
             android:name="com.game.sdk.reconstract.ui.UserCenterActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.NewH5Activity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait"
+            />
 
         <!-- 现在支付 -->
         <activity
@@ -342,11 +349,25 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/ysf_window_theme" />
+<!--        <activity-->
+<!--            android:configChanges="orientation|screenSize|keyboardHidden"-->
+<!--            android:name="com.game.sdk.reconstract.ui.NewH5Activity"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
 
         <activity
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:name="com.game.sdk.reconstract.ui.NewH5Activity"
-            android:launchMode="singleTask"
+            android:name="com.game.sdk.reconstract.ui.usercenter.UserInfoEditActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.usercenter.ResetPwdActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.usercenter.UsercenterBindPhoneActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <!-- 数数  -->
