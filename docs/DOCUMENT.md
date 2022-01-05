@@ -5,11 +5,12 @@
 3.9.5 增加手机号一键登录（闪验）、微信登录、微信绑定功能。
 新增用户协议调用接口，新增用户授权前是否弹起协议界面的流程。
 此次更新涉及到jar文件、资源文件的变更。请注意替换相关文件夹(libs,res,assets,so)下所有的资源。同时注意更新manifest文件。
-注意manifest本次新增权限:
+注意manifest本次新增权限 WRITE_SETTINGS、CHANGE_WIFI_STATE。
+
 ```xml
-<uses-permission android:name="android.permission.WRITE_SETTINGS" />
-<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-```
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+   ```
 
 
 3.9.4 增加个人中心用户资料编辑，增加个人中心的游戏社区。
