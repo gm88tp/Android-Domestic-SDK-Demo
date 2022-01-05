@@ -6,6 +6,10 @@
     android:background="#FFEFEFEF"
     android:orientation="horizontal">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -226,8 +230,49 @@
             android:src="@drawable/ic_new_user_center_go" />
 
     </RelativeLayout>
+        <View style="@style/new_HorizontalLine_guaimao" />
+        <RelativeLayout
+            android:id="@+id/fragment_user_info_edit_rl_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="微信"
+                    android:textColor="#ff666666" />
+
+                <TextView
+                    android:id="@+id/fragment_user_info_edit_tv_wechat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="未绑定"
+                    android:textSize="12sp"
+                    android:textColor="#ff999999" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_new_user_center_go" />
+
+        </RelativeLayout>
 
     </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:layout_width="0.5dp"

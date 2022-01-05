@@ -1,6 +1,14 @@
-# 怪猫SDK 接入文档 2021/12/13
+# 怪猫SDK 接入文档 2022/1/5
 
 ## 历史版本更新
+
+3.9.5 增加手机号一键登录（闪验）、微信登录、微信绑定功能。新增用户协议调用接口。
+此次更新涉及到jar文件、资源文件的变更。请注意替换相关文件夹(libs,res,assets,so)下所有的资源。同时注意更新manifest文件。
+注意manifest本次新增权限:
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+
 3.9.4 增加个人中心用户资料编辑，增加个人中心的游戏社区。
 此次更新涉及到jar文件、资源文件的变更。请注意替换相关文件夹(libs,res)下所有的资源。同时注意更新manifest文件。
 
@@ -36,7 +44,7 @@
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.4" />
+                android:value="3.9.5" />
    ```
 
 ## SDK 接入相关
@@ -408,6 +416,25 @@ Platform.getInstance().showBindPhone();
 
 ```java
 Platform.getInstance().showBindId();
+```
+
+
+7. 打开用户协议界面接口，调用此接口后，会展示用户协议和隐私政策内容界面
+
+```java
+Platform.getInstance().openUserProtocol(new ProtocalHelper.ProtocolListener(){
+                    @Override
+                    public void onAgree() {
+                    //用户点击同意
+                        Toast.makeText(MainActivity.this,"agree",Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onDisagree() {
+                    //用户点击不同意，或者退出界面
+                        Toast.makeText(MainActivity.this,"disagree",Toast.LENGTH_SHORT).show();
+                    }
+                });
 ```
 
 ### 广告相关（选接）

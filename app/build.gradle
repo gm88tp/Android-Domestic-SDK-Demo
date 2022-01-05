@@ -34,7 +34,7 @@ android {
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.9.4.jar')
+    compile files('libs/GuaiMaoSdk_3.9.5.jar')
     compile files('libs/fastjson-1.2.76.jar')
     compile files('libs/android-v4.jar')
     compile files('libs/du.jar')
@@ -59,4 +59,5 @@ dependencies {
     compile files('libs/qiyu-sdk-3.11.1.jar')
     compile files('libs/tracking.1.7.1.jar')
     compile files('libs/thinkingSDK_2.7.3.jar')
+    compile files('libs/shanyan2.4.0.jar')
 }

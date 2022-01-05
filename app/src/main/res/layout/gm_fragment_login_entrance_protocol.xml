@@ -18,13 +18,22 @@
         android:orientation="vertical"
         android:paddingBottom="10dp">
 
-
-        <WebView
+        <ImageView
+            android:id="@+id/gm_fragment_login_entrance_protocol_iv_back"
+            android:src="@drawable/ic_new_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:visibility="gone"
+            />
+
+
+        <com.game.sdk.reconstract.views.CircleWebview
             android:id="@+id/wv_user_center_login_entrance_protocol"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="match_parent"
+             />
 
     </LinearLayout>
 

@@ -40,6 +40,9 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false" />
@@ -72,7 +75,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.9.4" />
+            android:value="3.9.5" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
@@ -376,5 +379,63 @@
         <receiver android:name="cn.thinkingdata.android.TDReceiver" android:exported="false" android:enabled="false"/>
 
         <service android:name="cn.thinkingdata.android.TDQuitSafelyService$TDKeepAliveService" android:exported="false" android:stopWithTask="false"/>
+
+
+        <!--  闪验-->
+        <!-- ***********授权页activity************ -->
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.CmccLoginActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            />
+        <activity-alias
+            android:name="com.cmic.sso.sdk.view.LoginAuthActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:targetActivity="com.chuanglan.shanyan_sdk.view.CmccLoginActivity"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            />
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.ShanYanOneKeyActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            />
+        <!-- ***********协议页activity************ -->
+        <activity
+            android:name="com.chuanglan.shanyan_sdk.view.CTCCPrivacyProtocolActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false"
+            android:launchMode="standard"
+            android:screenOrientation="behind"
+            android:theme="@style/Theme.ActivityDialogStyle"
+            />
+
+        <activity
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:name="com.game.sdk.reconstract.ui.login.ProtocolActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+
+        <!--微信登录回调activity        -->
+        <activity
+            android:name="com.game.sdk.reconstract.thirdlogin.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+
+        <activity-alias
+            android:name="${applicationId}.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:targetActivity="com.game.sdk.reconstract.thirdlogin.WXEntryActivity"
+            />
+
+
     </application>
 </manifest>
