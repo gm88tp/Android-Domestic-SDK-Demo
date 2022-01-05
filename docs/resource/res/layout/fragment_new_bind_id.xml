@@ -51,6 +51,7 @@
             android:layout_width="270dp"
             android:layout_height="110dp">
             <TextView
+                android:textSize="13sp"
                 android:id="@+id/tv_bind_hint_gm"
                 android:textColor="#0A0A0A"
                 android:layout_width="match_parent"
