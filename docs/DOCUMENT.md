@@ -6,7 +6,7 @@
 新增用户协议调用接口，新增用户授权前是否弹起协议界面的流程。
 此次更新涉及到jar文件、资源文件的变更。请注意替换相关文件夹(libs,res,assets,so)下所有的资源。同时注意更新manifest文件。
 注意manifest本次新增权限:
-```java
+```xml
 <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 ```
