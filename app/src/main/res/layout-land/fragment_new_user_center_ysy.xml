@@ -703,6 +703,17 @@
                             android:layout_alignParentRight="true">
 
                             <ImageView
+                                android:id="@+id/iv_user_center_kf_hint"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_centerInParent="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginLeft="0dp"
+                                android:visibility="invisible"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_have_new_guaimao" />
+
+                            <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentEnd="true"
