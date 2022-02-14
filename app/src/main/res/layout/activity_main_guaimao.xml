@@ -184,6 +184,30 @@
                 android:background="@drawable/gm_demo_button_shape"
                 android:text="测试分享" />
 
+            <Button
+                android:id="@+id/btn_main_activity_onekey"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="测试闪验" />
+
+            <Button
+                android:id="@+id/btn_main_activity_wechatLogin"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="测试微信登录" />
+
+            <Button
+                android:id="@+id/btn_main_activity_protocol"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="调用用户协议" />
+
             <EditText
                 android:id="@+id/et_set_tips_time"
                 android:layout_width="match_parent"
@@ -424,7 +448,26 @@
 
 
 
+
+
+
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/gm_demo_button_shape"
+                android:text="其他功能测试" />
+
+            <TextView
+                android:id="@+id/tv_main_activity_isdebug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:textColor="#fff"
+                android:text="当前为测试环境" />
 
         </LinearLayout>
 

@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="温馨提示"
-                android:textColor="#ff9600"
+                android:textColor="@color/gm_text_color_orange"
                 android:textSize="25sp" />
 
             <ImageView
@@ -43,7 +43,7 @@
 
 
         <TextView
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:id="@+id/tv_downloading_tips_msg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
             android:textSize="15sp" />
 
         <TextView
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:id="@+id/tv_downloading_loading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:layout_marginLeft="10dp"
                 android:text="游戏更新包已下载完成！" />
 
@@ -174,7 +174,7 @@
 
 
             <TextView
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:id="@+id/downerrortips"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="8dp"

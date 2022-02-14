@@ -11,19 +11,20 @@
         android:layout_width="20dp"
         android:layout_height="30dp">
 
-        <ImageView
-            android:id="@+id/gm_fragment_login_entrance_check_protocol"
-            android:scaleType="fitXY"
-            android:src="@drawable/gm_login_protocol_check"
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:visibility="invisible"/>
+
         <ImageView
             android:id="@+id/gm_fragment_login_entrance_uncheck_protocol"
             android:scaleType="fitXY"
             android:src="@drawable/gm_login_protocol_uncheck"
             android:layout_width="14dp"
             android:layout_height="14dp" />
+        <ImageView
+            android:id="@+id/gm_fragment_login_entrance_check_protocol"
+            android:scaleType="fitXY"
+            android:src="@drawable/gm_login_protocol_check"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:visibility="invisible"/>
 
     </RelativeLayout>
     <LinearLayout
@@ -33,22 +34,22 @@
         android:layout_height="30dp">
 
         <TextView
-            android:textColor="@color/color_protocol_agree"
+            android:id="@+id/tv_login_entrance_hint_protocol"
+            android:textColor="@color/gm_text_color_gray"
             android:gravity="center"
-            android:textSize="12dp"
+            android:textSize="11sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="我已阅读并同意" />
 
         <TextView
             android:id="@+id/tv_login_entrance_read_protocol"
-            android:textSize="12dp"
+            android:textSize="11sp"
             android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="用户服务协议、隐私协议"
-            android:background="@drawable/gm_text_underline"
-            android:textColor="@color/color_protocol_agree" />
+            android:textColor="#FF8A00" />
 
     </LinearLayout>
 

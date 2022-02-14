@@ -187,10 +187,11 @@
                     android:layout_height="30dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_btn_send_vcode"
                     android:gravity="center"
                     android:padding="5dp"
                     android:text="@string/register_get_verify_code_gm"
-                    android:textColor="#333333"
+                    android:textColor="@color/gm_text_color_white"
                     android:textSize="@dimen/text_size_f13_guaimao" />
 
             </LinearLayout>
@@ -202,10 +203,10 @@
                 android:layout_height="33dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/bg_long_yellow_button"
+                android:background="@drawable/bg_user_center_function_bar_orange_coners_guaimao"
                 android:gravity="center"
                 android:text="认证"
-                android:textColor="@color/text_black33_gm"
+                android:textColor="@color/gm_text_color_white"
                 android:textSize="14sp" />
 
         </LinearLayout>

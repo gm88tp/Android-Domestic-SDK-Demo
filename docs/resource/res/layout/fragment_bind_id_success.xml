@@ -13,7 +13,7 @@
         android:layout_height="349dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="@drawable/bg_login_white_gm"
+        android:background="@drawable/bg_login_new_gm"
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                 android:layout_centerInParent="true"
                 android:text="认证成功"
                 android:layout_weight="1"
-                android:textColor="#7F7F7F"
+                android:textColor="@color/gm_text_color_gray"
                 android:textSize="23dp" />
 
         </LinearLayout>

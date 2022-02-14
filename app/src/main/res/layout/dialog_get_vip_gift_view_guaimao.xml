@@ -42,7 +42,7 @@
                     android:layout_marginStart="6dp"
                     android:lineSpacingExtra="10dp"
                     android:text="未满足领取条件，无法领取"
-                    android:textColor="#333333"
+                    android:textColor="@color/gm_text_color_black"
                     android:textSize="18sp" />
 
             </LinearLayout>
@@ -54,7 +54,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:text="VIP专享礼包仅限v4及以上会员可领取"
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="15sp" />
 
         </RelativeLayout>
@@ -78,7 +78,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="关闭"
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="18sp" />
 
 

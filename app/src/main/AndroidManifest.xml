@@ -13,12 +13,12 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
-    <uses-permission android:name="android.permission.CALL_PHONE" />
+<!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
 
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
-    <uses-permission android:name="android.permission.SEND_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+<!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+<!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+<!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
 
     <!-- 网络相关 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -38,7 +38,7 @@
 
     <!-- 多媒体 -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+<!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -75,7 +75,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.9.5" />
+            android:value="3.9.6" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
@@ -176,7 +176,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:configChanges="orientation|screenSize|keyboardHidden"
-            android:name="com.game.sdk.reconstract.ui.UserCenterActivity"
+            android:name="com.game.sdk.reconstract.ui.usercenter.UserCenterActivity"
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
@@ -265,93 +265,93 @@
         </provider>
 
         <!-- 声明云信后台服务 -->
-        <service
-            android:name="com.qiyukf.nimlib.service.NimService"
-            android:process=":core" />
-        <service
-            android:name="com.qiyukf.nimlib.service.NimService$Aux"
-            android:process=":core" />
-        <service
-            android:name="com.qiyukf.unicorn.analytics.AnalyticsService"
-            android:process=":core" />
+<!--        <service-->
+<!--            android:name="com.qiyukf.nimlib.service.NimService"-->
+<!--            android:process=":core" />-->
+<!--        <service-->
+<!--            android:name="com.qiyukf.nimlib.service.NimService$Aux"-->
+<!--            android:process=":core" />-->
+<!--        <service-->
+<!--            android:name="com.qiyukf.unicorn.analytics.AnalyticsService"-->
+<!--            android:process=":core" />-->
 
         <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录 -->
-        <receiver
-            android:name="com.qiyukf.nimlib.service.NimReceiver"
-            android:exported="false"
-            android:process=":core">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-            </intent-filter>
-        </receiver>
+<!--        <receiver-->
+<!--            android:name="com.qiyukf.nimlib.service.NimReceiver"-->
+<!--            android:exported="false"-->
+<!--            android:process=":core">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
 
         <!-- 云信进程间通信receiver -->
-        <service android:name="com.qiyukf.nimlib.service.WakeupService" />
+<!--        <service android:name="com.qiyukf.nimlib.service.WakeupService" />-->
 
         <!--如果使用eclipse集成，需要将${applicationId}替换为你的应用包名-->
-        <provider
-            android:name="com.qiyukf.nim.uikit.provider.UnicornProvider"
-            android:authorities="${applicationId}.unicorn.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/ysf_provider" />
-        </provider>
+<!--        <provider-->
+<!--            android:name="com.qiyukf.nim.uikit.provider.UnicornProvider"-->
+<!--            android:authorities="${applicationId}.unicorn.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/ysf_provider" />-->
+<!--        </provider>-->
 
-        <activity
-            android:name="com.qiyukf.unicorn.ui.activity.ServiceMessageActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:icon="@drawable/ysf_action_bar_icon_transparent"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.qiyukf.nim.uikit.session.activity.WatchMessagePictureActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.qiyukf.nim.uikit.session.activity.PickImageActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme" />
-        <activity
-            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme" />
-        <activity
-            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/ysf_input_panel_take"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity
-            android:name="com.qiyukf.unicorn.ui.activity.FileDownloadActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/ysf_activity_file_download"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme" />
-        <activity
-            android:name="com.qiyukf.unicorn.ui.activity.UrlImagePreviewActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme" />
-        <activity
-            android:name="com.qiyukf.unicorn.ui.activity.CardPopupActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"
-            android:theme="@style/ysf_window_theme" />
+<!--        <activity-->
+<!--            android:name="com.qiyukf.unicorn.ui.activity.ServiceMessageActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:icon="@drawable/ysf_action_bar_icon_transparent"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.nim.uikit.session.activity.WatchMessagePictureActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.nim.uikit.session.activity.PickImageActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PickerAlbumPreviewActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.nim.uikit.common.media.picker.activity.PreviewImageFromCameraActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:label="@string/ysf_input_panel_take"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme"-->
+<!--            android:windowSoftInputMode="stateHidden|adjustResize" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.unicorn.ui.activity.FileDownloadActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:label="@string/ysf_activity_file_download"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.unicorn.ui.activity.UrlImagePreviewActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme" />-->
+<!--        <activity-->
+<!--            android:name="com.qiyukf.unicorn.ui.activity.CardPopupActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|screenSize"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/ysf_window_theme" />-->
 <!--        <activity-->
 <!--            android:configChanges="orientation|screenSize|keyboardHidden"-->
 <!--            android:name="com.game.sdk.reconstract.ui.NewH5Activity"-->

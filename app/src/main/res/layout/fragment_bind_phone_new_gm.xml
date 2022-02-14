@@ -46,7 +46,7 @@
         </RelativeLayout>
 
         <LinearLayout
-            android:background="#FFFFFF"
+            android:background="@color/gm_bg_color_white"
             android:gravity="center"
             android:layout_gravity="center"
             android:orientation="vertical"
@@ -63,7 +63,7 @@
                 android:layout_width="match_parent">
                 <TextView
                     android:gravity="center"
-                    android:textColor="#000000"
+                    android:textColor="@color/gm_text_color_black"
                     android:textSize="14dp"
                     android:text="+86"
                     android:paddingLeft="5dp"
@@ -85,8 +85,8 @@
                     android:inputType="number"
                     android:maxLength="11"
                     android:paddingLeft="10dp"
-                    android:textColor="@color/text_black32_gm"
-                    android:textColorHint="#9a9a9a"
+                    android:textColor="@color/gm_text_color_black"
+                    android:textColorHint="@color/gm_text_color_gray"
                     android:textSize="14dp" />
             </LinearLayout>
             <LinearLayout
@@ -106,8 +106,8 @@
                     android:paddingLeft="20dp"
                     android:singleLine="true"
                     android:hint="请输入验证码"
-                    android:textColor="@color/text_black32_gm"
-                    android:textColorHint="#9a9a9a"
+                    android:textColor="@color/gm_text_color_black"
+                    android:textColorHint="@color/gm_text_color_gray"
                     android:textSize="14dp" />
 
 
@@ -161,8 +161,8 @@
                     android:hint="请输入密码"
                     android:singleLine="true"
                     android:paddingLeft="10dp"
-                    android:textColor="@color/text_black32_gm"
-                    android:textColorHint="#9a9a9a"
+                    android:textColor="@color/gm_text_color_black"
+                    android:textColorHint="@color/gm_text_color_gray"
                     android:textSize="14dp" />
 
 

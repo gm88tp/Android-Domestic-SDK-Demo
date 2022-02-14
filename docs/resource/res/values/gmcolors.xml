@@ -44,4 +44,13 @@
 
     <color name="text_yellow_e7c68e_gm">#e7c68e</color>
 
+
+    <color name="gm_text_color_black">#FF333333</color>
+    <color name="gm_text_color_orange">#F59A23</color>
+    <color name="gm_text_color_white">#FFFFFF</color>
+    <color name="gm_text_color_gray">#9a9a9a</color>
+    <color name="gm_text_color_gray_deep">#ADADAD</color>
+    <color name="gm_bg_color_white">#FFFFFF</color>
+    <color name="gm_text_color_black2">#646464</color>
+
 </resources>

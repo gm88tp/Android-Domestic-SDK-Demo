@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="VIP专属客服"
-                android:textColor="#F59A23"
+                android:textColor="@color/gm_text_color_orange"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <RelativeLayout
@@ -78,7 +78,9 @@
                 android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:text="QQ号:2852371004"
-                android:layout_marginLeft="7dp" />
+                android:layout_marginLeft="7dp"
+                android:textColor="@color/gm_text_color_black"
+                />
 
         </LinearLayout>
 
@@ -101,7 +103,9 @@
                 android:layout_height="18dp"
                 android:layout_gravity="center"
                 android:text="微信号:GM88VIP01"
-                android:layout_marginLeft="7dp" />
+                android:layout_marginLeft="7dp"
+                android:textColor="@color/gm_text_color_black"
+                />
 
         </LinearLayout>
 

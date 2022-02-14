@@ -5,5 +5,5 @@
         android:topLeftRadius="@dimen/gm_sdk_common_corner_radius"
         android:topRightRadius="@dimen/gm_sdk_common_corner_radius" />
 
-    <solid android:color="#FFFFFF" />
+    <solid android:color="@color/gm_bg_color_white" />
 </shape>

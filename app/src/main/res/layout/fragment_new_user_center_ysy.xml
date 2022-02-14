@@ -62,7 +62,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#FFFFFF"
+            android:background="@color/gm_bg_color_white"
             android:orientation="vertical">
 
 
@@ -148,7 +148,7 @@
                                 android:layout_centerInParent="true"
                                 android:ellipsize="end"
                                 android:maxLength="12"
-                                android:textColor="#FF333333"
+                                android:textColor="@color/gm_text_color_black"
                                 android:textSize="15sp"
                                 tools:text="13000000000" />
 
@@ -160,7 +160,7 @@
                                 android:layout_marginTop="5dp"
                                 android:ellipsize="end"
                                 android:lines="1"
-                                android:textColor="#7A746F"
+                                android:textColor="@color/gm_text_color_gray_deep"
                                 android:textSize="12sp"
                                 tools:text="13000000000"
 
@@ -197,11 +197,11 @@
                             android:src="@drawable/ic_userinfo_edit"
                             />
                         <TextView
-                            android:textColor="#FF333333"
                             android:text="编辑您的资料"
                             android:layout_marginLeft="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/gm_text_color_black"
                             />
 
                     </LinearLayout>
@@ -235,7 +235,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="460dp"
-                android:background="#FFFFFF"
+                android:background="@color/gm_bg_color_white"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
@@ -317,7 +317,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="游戏社区" />
@@ -327,16 +327,6 @@
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true">
-                        <ImageView
-                            android:id="@+id/iv_user_center_gifts_hint"
-                            android:layout_width="wrap_content"
-                            android:layout_height="20dp"
-                            android:layout_centerInParent="true"
-                            android:layout_alignParentLeft="true"
-                            android:layout_marginLeft="0dp"
-                            android:visibility="invisible"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_have_new_guaimao" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -372,7 +362,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="游戏礼包" />
@@ -427,7 +417,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="新闻公告" />
@@ -482,7 +472,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="游戏活动" />
@@ -538,7 +528,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="VIP服务" />
@@ -579,19 +569,30 @@
 
                     <TextView
                         android:layout_width="72dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
-                        android:textStyle="bold"
+                        android:text="客服中心"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textSize="15dp"
-                        android:text="客服中心" />
+                        android:textStyle="bold" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true">
+
+                        <ImageView
+                            android:id="@+id/iv_user_center_kf_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_centerInParent="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="0dp"
+                            android:visibility="invisible"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_have_new_guaimao" />
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -625,7 +626,7 @@
                         android:layout_height="20dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="7dp"
-                        android:textColor="#7A746F"
+                        android:textColor="@color/gm_text_color_black2"
                         android:textStyle="bold"
                         android:textSize="15dp"
                         android:text="优惠券" />
@@ -701,7 +702,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
-                android:background="#FFFFFF">
+                android:background="@color/gm_bg_color_white">
                 <LinearLayout
                     android:id="@+id/ll_user_center_recommend"
                     android:layout_width="match_parent"
@@ -720,7 +721,6 @@
                         <LinearLayout
                             android:layout_width="210dp"
                             android:layout_height="match_parent"
-                            android:background="#FFFFFF"
                             android:layout_weight="1"
                             android:orientation="vertical">
 
@@ -730,7 +730,7 @@
                             android:layout_height="20dp"
                             tools:text="产品名称"
                             android:layout_weight="1"
-                            android:textColor="#333333"
+                            android:textColor="@color/gm_text_color_black"
                             android:layout_marginTop="10dp"
                             android:textSize="14sp"
                             android:layout_alignParentLeft="true"
@@ -741,7 +741,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="20dp"
                             tools:text="产品描述的话"
-                            android:textColor="#333333"
+                            android:textColor="@color/gm_text_color_black"
                             android:layout_marginBottom="10dp"
                             android:singleLine="true"
                             android:layout_weight="1"
@@ -773,9 +773,8 @@
                     android:layout_alignParentBottom="true"
                     android:layout_width="fill_parent"
                     android:layout_height="20dp"
-                    android:background="#FFFFFF"
                     android:textSize="16sp"
-                    android:textColor="#000000"
+                    android:textColor="@color/gm_text_color_black"
                     tools:text="v3.7.2" />
 
             </RelativeLayout>

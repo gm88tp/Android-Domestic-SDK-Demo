@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="请确认您游戏内购买的商品"
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:textSize="18sp" />
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_marginTop="13dp"
             android:gravity="center"
             android:text="您想以68猫币的价格购买"
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:textSize="14sp" />
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="西亭脆饼吗？"
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:textSize="14sp" />
 
 
@@ -59,7 +59,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="取消"
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="18sp" />
 
 
@@ -72,7 +72,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="确定"
-                android:textColor="#333333"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

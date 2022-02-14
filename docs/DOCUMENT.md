@@ -1,6 +1,34 @@
-# 怪猫SDK 接入文档 2022/1/5
+# 怪猫SDK 接入文档 2022/2/14
 
 ## 历史版本更新
+
+3.9.6 客服系统由原七鱼替换为Aihelp,注意去除原七鱼客服相关sdk与资源
+由于Aihelp sdk目前版本需要支持androidx，所以建议直接引用远端依赖
+在module的build.gradle添加:
+```groovy
+dependencies {
+    compile 'net.aihelp:android-aihelp-aar:2.7.+'
+    }
+```
+
+若某些特殊情况下无法使用远端依赖，请自行导入docs文件夹下的AihelpSDK的解压包中的相关资源(包括导入jar包，各资源文件，合并manifest)
+并将工程做androidx的支持
+```groovy
+android.useAndroidX=true
+android.enableJetifier=true
+```
+
+同时本次更新去除了部分敏感权限，请注意同步
+```xml
+    <!--    <uses-permission android:name="android.permission.CALL_PHONE" />-->
+    <!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+    <!--    <uses-permission android:name="android.permission.READ_SMS" />-->
+    <!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
+    <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+   ```
+
+
+
 
 3.9.5 增加手机号一键登录（闪验）、微信登录、微信绑定功能。
 新增用户协议调用接口，新增用户授权前是否弹起协议界面的流程。
@@ -48,7 +76,7 @@
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.5" />
+                android:value="3.9.6" />
    ```
 
 ## SDK 接入相关

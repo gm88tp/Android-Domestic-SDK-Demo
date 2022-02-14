@@ -24,7 +24,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="17dp"
             android:text="您的初始密码已生成并发送至\n您的手机及用户中心消息列表"
-            android:textColor="#333333"
+            android:textColor="@color/gm_text_color_black"
             android:textSize="12sp" />
 
         <TextView
@@ -33,7 +33,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="14dp"
             android:text="Tips:再次登录时您可以使用该密码登录\n如需修改请前往用户中心修改"
-            android:textColor="#666666"
+            android:textColor="@color/gm_text_color_gray"
             android:textSize="9sp" />
 
     </LinearLayout>

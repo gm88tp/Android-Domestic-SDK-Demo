@@ -47,7 +47,7 @@
             android:inputType="number"
             android:maxLength="11"
             android:text="152****5555"
-            android:textColor="#000000"
+            android:textColor="@color/gm_text_color_black"
             android:textSize="30sp" />
 
 
@@ -60,7 +60,7 @@
             android:layout_marginLeft="47dp"
             android:layout_marginTop="43dp"
             android:layout_marginRight="47dp"
-            android:background="@drawable/umcsdk_login_btn_bg"
+            android:background="@drawable/bg_user_center_function_bar_orange_coners_guaimao"
             android:gravity="center"
             android:stateListAnimator="@null"
             android:text="本机号码一键登录"

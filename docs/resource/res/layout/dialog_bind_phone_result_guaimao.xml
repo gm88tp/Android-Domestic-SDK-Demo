@@ -33,7 +33,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
                 android:text="认证成功"
-                android:textColor="#000000"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="22sp" />
 
         </LinearLayout>

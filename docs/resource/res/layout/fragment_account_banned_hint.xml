@@ -16,20 +16,20 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@drawable/bg_new_login_gm">
+            >
             <TextView
                 android:id="@+id/tv_account_banned_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="温馨提示"
-                android:textColor="#F59A23"
+                android:textColor="@color/gm_text_color_orange"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
         <LinearLayout
-            android:background="#FFFFFF"
+            android:background="@color/gm_bg_color_white"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="180dp">
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 tools:text="封号原因封号原因封号原因封号原因封号原因封号原因"
-                android:textColor="#000000"
+                android:textColor="@color/gm_text_color_black"
                 android:textSize="16sp" />
 
         </LinearLayout>
