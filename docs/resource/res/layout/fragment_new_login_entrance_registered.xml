@@ -81,6 +81,7 @@
                 android:inputType="number"
                 android:maxLength="11"
                 android:paddingLeft="10dp"
+                android:imeOptions="actionDone"
                 android:textColor="@color/gm_text_color_black"
                 android:textColorHint="@color/gm_text_color_gray"
                 android:textSize="14dp" />
