@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2022/2/14
+# 怪猫SDK 接入文档 2022/9/8
 
 ## 历史版本更新
 3.9.8新增文字公告、调整协议和权限弹出时机
@@ -76,7 +76,7 @@ android.enableJetifier=true
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.6" />
+                android:value="3.9.8" />
    ```
 
 ## SDK 接入相关

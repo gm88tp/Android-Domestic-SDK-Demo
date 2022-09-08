@@ -75,7 +75,7 @@
 
         <meta-data
             android:name="game_sdk_version_guaimao"
-            android:value="3.9.6" />
+            android:value="3.9.8" />
 
         <activity
             android:name="com.game.sdk.reconstract.ui.SDKInitActivity"
