@@ -1,24 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
     <gameinfo gssAppId="4688" appMode="release" appReleaseId=""/>
+<!--    <gmsdk>-->
+<!--        <loginType>-->
+<!--            <login>fast</login>-->
+<!--        </loginType>-->
+<!--        &lt;!&ndash;今日头条&ndash;&gt;-->
+<!--        <jrtt appName ="" channel = "" aId = "" />-->
+<!--        &lt;!&ndash;热云&ndash;&gt;-->
+<!--        <ry appkey = "" channelid = "_default_" />-->
+<!--        &lt;!&ndash;广点通&ndash;&gt;-->
+<!--        <tc ActionSetID = "" AppSecretKey = "" />-->
+<!--        &lt;!&ndash;uc&ndash;&gt;-->
+<!--        <uc appID = "" appName = "" appChannel = ""/>-->
+<!--        -->
+<!--        <ks appId = "" appName = "" />-->
+<!--        -->
+<!--        <pdd appId = ""  appSecret = ""/>-->
+<!--        &lt;!&ndash; 数数 &ndash;&gt;-->
+<!--        <thinking appId = ""  reportUrl = ""/>-->
+<!--    </gmsdk>-->
+
     <gmsdk>
         <loginType>
             <login>fast</login>
         </loginType>
-        <!--今日头条-->
-        <jrtt appName ="" channel = "" aId = "" />
+        <!--        &lt;!&ndash;今日头条&ndash;&gt;-->
+        <!--        <jrtt appName ="shaonvzhanzheng" channel = "com.sqw.snzz.gm" aId = "196778" />-->
         <!--热云-->
-        <ry appkey = "" channelid = "_default_" />
-        <!--广点通-->
-        <tc ActionSetID = "" AppSecretKey = "" />
-        <!--uc-->
-        <uc appID = "" appName = "" appChannel = ""/>
-        
-        <ks appId = "" appName = "" />
-        
+        <ry appkey = "287fee17877bddcbd819eb002ae76d76" channelid = "_default_" />
+        <!--        &lt;!&ndash;广点通&ndash;&gt;-->
+        <!--        <tc ActionSetID = "1111121712" AppSecretKey = "dd389bb389916899f5fc01c25d8b9c1d" />-->
+        <!--        &lt;!&ndash;uc&ndash;&gt;-->
+        <!--        <uc appID = "102623" appName = "shaonvzhanzheng" appChannel = "com.sqw.snzz.gm"/>-->
+        <!--        <ks appId = "70427" appName = "shaonvzhanzheng" />-->
+        <!--        <jrttad adId="945642183" appId = "5060632" appName = "" />-->
         <pdd appId = ""  appSecret = ""/>
-        <!-- 数数 -->
-        <thinking appId = ""  reportUrl = ""/>
+        <sm apiKey = ""/>
+
+        <!--        <thinking appId = "06842647fb7c48e794aafa3d6d3fc7d9"  reportUrl = "https://receiver.ta.thinkingdata.cn"/>-->
+
+        <!-- 数数测试环境 -->
+<!--        <thinking appId = "06842647fb7c48e794aafa3d6d3fc7d9"  reportUrl = "https://tareport.gm88.com"/>-->
+
+        <!-- 数数正式环境 -->
+                <thinking appId = "3b0be931049d4640a9e94e6fac141ddb"  reportUrl = "https://tareport.gm88.com"/>
+
+        <!--        <share qqAppId = "101860838"  wxAppId = "wx180c8f3360de0b12" wbAppKey = "3118377197" dyKey = "awmms3veimohgix8"/>-->
     </gmsdk>
 </config>
 

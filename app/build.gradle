@@ -31,10 +31,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.9.6.jar')
     compile files('libs/fastjson-1.2.76.jar')
     compile files('libs/android-v4.jar')
     compile files('libs/du.jar')
