@@ -17,9 +17,7 @@ import android.widget.Toast;
 
 import com.game.sdk.Platform;
 import com.game.sdk.reconstract.base.Config;
-import com.game.sdk.reconstract.manager.GameInfoManager;
 import com.game.sdk.reconstract.utils.GlobalUtil;
-import com.game.sdk.reconstract.utils.ULogUtil;
 import com.gm88.gmcore.GM;
 import com.gm88.gmcore.GmListener;
 import com.gm88.gmcore.GmStatus;
@@ -206,21 +204,22 @@ public class MainActivity extends Activity {
                 }
             }
         });
-        changeDebug_BTN.setOnClickListener(new View.OnClickListener() {
-          @Override
-          public void onClick(View v) {
-
-            if (count <= 6) {
-    //                    GlobalUtil.shortToast("再点击" + (6 - count) + "次，完成切换");
-                count++;
-            } else {
-                Config.setIsDebug(!Config.isDebug());
-                changeDebug_BTN.setText(Config.isDebug() ? "点击切换成正式环境服务" : "点击切换成测试环境服务");
-                GlobalUtil.shortToast("切换成功");
-            }
-            ULogUtil.d(TAG, "is Debug :" + Config.isDebug());
-          }
-        });
+//        changeDebug_BTN.setOnClickListener(new View.OnClickListener() {
+//          @Override
+//          public void onClick(View v) {
+//
+//            if (count <= 6) {
+//    //                    GlobalUtil.shortToast("再点击" + (6 - count) + "次，完成切换");
+//                count++;
+//            } else {
+//                Config.setIsDebug(!Config.isDebug());
+//                changeDebug_BTN.setText(Config.isDebug() ? "点击切换成正式环境服务" : "点击切换成测试环境服务");
+//                GlobalUtil.shortToast("切换成功");
+//            }
+//            ULogUtil.d(TAG, "is Debug :" + Config.isDebug());
+//          }
+//        });
+        Config.setIsDebug(false);
         customer_BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -10,11 +10,8 @@ android {
         multiDexEnabled true
         versionCode 2
         versionName "1.0"
-        ndk{
+        ndk {
             abiFilters 'armeabi-v7a'
-        }
-        jackOptions {
-            enabled true
         }
     }
     buildTypes {
@@ -31,10 +28,11 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.9.6.jar')
+    compile files('libs/GuaiMaoSdk_3.9.8.jar')
     compile files('libs/fastjson-1.2.76.jar')
     compile files('libs/android-v4.jar')
     compile files('libs/du.jar')
