@@ -5,13 +5,13 @@ android {
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "com.gm.gmsdkdemo"
-        minSdkVersion 17
+        minSdkVersion 21
         targetSdkVersion 28
         multiDexEnabled true
         versionCode 2
         versionName "1.0"
         ndk {
-            abiFilters 'armeabi-v7a'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
     buildTypes {
@@ -24,6 +24,7 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -31,34 +32,9 @@ android {
 
 }
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/GuaiMaoSdk_3.9.8.jar')
-    compile files('libs/fastjson-1.2.76.jar')
-    compile files('libs/android-v4.jar')
-    compile files('libs/du.jar')
-    compile files('libs/gdt.jar')
-    compile files('libs/GDTUnionSDK.4.28.902.min.jar')
-    compile files('libs/ipaynow_alipay_v2.0.1.jar')
-    compile files('libs/ipaynow_alipaywp_v1.0.2.jar')
-    compile files('libs/ipaynow_base_2.1.12_api_1.0.0.jar')
-    compile files('libs/ipaynow_wechatpay_v2.0.5.jar')
-    compile files('libs/jrtt-3.3.12.jar')
-    compile files('libs/miit_mdid_1.0.13.jar')
-    compile files('libs/gmdatasdk.jar')
-    compile files('libs/gmpluginsdk.jar')
-    compile files('libs/gmthirdutil.jar')
-    compile files('libs/gism_sdk-1.3.1.jar')
-    compile files('libs/ks-sdk_1.0.4.jar')
-    compile files('libs/gmutil.jar')
-    compile files('libs/gmcore.jar')
-    compile files('libs/papt_0.0.3.jar')
-    compile files('libs/gmthirdskeleton.jar')
-    compile files('libs/bcprov-jdk16-139.jar')
-    compile files('libs/qiyu-sdk-3.11.1.jar')
-    compile files('libs/tracking.1.7.1.jar')
-    compile files('libs/thinkingSDK_2.7.3.jar')
-    compile files('libs/shanyan2.4.0.jar')
+    implementation(name: 'GMSDK_3.9.8', ext: 'aar')
 
     //Aihelp
     compile 'net.aihelp:android-aihelp-aar:2.7.+'
+    compile 'com.alipay.sdk:alipaysdk-android:+@aar'
 }

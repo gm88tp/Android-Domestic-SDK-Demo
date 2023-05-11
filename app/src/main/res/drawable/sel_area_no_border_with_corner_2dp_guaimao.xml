@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:drawable="@drawable/bg_area_no_border_pressed_with_corner_2dp_guaimao" android:state_pressed="true" />
-    <item android:drawable="@drawable/bg_area_no_border_normal_with_corner_2dp_guaimao" android:state_pressed="false" />
-
-</selector>

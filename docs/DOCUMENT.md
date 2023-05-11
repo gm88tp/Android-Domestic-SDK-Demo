@@ -1,4 +1,4 @@
-# 怪猫SDK 接入文档 2022/9/8
+# 怪猫SDK 接入文档 2023/5/11
 
 ## 历史版本更新
 3.9.8新增文字公告、调整协议和权限弹出时机
@@ -50,6 +50,7 @@ android.enableJetifier=true
 
 ## SDK **资源引用**
 
+SDK提供两种引入方式，aar引入和res单独引入，res引入方式如下
 1. 将 resource/libs 下的 jar 文件复制到项目的 libs 目录。
 
 2. 将 resource/so 下的 so文件复制到项目的 so 存放目录（Eclipse 的 so 存放目录在 libs 下，AndroidStudio 的 so存放目录在 /src/main/jniLibs 下）
@@ -78,6 +79,14 @@ android.enableJetifier=true
                 android:name="game_sdk_version_guaimao"
                 android:value="3.9.8" />
    ```
+   
+aar引入方式如下:
+1. 引入GMSDK_3.9.8.aar文件，并引入两个远程依赖
+    compile 'net.aihelp:android-aihelp-aar:2.7.+'
+    compile 'com.alipay.sdk:alipaysdk-android:+@aar'
+2. targetSdkVersion 设置成22及以上(最高可支持到28)
+3. 引入jbiLibs下的arm64-v8a和armeabi-v7a的so文件，出包是请至少支持这两个架构
+
 
 ## SDK 接入相关
 

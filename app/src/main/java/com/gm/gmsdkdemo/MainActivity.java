@@ -39,7 +39,6 @@ public class MainActivity extends Activity {
     private EditText gameId_ET, roleName_ET, openUrl_ET;
     private Button setGameId_BTN, changeDebug_BTN, creatRole_BTN, customer_BTN, updateRole_BTN, palyTimeLeft_BTN;
     private Button mRealNameCheck_BTN, openWebUrl_BTN;
-    private int count = 0;
 
     private boolean initsucc = false;
 
@@ -204,21 +203,7 @@ public class MainActivity extends Activity {
                 }
             }
         });
-//        changeDebug_BTN.setOnClickListener(new View.OnClickListener() {
-//          @Override
-//          public void onClick(View v) {
-//
-//            if (count <= 6) {
-//    //                    GlobalUtil.shortToast("再点击" + (6 - count) + "次，完成切换");
-//                count++;
-//            } else {
-//                Config.setIsDebug(!Config.isDebug());
-//                changeDebug_BTN.setText(Config.isDebug() ? "点击切换成正式环境服务" : "点击切换成测试环境服务");
-//                GlobalUtil.shortToast("切换成功");
-//            }
-//            ULogUtil.d(TAG, "is Debug :" + Config.isDebug());
-//          }
-//        });
+
         Config.setIsDebug(false);
         customer_BTN.setOnClickListener(new View.OnClickListener() {
             @Override
