@@ -2,6 +2,7 @@ package com.gm.gmsdkdemo;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -340,6 +341,7 @@ public class MainActivity extends Activity {
         payInfo.put("zoneName", "上海一区");
         payInfo.put("gameReceipts", System.currentTimeMillis() + "");
         GM.pay(payInfo);
+
     }
 
     @Override

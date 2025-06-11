@@ -1,13 +1,15 @@
-# 怪猫SDK 接入文档 2023/5/11
+# 怪猫SDK 接入文档 2024/5/18
 
 ## 历史版本更新
+4.0.1 新增对百度投放渠道的支持，新增oaid获取、以oaid为主要鉴别途径，投放回传优化
 3.9.8新增文字公告、调整协议和权限弹出时机
 3.9.6 客服系统由原七鱼替换为Aihelp,注意去除原七鱼客服相关sdk与资源
 由于Aihelp sdk目前版本需要支持androidx，所以建议直接引用远端依赖
 在module的build.gradle添加:
 ```groovy
 dependencies {
-    compile 'net.aihelp:android-aihelp-aar:2.7.+'
+    // ToDo aihelp版本有更新
+    compile 'net.aihelp:android-aihelp-aar:4.2.+'
     }
 ```
 
@@ -27,8 +29,23 @@ android.enableJetifier=true
     <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
    ```
 
-
-
+4.0.1
+支持百度投放渠道
+新增oaid获取、以oaid为主要鉴别途径
+```groovy
+    //涉及投放业务需要使用 oaidSDK 版本 2.2.0或以上
+    api (name: 'oaid_sdk_2.2.0', ext: 'aar')
+    //使用百度投放需接入
+    api (name: 'Baidu_ocpc_action_2_6_4', ext: 'aar')
+    //字节SDK
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61'
+    api (name: 'RangersAppLog-Lite-cn-6.14.3', ext: 'aar')
+    api files('libs/if_encryptor-1.0.0-rc.5.aar')
+    api files('libs/plugin-aggregation-0.0.1.aar')
+    api files('libs/RangersAppLog-All-convert-6.14.3.aar')
+    api files('libs/RangersAppLog-Log-1.0.5.aar')
+    api files('libs/encryptor-1.0.1.noasan.aar')
+```
 
 3.9.5 增加手机号一键登录（闪验）、微信登录、微信绑定功能。
 新增用户协议调用接口，新增用户授权前是否弹起协议界面的流程。
@@ -51,6 +68,7 @@ android.enableJetifier=true
 ## SDK **资源引用**
 
 SDK提供两种引入方式，aar引入和res单独引入，res引入方式如下
+**4.0版本以后建议使用aar方式引入**
 1. 将 resource/libs 下的 jar 文件复制到项目的 libs 目录。
 
 2. 将 resource/so 下的 so文件复制到项目的 so 存放目录（Eclipse 的 so 存放目录在 libs 下，AndroidStudio 的 so存放目录在 /src/main/jniLibs 下）
@@ -77,13 +95,25 @@ SDK提供两种引入方式，aar引入和res单独引入，res引入方式如�
 ```xml
     <meta-data
                 android:name="game_sdk_version_guaimao"
-                android:value="3.9.8" />
+                android:value="4.0.1" />
    ```
    
 aar引入方式如下:
-1. 引入GMSDK_3.9.8.aar文件，并引入两个远程依赖
-    compile 'net.aihelp:android-aihelp-aar:2.7.+'
+1. 引入GMSDK_4.0.1.aar文件，引入oaid、百度、字节的aar文件，并引入下列远程依赖
+    compile 'net.aihelp:android-aihelp-aar:4.2.+'
     compile 'com.alipay.sdk:alipaysdk-android:+@aar'
+    //涉及投放业务需要使用 oaidSDK 版本 2.2.0或以上
+    api (name: 'oaid_sdk_2.2.0', ext: 'aar')
+    //使用百度投放需接入
+    api (name: 'Baidu_ocpc_action_2_6_4', ext: 'aar')
+    //字节SDK
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61'
+    api (name: 'RangersAppLog-Lite-cn-6.14.3', ext: 'aar')
+    api files('libs/if_encryptor-1.0.0-rc.5.aar')
+    api files('libs/plugin-aggregation-0.0.1.aar')
+    api files('libs/RangersAppLog-All-convert-6.14.3.aar')
+    api files('libs/RangersAppLog-Log-1.0.5.aar')
+    api files('libs/encryptor-1.0.1.noasan.aar')
 2. targetSdkVersion 设置成22及以上(最高可支持到28)
 3. 引入jbiLibs下的arm64-v8a和armeabi-v7a的so文件，出包是请至少支持这两个架构
 
@@ -109,6 +139,12 @@ public class MyApplication extends GMApplication {
     public void onCreate() {
         super.onCreate();
         GM.initApplication(MyApplication.this);
+        //4.0.1新增内容配置 接入百度渠道
+        boolean containsOpenDatasdkWithBd = checkOpenDatasdkWithBd(FileUtils.getMETAFileContent(TApplication.this, "third_sdk"));
+        if (containsOpenDatasdkWithBd) {
+            UseBD.BdBean bdBean = extractBdFields(FileUtils.getMETAFileContent(TApplication.this, "third_sdk"));
+            BaiduAction.init(TApplication.this, Long.parseLong(bdBean.bdAppId), bdBean.bdAppSecret);
+        }
     }
 }
 ```
@@ -489,3 +525,29 @@ Platform.getInstance().openUserProtocol(new ProtocalHelper.ProtocolListener(){
 
 分享相关接入流程说明：
 分享相关为选接SDK，如游戏或我方运营有相关需求可以选择接入，如无要求可不接入，分享SDK为独立SDK，接入时不会影响已接入的主体SDK。相关文档、demo见resource/addition下的分享SDK.zip，接入时如果遇到已使用的jar文件或so库等，无需重复引入
+
+
+### 百度投放（选接）
+百度投放接入流程说明：
+百度投放为选接SDK，如游戏或我方运营有相关需求可以选择接入，如无要求可不接入。
+在GMConfig.xml中配置
+```xml
+    <!--百度-->
+    <bd appId = ""  appSecret = ""/>
+```
+在build.gradle中配置
+```groovy
+    //使用百度投放需接入
+    api (name: 'Baidu_ocpc_action_2_6_4', ext: 'aar')
+```
+新增百度投放渠道初始化配置
+```java
+    //ToDo 接入百度投放需要主动初始化配置
+    boolean containsOpenDatasdkWithBd = checkOpenDatasdkWithBd(FileUtils.getMETAFileContent(TApplication.this, "third_sdk"));
+    if (containsOpenDatasdkWithBd) {
+        UseBD.BdBean bdBean = extractBdFields(FileUtils.getMETAFileContent(TApplication.this, "third_sdk"));
+        BaiduAction.init(TApplication.this, Long.parseLong(bdBean.bdAppId), bdBean.bdAppSecret);
+    }
+```
+UseBD类参考demo中UseBD.java
+baidu投放初始化成功会有日志输出：BaiduAction初始化成功

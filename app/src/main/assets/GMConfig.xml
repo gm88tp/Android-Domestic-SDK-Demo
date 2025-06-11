@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <gameinfo gssAppId="4688" appMode="release"/>
+    <gameinfo gssAppId="5247" appMode="release"/>
     <gmsdk>
         <loginType>
             <login>fast</login>
         </loginType>
         <!--今日头条-->
-        <jrtt appName ="" channel = "" aId = "" />
+        <jrtt appName ="woyaodangxiaozhang01" channel = "com.qmxb.shhc" aId = "181687" />
         <!--热云-->
         <ry appkey = "" channelid = "_default_" />
         <!--广点通-->
         <tc ActionSetID = "" AppSecretKey = "" />
         <!--uc-->
         <uc appID = "" appName = "" appChannel = ""/>
-
+        <!--快手-->
         <ks appId = "" appName = "" />
-
+        <!--拼多多-->
         <pdd appId = ""  appSecret = ""/>
+        <!--百度-->
+        <bd appId = ""  appSecret = ""/>
         <!-- 数数 -->
         <thinking appId = ""  reportUrl = ""/>
     </gmsdk>

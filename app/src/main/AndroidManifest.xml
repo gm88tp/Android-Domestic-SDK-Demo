@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.gm.gmsdkdemo">
 
     <!-- 加入应用需要的权限 -->
@@ -59,7 +60,9 @@
         android:supportsRtl="true"
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:name="com.gm.gmsdkdemo.TApplication"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        tools:replace="android:allowBackup"
+        >
         <activity android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>

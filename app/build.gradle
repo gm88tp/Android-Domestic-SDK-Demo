@@ -4,20 +4,22 @@ android {
     compileSdkVersion 28
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.gm.gmsdkdemo"
+        applicationId "com.qmxb.shhc"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 30
         multiDexEnabled true
-        versionCode 2
-        versionName "1.0"
+        versionCode 64
+        versionName "1.6.4"
         ndk {
             abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
     buildTypes {
         release {
+            debuggable true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
     lintOptions {
@@ -29,12 +31,27 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    ndkVersion '20.0.5594570'
 
 }
 dependencies {
-    implementation(name: 'GMSDK_3.9.8', ext: 'aar')
+    //ToDo 版本更新
+    implementation(name: 'GMSDK_4.0.1', ext: 'aar')
 
-    //Aihelp
-    compile 'net.aihelp:android-aihelp-aar:2.7.+'
+    //涉及投放业务需要使用 oaidSDK 版本 2.2.0或以上
+    api (name: 'oaid_sdk_2.2.0', ext: 'aar')
+    //使用百度投放需接入
+    api (name: 'Baidu_ocpc_action_2_6_4', ext: 'aar')
+
+    //ToDo Aihelp 有升级更新
+    compile 'net.aihelp:android-aihelp-aar:4.2.+'
     compile 'com.alipay.sdk:alipaysdk-android:+@aar'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61'
+    api (name: 'RangersAppLog-Lite-cn-6.14.3', ext: 'aar')
+    api files('libs/if_encryptor-1.0.0-rc.5.aar')
+    api files('libs/plugin-aggregation-0.0.1.aar')
+    api files('libs/RangersAppLog-All-convert-6.14.3.aar')
+    api files('libs/RangersAppLog-Log-1.0.5.aar')
+    api files('libs/encryptor-1.0.1.noasan.aar')
 }
