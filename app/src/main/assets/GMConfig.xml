@@ -6,9 +6,9 @@
             <login>fast</login>
         </loginType>
         <!--今日头条-->
-        <jrtt appName ="woyaodangxiaozhang01" channel = "com.qmxb.shhc" aId = "181687" />
+<!--        <jrtt appName ="woyaodangxiaozhang01" channel = "com.qmxb.shhc" aId = "181687" />-->
         <!--热云-->
-        <ry appkey = "" channelid = "_default_" />
+<!--        <ry appkey = "" channelid = "_default_" />-->
         <!--广点通-->
         <tc ActionSetID = "" AppSecretKey = "" />
         <!--uc-->
@@ -21,5 +21,6 @@
         <bd appId = ""  appSecret = ""/>
         <!-- 数数 -->
         <thinking appId = ""  reportUrl = ""/>
+        <yl accessToken="fQcIvmmznSharcisnkyAXyDpeGKPo4Y7" yl_channel="_default_"/>
     </gmsdk>
 </config>

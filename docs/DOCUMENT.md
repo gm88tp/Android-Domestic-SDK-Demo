@@ -1,6 +1,7 @@
-# 怪猫SDK 接入文档 2024/5/18
+# 怪猫SDK 接入文档 2025/7/8
 
 ## 历史版本更新
+4.0.2 新增对引力引擎的支持
 4.0.1 新增对百度投放渠道的支持，新增oaid获取、以oaid为主要鉴别途径，投放回传优化
 3.9.8新增文字公告、调整协议和权限弹出时机
 3.9.6 客服系统由原七鱼替换为Aihelp,注意去除原七鱼客服相关sdk与资源
@@ -28,6 +29,30 @@ android.enableJetifier=true
     <!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
     <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
    ```
+
+4.0.2
+支持引力引擎
+新增oaid获取、以oaid为主要鉴别途径
+```groovy
+    //在app的gradle文件中新增引力引擎的引用
+    implementation "cn.gravity.android:GravityEngineSDK:4.8.11"
+```
+
+```groovy
+    //在项目的gradle文件中新增引力引擎的Maven地址
+    //引力引擎仓库
+    maven {
+        url 'https://nexus.gravity-engine.com/repository/maven-releases/'
+    }
+    maven {
+        url 'https://nexus.gravity-engine.com/repository/maven-snapshots/'
+    }
+```
+启用引力引擎的项目需要在GMConfig.xml中添加以下内容
+```groovy
+    //accessToken为引力引擎的token
+    <yl accessToken="fQcIvmmznSharcisnkyAXyDpeGKPo4Y7" yl_channel="_default_"/>
+```
 
 4.0.1
 支持百度投放渠道

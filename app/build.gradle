@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.qmxb.shhc"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 28
         multiDexEnabled true
         versionCode 64
         versionName "1.6.4"
@@ -36,7 +36,7 @@ android {
 }
 dependencies {
     //ToDo 版本更新
-    implementation(name: 'GMSDK_4.0.1', ext: 'aar')
+    implementation(name: 'GMSDK_4.0.2', ext: 'aar')
 
     //涉及投放业务需要使用 oaidSDK 版本 2.2.0或以上
     api (name: 'oaid_sdk_2.2.0', ext: 'aar')
@@ -54,4 +54,7 @@ dependencies {
     api files('libs/RangersAppLog-All-convert-6.14.3.aar')
     api files('libs/RangersAppLog-Log-1.0.5.aar')
     api files('libs/encryptor-1.0.1.noasan.aar')
+    //在app的gradle文件中新增引力引擎的引用
+    implementation "cn.gravity.android:GravityEngineSDK:4.8.11"
+
 }

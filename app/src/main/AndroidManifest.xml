@@ -61,7 +61,8 @@
         android:configChanges="keyboardHidden|orientation|screenSize"
         android:name="com.gm.gmsdkdemo.TApplication"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-        tools:replace="android:allowBackup"
+        tools:replace="android:allowBackup,android:icon,android:theme"
+
         >
         <activity android:name=".MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">

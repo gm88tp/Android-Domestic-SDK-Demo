@@ -7,6 +7,13 @@ buildscript {
             url 'https://maven.google.com/'
             name 'Google'
         }
+        //引力引擎仓库
+        maven {
+            url 'https://nexus.gravity-engine.com/repository/maven-releases/'
+        }
+        maven {
+            url 'https://nexus.gravity-engine.com/repository/maven-snapshots/'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.4'
@@ -24,6 +31,13 @@ allprojects {
         }
         flatDir {
             dirs 'libs'
+        }
+        //引力引擎仓库
+        maven {
+            url 'https://nexus.gravity-engine.com/repository/maven-releases/'
+        }
+        maven {
+            url 'https://nexus.gravity-engine.com/repository/maven-snapshots/'
         }
     }
 }

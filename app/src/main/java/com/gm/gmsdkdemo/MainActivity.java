@@ -65,6 +65,7 @@ public class MainActivity extends Activity {
                   SDKLog.d(TAG, "初始化sdk成功回调  " + s);
 
                   initsucc = true;
+                  Platform.getInstance().setShouldShowLoginViewAuto(true);
                   Log.i(TAG, "初始化成功");
                   toast(s);
                   break;
