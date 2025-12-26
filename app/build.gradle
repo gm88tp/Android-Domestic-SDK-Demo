@@ -36,7 +36,7 @@ android {
 }
 dependencies {
     //ToDo 版本更新
-    implementation(name: 'GMSDK_4.0.2', ext: 'aar')
+    implementation(name: 'GMSDK_4.0.3', ext: 'aar')
 
     //涉及投放业务需要使用 oaidSDK 版本 2.2.0或以上
     api (name: 'oaid_sdk_2.2.0', ext: 'aar')
