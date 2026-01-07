@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
-    <gameinfo gssAppId="5247" appMode="release"/>
+    <gameinfo gssAppId="5297" appMode="release"/>
     <gmsdk>
         <loginType>
             <login>fast</login>
@@ -19,6 +19,8 @@
         <pdd appId = ""  appSecret = ""/>
         <!--百度-->
         <bd appId = ""  appSecret = ""/>
+        <!--巨量-->
+        <jl appId = "921239" appName = "rongyaoquanmingxing01"/>
         <!-- 数数 -->
         <thinking appId = ""  reportUrl = ""/>
         <yl accessToken="fQcIvmmznSharcisnkyAXyDpeGKPo4Y7" yl_channel="_default_"/>

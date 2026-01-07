@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         init();
         initClick();
     }
@@ -68,6 +69,7 @@ public class MainActivity extends Activity {
                   Platform.getInstance().setShouldShowLoginViewAuto(true);
                   Log.i(TAG, "初始化成功");
                   toast(s);
+//                  Platform.getInstance().login();
                   break;
                case GmStatus.INIT_FALIED:// 初始化sdk失败回调
                   String s1 = (String) mMessage.obj;
