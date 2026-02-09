@@ -65,7 +65,8 @@
 
         >
         <activity android:name=".MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize">
+            android:configChanges="orientation|keyboardHidden|keyboard|smallestScreenSize|locale|screenLayout|touchscreen|screenSize"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

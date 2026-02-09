@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
                   Platform.getInstance().setShouldShowLoginViewAuto(true);
                   Log.i(TAG, "初始化成功");
                   toast(s);
-//                  Platform.getInstance().login();
+                  GM.login(); //通常情况下，初始化SDK成功后应当调用GM.login();进行登录
                   break;
                case GmStatus.INIT_FALIED:// 初始化sdk失败回调
                   String s1 = (String) mMessage.obj;
@@ -78,6 +78,7 @@ public class MainActivity extends Activity {
                   break;
               case GmStatus.LOGIN_SUCCESS:// 登陆成功回调
                   String res = (String) mMessage.obj;
+                  toast("登陆成功回调");
                   try {
                       JSONObject object = new JSONObject(res);
                       object.getString("token");
@@ -94,6 +95,7 @@ public class MainActivity extends Activity {
                   break;
               case GmStatus.LOGOUT_SUCCESS:// 注销账号成功回调
                   toast("注销账号成功回调");
+                  GM.login(); //通常情况下，注销账号成功后应当调用GM.login();进行登录
                   break;
               case GmStatus.LOGOUT_FALIED:// 注销账号失败回调
                   toast("注销账号失败回调");
@@ -108,7 +110,7 @@ public class MainActivity extends Activity {
                   toast("支付取消回调");
                   break;
               case GmStatus.GAME_EXIT:// 退出游戏回调
-                  MainActivity.this.finish();
+                  System.exit(0);
                   break;
               case GmStatus.REALNAME_CHECK:
                   int realNameType = (int) mMessage.obj;
@@ -393,6 +395,11 @@ public class MainActivity extends Activity {
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         GM.onNewIntent(intent);
+        if (GM.isLogin()) {
+            Toast.makeText(this, "您已经登录过帐号", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        GM.login();
     }
 
     @Override

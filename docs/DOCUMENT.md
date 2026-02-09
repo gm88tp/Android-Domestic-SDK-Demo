@@ -1,12 +1,22 @@
 # 怪猫SDK 接入文档 2025/12/25
 
 ## 历史版本更新
+4.0.5 为应对国内不同渠道不同的审核标准，去除了在初始化阶段统一申请权限，改为后续动态申请权限。如果CP有提前申请部分权限需求的应请及时沟通请求权限内容及告知时机。
+因穿山甲增长参谋服务停止运营，本次更新去除了穿山甲增长参谋相关包体并停用了相关参数的支持。
+
+4.0.4 接入了巨量上报，GMConfig.xml新增了相关标签<jl>
+
 4.0.3 引力引擎支付上报交由后端统一上报，修复支付宝横竖屏切换在低版本下的适配问题
+
 4.0.2 新增对引力引擎的支持
+
 4.0.1 新增对百度投放渠道的支持，新增oaid获取、以oaid为主要鉴别途径，投放回传优化
+
 3.9.8新增文字公告、调整协议和权限弹出时机
+
 3.9.6 客服系统由原七鱼替换为Aihelp,注意去除原七鱼客服相关sdk与资源
 由于Aihelp sdk目前版本需要支持androidx，所以建议直接引用远端依赖
+
 在module的build.gradle添加:
 ```groovy
 dependencies {
@@ -30,6 +40,25 @@ android.enableJetifier=true
     <!--    <uses-permission android:name="android.permission.RECEIVE_SMS" />-->
     <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
    ```
+
+在manifest中建议接入游戏SDK的页面采用standard或singleTop的启动模式:
+```groovy
+android:launchMode="standard"
+android:launchMode="singleTop"
+```
+如果需要使用singleTask启动模式，需要自行在onNewIntent中监听账户登录状态以防止token失效等问题。如：
+```groovy
+@Override
+protected void onNewIntent(Intent intent) {
+super.onNewIntent(intent);
+GM.onNewIntent(intent);
+if (GM.isLogin()) {
+Toast.makeText(this, "您已经登录过帐号", Toast.LENGTH_SHORT).show();
+return;
+}
+GM.login();
+}
+```
 
 4.0.2
 支持引力引擎
@@ -144,13 +173,14 @@ aar引入方式如下:
 3. 引入jbiLibs下的arm64-v8a和armeabi-v7a的so文件，出包是请至少支持这两个架构
 
 
-## SDK 接入相关
+# SDK 接入相关
 
 怪猫 SDK 开放接口，对外提供的接口方法都是静态的，直接通过 GM 进行调用即可。
 
-### 接入 SDK 基本顺序
+## 1. 接入 SDK 基本顺序
 
-1. 第一步需要在 Application 的对应方法内进行初始化，Application需要继承GMApplication
+### 1.1 初始化Application<font color = red> （必接） </font>
+第一步需要在 Application 的对应方法内进行初始化，Application需要继承GMApplication
 
 ```java
 public class MyApplication extends GMApplication {
@@ -175,7 +205,8 @@ public class MyApplication extends GMApplication {
 }
 ```
 
-2. 第二步需要在游戏主 Activity 的onCreate()方法内设置回调函数，否则游戏将收不到任何回调信息（登陆成功,登陆失败,支付成功,支付失败等...）
+### 1.2 设置回调函数<font color = red> （必接） </font>
+第二步需要在游戏主 Activity 的onCreate()方法内设置回调函数，否则游戏将收不到任何回调信息（登陆成功,登陆失败,支付成功,支付失败等...）
    
    ```java
         GM.setListener(new GmListener() {
@@ -260,26 +291,30 @@ public class MyApplication extends GMApplication {
         GM.init(this);
    ```
 
-3. 第三步需要在游戏主 Activity 的 onCreate 方法内进行初始化(如上面代码所示)
+### 1.3 初始化SDK<font color = red> （必接） </font>
+第三步需要在游戏主 Activity 的 onCreate 方法内进行初始化(如上面代码所示)
    
    ```java
    GM.init(this);
    ```
 
-4. 商务给您的appid并不在这个初始化中传入，只需要在 assests 的 GMConfig.xml 中去修改gssAppId 即可。
+### 1.4 设置游戏参数<font color = red> （必接） </font>
+商务给您的appid并不在这个初始化中传入，只需要在 assests 的 GMConfig.xml 中去修改gssAppId 即可。
+根据接入的推广、投放、数据上报渠道的不同，对应填写GMConfig.xml中对应标签下的字段。
 3.9.4版本中GMConfig.xml添加了appReleaseId属性，以提供发布记录id。（可不填或为空）
 
-5. 需要重写 Activity 的一些生命周期方法，并调用怪猫 SDK 的相关方法。后续有详细说明。
+### 1.5 重写生命周期方法<font color = red> （必接） </font>
+需要重写 Activity 的一些生命周期方法，并调用怪猫 SDK 的相关方法。后续有详细说明。
 
-### SDK 重写生命周期方法
+## 2.SDK 重写生命周期方法和接口调用
 
 游戏需要在游戏主 Activity 里的各个生命周期内，重写以下生命周期的方法，并在方法内调用 GM SDK 对应的生命周期方法
 
-注意：onBackPressed()方法是否重写，需要根据游戏是否能主动监听用户退出游戏的操作来决定。游戏能够监听用户退出操作，就不需要重写 onBackPressed() 方法了。反之，则需要重写。
+<font color = red> 注意： </font> onBackPressed()方法是否重写，需要根据游戏是否能主动监听用户退出游戏的操作来决定。游戏能够监听用户退出操作，就不需要重写 onBackPressed() 方法了。反之，则需要重写。
 
-生命周期内需要重写的方法
+### 2.1 生命周期内需要重写的方法<font color = red> （必接） </font>
 
-以下方法都需要重写，并调用 GMSDK 对应的生命周期方法
+<font color = red> 注意： </font> 以下方法都需要重写，并调用 GMSDK 对应的生命周期方法
 
 ```java
 onStart()
@@ -307,13 +342,13 @@ GM.onActivityResult(int requestCode, int resultCode, Intent data)
 GM.onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
 ```
 
-### 登录
+### 2.2 登录<font color = red> （必接） </font>
 
 ```java
 GM.login()
 ```
 
-一定要接到初始化 SDK 成功回调，才可以调登录接口的函数。
+<font color = red> 注意： </font>一定要接到初始化 SDK 成功回调，才可以调登录接口的函数。
 在点击进入游戏时，游戏需要判断用户是否登陆，若未登录，需要调用登录方法。
 登录结果请在相应回调中进行获取
 登录成功的回调信息如下：
@@ -335,7 +370,7 @@ GM.login()
   }
 ```
 
-### 查看用户是否登录
+### 2.3 查看用户是否登录<font color = red> （必接） </font>
 
 ```java
 GM.isLogin()
@@ -346,15 +381,18 @@ GM.isLogin()
 | true  | 当前为已登陆状态 |
 | false | 当前为未登陆状态 |
 
-### 登出
+### 2.4 登出<font color = red> （必接） </font>
 
 ```java
 GM.logout
 ```
 
-调用该方法后，游戏会收到登出回调。此时请游戏退回到游戏主界面，如果想重新拉起登录，请再次调用登录方法
+调用该方法后，游戏会收到登出回调。此时请游戏退回到游戏主界面。
+<font color = red> 注意： </font>如果想重新拉起登录，请再次调用登录方法
 
-### 提交角色信息
+### 2.5 提交角色信息<font color = red> （必接） </font>
+
+<font color = red> 注意： </font>用户首次注册登入游戏一定要上报创建角色信息并上报进入游戏。
 
 ```java
 GM.submitRoleInfo(Map<String,String> roleInfo)
@@ -392,7 +430,7 @@ data.put("roleLevelMTime", "-1");
 GM.submitRoleInfo(data);
 ```
 
-### 支付
+### 2.6 支付<font color = red> （必接） </font>
 
 ```java
 GM.pay(Map<String,String> payInfo)
@@ -442,13 +480,13 @@ GM.pay(payInfo);
 
 支付信息可以在回调当中获取
 
-### 退出游戏
+### 2.7 退出游戏<font color = red> （必接） </font>
 
 ```java
 GM.quit()
 ```
 
-退出游戏的接入流程说明：
+<font color = red> 注意： </font>退出游戏的接入流程说明：
 
 1. 首先根据游戏是否会自己监听游戏的退出来分：
    
@@ -461,19 +499,19 @@ GM.quit()
    GmStatus.GAME_EXIT --- 游戏此时需要结束游戏进程
    
    
-### 实名认证相关
+### 2.8 实名认证相关（选接）
 
 
-实名认证相关接入流程说明：
+<font color = red> 注意： </font>实名认证相关接入流程说明：
 相关主动接口均需在用户登录后调用，如游戏或我方运营有相关需求可以选择接入，如无要求可不接入
 
-1. SDK会在登录游戏以及用户实名状态改变时回调实名认证回调，同时SDK提供接口GM.antiAddiction()，调用后也可收到实名认证回调
+#### 2.8.1. SDK会在登录游戏以及用户实名状态改变时回调实名认证回调，同时SDK提供接口GM.antiAddiction()，调用后也可收到实名认证回调
 
 ```java
 GM.antiAddiction()
 ```
 
-2. 根据防沉迷相关要求，SDK提供查询用户当天剩余游玩时间接口，返回为剩余游玩分钟
+#### 2.8.2. 根据防沉迷相关要求，SDK提供查询用户当天剩余游玩时间接口，返回为剩余游玩分钟
    
 ```java
 GM.getPlayTimeLeft()
@@ -481,48 +519,55 @@ GM.getPlayTimeLeft()
 
 当GM.getPlayTimeLeft()接口返回为Integer.MAX_VALUE时，用户已成年无游玩时间限制，返回为Integer.MIN_VALUE时为我方后台未开启实名游玩限制，其余返回为用户剩余游玩分钟，详情可参考demo
 
-### 其他外部接口，可根据游戏自身需要选接
+## 3. 其他外部接口，可根据游戏自身需要选接
 
-1. 打开外部链接接口，调用此接口后，SDK会跳转外部链接url
+### 3.1. 打开外部链接接口（选接）
+调用此接口后，SDK会跳转外部链接url
 
 ```java
 Platform.getInstance().openUrlWithWeb(String url);
 ```
 
 
-2. 打开webview链接接口，调用此接口后，SDK会跳转webview
+### 3.2. 打开webview链接接口（选接）
+调用此接口后，SDK会跳转webview
 
 ```java
 Platform.getInstance().doOpenURLbyWebView(String url);
 ```
 
-3. 打开怪猫客服界面接口，调用此接口后，会进入客服界面
+### 3.3. 打开怪猫客服界面接口（选接）
+调用此接口后，会进入客服界面
 
 ```java
 Platform.getInstance().openCustomer(Context context);
 ```
 
-4. 打开怪猫个人中心界面接口，调用此接口后，会进入个人中心界面
+### 3.4. 打开怪猫个人中心界面接口（选接）
+调用此接口后，会进入个人中心界面
 
 ```java
 Platform.getInstance().showUserCenter(Context context);
 ```
 
-5. 打开怪猫手机绑定界面接口，调用此接口后，会进入手机绑定界面
+### 3.5. 打开怪猫手机绑定界面接口（选接）
+调用此接口后，会进入手机绑定界面
 
 ```java
 Platform.getInstance().showBindPhone();
 ```
 
 
-6. 打开怪猫实名认证界面接口，调用此接口后，会进入实名认证界界面
+### 3.6. 打开怪猫实名认证界面接口（选接）
+调用此接口后，会进入实名认证界界面
 
 ```java
 Platform.getInstance().showBindId();
 ```
 
 
-7. 打开用户协议界面接口，调用此接口后，会展示用户协议和隐私政策内容界面
+### 3.7. 打开用户协议界面接口
+调用此接口后，会展示用户协议和隐私政策内容界面
 
 ```java
 Platform.getInstance().openUserProtocol(new ProtocalHelper.ProtocolListener(){
